@@ -1,1 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madhav S Anoop | Engineering Portfolio</title>
+    
+    <!-- Google Fonts: Inter for the modern Framer aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        bg: '#F7F7F7',
+                        card: '#FFFFFF',
+                        border: '#E5E5E5',
+                        primary: '#111111',
+                        muted: '#737373',
+                        accent: '#2563EB', // A subtle tech blue
+                    },
+                    boxShadow: {
+                        'framer': '0 4px 20px rgba(0, 0, 0, 0.03)',
+                        'framer-hover': '0 10px 40px rgba(0, 0, 0, 0.08)',
+                        'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(15px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #F7F7F7;
+            color: #111111;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Hide scrollbar for cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d1d5db;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9ca3af;
+        }
 
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="relative pb-32 flex flex-col min-h-screen">
+
+    <!-- Floating Pill Navigation (JS Controlled) -->
+    <nav class="fixed top-6 right-6 md:right-10 glass-nav border border-border px-2 py-2 rounded-full z-50 shadow-glass flex items-center gap-1 sm:gap-2 transition-all w-max max-w-[95vw]">
+        <button onclick="navigate('home')" data-target="home" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors bg-black/10 text-primary">Home</button>
+        <button onclick="navigate('engineering')" data-target="engineering" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted">Engineering</button>
+        <button onclick="navigate('aerospace')" data-target="aerospace" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted">Aerospace</button>
+        <button onclick="navigate('music')" data-target="music" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted">Music</button>
+        <button onclick="navigate('experience')" data-target="experience" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted hidden sm:block">Experience</button>
+        <button onclick="navigate('honors')" data-target="honors" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted">Honors</button>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="max-w-[1100px] w-full mx-auto px-6 pt-20 md:pt-24 pb-16 flex-grow">
+
+        <!-- ================= PAGE 1: HOME ================= -->
+        <section id="home" class="page-section animate-fade-in-up">
+            
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tighter text-primary mb-4 leading-[1.1]">
+                Madhav S Anoop
+            </h1>
+            
+            <p class="text-base md:text-lg text-muted w-full leading-relaxed mb-10">
+                Aspiring Aerospace Engineer & Researcher &bull; Senior at Round Rock High School &bull; Class of 2027
+            </p>
+
+            <!-- "AT A GLANCE" BENTO GRID -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                
+                <!-- Highlight 1: Engineering (Routes to Engineering Page) -->
+                <a href="#" onclick="navigate('engineering'); return false;" class="group bg-card rounded-[1.5rem] p-6 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden relative">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 bg-accent/5 rounded-full blur-2xl group-hover:bg-accent/10 transition-colors"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="w-10 h-10 bg-primary text-white rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold tracking-tight mb-2">Biomimetic Aerodynamic Research</h3>
+                        <p class="text-muted text-sm leading-relaxed mb-4">
+                            2-year independent research adapting humpback whale tubercles to improve aircraft wings efficiency. Proved <strong class="text-primary">+47% L/D ratio</strong> in CFD simulation and achieved <strong class="text-primary">+12% flight range</strong> via custom fabricated UAV.
+                        </p>
+                    </div>
+                    <div class="relative z-10 flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 bg-black/5 text-primary text-[10px] font-semibold rounded-full">Published Author</span>
+                        <span class="px-2.5 py-1 bg-black/5 text-primary text-[10px] font-semibold rounded-full">2x Sci-Fair winner</span>
+                        <span class="px-2.5 py-1 bg-black/5 text-primary text-[10px] font-semibold rounded-full">SpaceX Award</span>
+                        <span class="px-2.5 py-1 bg-black/5 text-primary text-[10px] font-semibold rounded-full">US Air Force Award</span>
+                    </div>
+                </a>
+
+                <!-- Highlight 3: Toolkit -->
+                <a href="#" onclick="navigate('engineering'); setTimeout(() => document.getElementById('independent-capstone').scrollIntoView({behavior: 'smooth'}), 50); return false;" class="group bg-card rounded-[1.5rem] p-6 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div>
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-bold tracking-tight mb-2">Aerodynamic Toolkit</h3>
+                        <p class="text-muted text-sm leading-relaxed mb-4">
+                            Developed & deployed an open-source educational software toolkit to screen aerodynamics, piloted with local robotics teams.
+                        </p>
+                    </div>
+                    <div class="mt-auto flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full">Software & Education</span>
+                        <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full">Capstone Project</span>
+                    </div>
+                </a>
+
+                <!-- Highlight 2: DI -->
+                <a href="#" onclick="navigate('engineering'); setTimeout(() => document.getElementById('destination-imagination').scrollIntoView({behavior: 'smooth'}), 50); return false;" class="group bg-card rounded-[1.5rem] p-6 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div>
+                        <div class="w-10 h-10 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-bold tracking-tight mb-2">Destination Imagination</h3>
+                        <p class="text-muted text-sm leading-relaxed mb-4">
+                            Competed in rigorous STEAM and fine arts challenges demanding complex engineering and collaboration.
+                        </p>
+                    </div>
+                    <div class="mt-auto flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 bg-amber-100 text-amber-800 text-[10px] font-bold rounded-full">2x Global 1st Place</span>
+                        <span class="px-2.5 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-[10px] font-bold rounded-full">DaVinci Award</span>
+                        <span class="px-2.5 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-[10px] font-bold rounded-full">Renaissance Award</span>
+                    </div>
+                </a>
+
+                <!-- Highlight 4: NASA (Routes to Aerospace Page) -->
+                <a href="#" onclick="navigate('aerospace'); return false;" class="group bg-card rounded-[1.5rem] p-6 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute right-0 bottom-0 opacity-[0.03] text-primary pointer-events-none">
+                        <svg width="150" height="150" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                    </div>
+                    <div class="relative z-10">
+                        <p class="text-muted font-semibold tracking-wider text-[10px] uppercase mb-1">HIGH SCHOOL AEROSPACE SCHOLARS (NASA)</p>
+                        <h3 class="text-xl font-bold tracking-tight mb-2 text-primary">NASA Moonshot Team Lead</h3>
+                        <p class="text-muted text-sm leading-relaxed">
+                            Selected for a rigorous year-long NASA program. Led the Echo team to design a comprehensive human mission architecture to the Moon, presenting directly to a panel of NASA engineers.
+                        </p>
+                    </div>
+                    <div class="relative z-10 flex flex-wrap gap-2 mt-4">
+                        <span class="px-2.5 py-1 bg-black/5 text-primary text-[10px] font-semibold rounded-full">Year-long program (NASA)</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 2: ENGINEERING ================= -->
+        <section id="engineering" class="page-section hidden">
+            <div class="mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-primary mb-4">Engineering Experience</h2>
+                <p class="text-lg text-muted max-w-2xl mb-8">Projects enriching my passion for aerospace and engineering</p>
+
+                <!-- Experience Highlight Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <div onclick="document.getElementById('independent-research').scrollIntoView({behavior: 'smooth'})" class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300 flex flex-col justify-between cursor-pointer group">
+                        <div>
+                            <h3 class="text-lg font-bold text-primary mb-3 group-hover:text-accent transition-colors">Independent Research projects</h3>
+                            <p class="text-muted text-sm leading-relaxed">Conducted research for aircraft fuel efficiency improvement, paper published in JEI; named Top 12/330 at Sci Fair, securing awards and $6K scholarship</p>
+                        </div>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <a href="https://doi.org/10.69831/157f400f46" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="inline-flex items-center gap-1.5 px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-[11px] font-semibold rounded-full hover:bg-accent/20 transition-colors">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                Published Research Paper
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div onclick="document.getElementById('independent-capstone').scrollIntoView({behavior: 'smooth'})" class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300 flex flex-col justify-between cursor-pointer group">
+                        <div>
+                            <h3 class="text-lg font-bold text-primary mb-3 group-hover:text-accent transition-colors">Independent Capstone project</h3>
+                            <p class="text-muted text-sm leading-relaxed">Developed an open-source predictive aerodynamics software toolkit for aircraft wing efficiency, replacing costly hardware and simulation software; hosted workshops for XX users; refined via community feedback</p>
+                        </div>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-xs font-semibold rounded-full">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                Toolkit website
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-black/5 border border-border text-primary text-xs font-semibold rounded-full">
+                                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                                GitHub link
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div onclick="document.getElementById('ut-austin-research').scrollIntoView({behavior: 'smooth'})" class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300 flex flex-col justify-between cursor-pointer group">
+                        <div>
+                            <h3 class="text-lg font-bold text-primary mb-3 group-hover:text-accent transition-colors">UT Austin Research Assistant</h3>
+                            <p class="text-muted text-sm leading-relaxed">Assisted UT Austin Professor at the Vertical Flight Lab on the research project for the US Dept of Navy; conducted testing for drone sensors</p>
+                        </div>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-xs font-semibold rounded-full">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                                US Navy project
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-black/5 border border-border text-primary text-xs font-semibold rounded-full">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                                Flight Lab
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="independent-research" class="bg-card rounded-[2rem] border border-border overflow-hidden shadow-framer scroll-mt-28">
+                <div class="p-8 md:p-12 border-b border-border">
+                    <p class="text-accent font-semibold tracking-wider text-2xl uppercase mb-2">Independent Research</p>
+                    <h3 class="text-3xl md:text-4xl font-bold tracking-tight mb-6">Prototyping & Flight-Testing Biomimetic Wings to Optimize Aerodynamic Efficiency</h3>
+                    
+                    <!-- Project Snapshot Section -->
+                    <div class="p-6 md:p-8 bg-bg rounded-2xl border border-border">
+                        <strong class="text-primary block mb-3 text-lg">Project Snapshot</strong>
+                        <p class="text-muted leading-relaxed text-sm md:text-base mb-6">
+                            With air travel emitting one billion tons of CO2 annually and transportation contributing ~28% of global emissions, developing efficient wing designs to reduce drag is critical for mitigating global warming. This two-phase study evaluated biomimetic wings inspired by eagles and humpback whales. In Phase 1, Computational Fluid Dynamics (CFD) and wind-tunnel testing on 10-inch half-wing models revealed that the whale-mimetic design improved the lift-to-drag ratio by up to 47% at a 5-degree angle of attack and 50 m/s airspeed; the eagle-inspired design showed inconsistent performance. Phase 2 scaled the whale-mimetic design to a 40.5-inch full-wing model. CFD simulations at 10 m/s and a 5-degree angle of attack showed a 12.2% improvement in the lift-to-drag ratio. Subsequent flight testing of a drone prototype demonstrated a 12% increase in flight distance per volt compared to conventional wings. These results suggest that whale-mimetic wings significantly enhance fuel efficiency and represent a promising advancement in reducing the environmental impact of aviation.
+                        </p>
+                        
+                        <!-- Snapshot Sub-Cards -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="bg-card rounded-xl p-5 border border-border shadow-sm">
+                                <h4 class="font-bold text-primary mb-2 text-sm">Computational Fluid Dynamics (CFD)</h4>
+                                <p class="text-muted text-xs leading-relaxed">
+                                    15,000 Computational Fluid Dynamics (CFD) simulation trials executed at airspeeds of 50 m/s, 100 m/s, and 240 m/s at angles of attack of 0, 5, and 10 degrees.
+                                </p>
+                            </div>
+                            <div class="bg-card rounded-xl p-5 border border-border shadow-sm">
+                                <h4 class="font-bold text-primary mb-2 text-sm">Custom-built Wind-tunnel Testing</h4>
+                                <p class="text-muted text-xs leading-relaxed">
+                                    A wind-tunnel was built and utilized for testing the best-performant whale-mimetic vs conventional aerofoil. Lift produced by the whale-mimetic aerofoil was compared against the lift produced by conventional cambered aerofoils.
+                                </p>
+                            </div>
+                            <div class="bg-card rounded-xl p-5 border border-border shadow-sm">
+                                <h4 class="font-bold text-primary mb-2 text-sm">Flight Testing & Telemetry Data</h4>
+                                <p class="text-muted text-xs leading-relaxed mb-2">
+                                    A commercial drone-sized prototype aircraft with a 40.5-inch wingspan was flown using the 3D printed conventional and whale-mimetic wings. This involved:
+                                </p>
+                                <ul class="text-muted text-xs leading-relaxed list-disc list-inside pl-1 space-y-1">
+                                    <li>Aircraft Fabrication and Assembly</li>
+                                    <li>Circuit Development</li>
+                                    <li>GPS Module Integration</li>
+                                    <li>Data Logger Programming</li>
+                                    <li>Flight testing</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Recognition Chips -->
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-xs font-semibold rounded-full">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477-4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                                Published Research
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold rounded-full">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                                1st Place Greater Austin Regional Sci & Eng Fair
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold rounded-full">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                                $2500 SpaceX Scholarship (TXSEF)
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold rounded-full">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                                US Air Force Research Lab Award
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold rounded-full">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                                $3000 Smith & Dawson Excellence Award
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Problem & Hypothesis Section -->
+                    <div class="mt-8 pt-8 border-t border-border">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-muted">
+                            <div>
+                                <strong class="text-primary block mb-2">The Problem</strong>
+                                Aviation generates 1B tons of carbon annually. With demand projecting a 110% rise by 2050, innovative fuel efficiency solutions are critical to combat global warming.
+                            </div>
+                            <div>
+                                <strong class="text-primary block mb-2">The Hypothesis</strong>
+                                Implementing humpback whale flipper tubercles or slotted eagle primary feathers into aerofoil designs minimizes drag, thereby increasing lift-to-drag (L/D) ratios and fuel efficiency.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- New Research Background Section -->
+                    <div class="mt-8 pt-8 border-t border-border">
+                        <strong class="text-primary block mb-4">Research Background</strong>
+                        <ul class="space-y-3 text-muted">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span class="leading-relaxed">Adapting aerodynamic features from nature, such as bird and whale anatomy, to enhance airplane wing design</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span class="leading-relaxed">Humpback whale flipper tubercles reduce drag and improve the lift-to-drag ratio</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span class="leading-relaxed">Eagle wingtip feathers minimize drag by breaking large vortices into smaller, less impactful ones</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Objectives Section -->
+                    <div class="mt-8 pt-8 border-t border-border">
+                        <strong class="text-primary block mb-4">Objectives</strong>
+                        <ul class="space-y-3 text-muted">
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 rounded-full bg-accent/10 text-accent flex items-center justify-center text-xs font-bold mr-3 mt-0.5 flex-shrink-0">1</div>
+                                <span class="leading-relaxed">Identify the optimal biomimetic wing design for improved aerodynamic efficiency</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-5 h-5 rounded-full bg-accent/10 text-accent flex items-center justify-center text-xs font-bold mr-3 mt-0.5 flex-shrink-0">2</div>
+                                <span class="leading-relaxed">Prototyping and Flight-Testing Biomimetic Wings: Empirical Performance Evaluation</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Methodology - Phase 1 Section -->
+                    <div class="mt-8 pt-8 border-t border-border">
+                        <strong class="text-primary block mb-4">Methodology - Phase 1</strong>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                            <div class="text-muted text-sm md:text-base leading-relaxed">
+                                <p class="mb-8"><strong>3D Modeling & Computational Fluid Dynamics (CFD):</strong> Designed 10-inch half-wing models representing conventional Clark-Y, whale-mimetic, and eagle-mimetic configurations. Conducted over 200 CFD simulations across 15,000 trials, analyzing performance at varying airspeeds (50, 100, 240 m/s) and Angles of Attack (0°, 5°, 10°).</p>
+                                <p><strong>Wind Tunnel Construction & Empirical Testing:</strong> To validate computational models with physical data, a custom 2'x1.5'x1.5' wind tunnel was fabricated. The setup utilizes 280 six-inch PVC pipes arranged in a honeycomb formation to ensure laminar airflow at a controlled speed of 4 m/s.</p>
+                            </div>
+                            <div class="grid grid-cols-1 gap-6">
+                                <div class="rounded-2xl overflow-hidden border border-border shadow-sm group bg-white flex items-center justify-center">
+                                    <img src="phase1-3Dwingmodels.png" alt="3D Wing Models" class="w-full h-full object-contain aspect-video p-2 group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                                <div class="rounded-2xl overflow-hidden border border-border shadow-sm group bg-bg">
+                                    <img src="Phase1-windtunnel-setup.jpg" alt="Custom Wind Tunnel Setup" class="w-full h-full object-cover aspect-video group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Methodology - Phase 2 Section -->
+                    <div class="mt-8 pt-8 border-t border-border">
+                        <strong class="text-primary block mb-4">Methodology - Phase 2</strong>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                            <div class="text-muted text-sm md:text-base leading-relaxed">
+                                <p class="mb-8"><strong>UAV Fabrication & 3D Prototyping:</strong> Transitioned from computational testing to physical validation by scaling the most efficient models to a 40.5-inch full wingspan. Fabricated custom aircraft platforms incorporating the whale-mimetic tubercles directly into the leading edge of the aerofoils for real-world environmental testing.</p>
+                                <p><strong>Flight Testing & Telemetry Tracking:</strong> Conducted rigorous field tests at operational speeds of ~10 m/s. Programmed and integrated a custom onboard data logger to precisely capture flight telemetry and power consumption. The physical flight data corroborated the CFD simulations, demonstrating a +12% increase in overall flight range (1802 meters/volt versus the 1596 meters/volt baseline).</p>
+                            </div>
+                            <div class="grid grid-cols-1 gap-6">
+                                <div class="rounded-2xl overflow-hidden border border-border shadow-sm group bg-white flex items-center justify-center">
+                                    <img src="phase2-3Dwingmodels.png" alt="Phase 2 3D Wing Models" class="w-full h-full object-contain aspect-video p-2 group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                                <div class="rounded-2xl overflow-hidden border border-border shadow-sm group bg-bg">
+                                    <img src="Phase2-drone.png" alt="Phase 2 Drone Flight Test" class="w-full h-full object-cover aspect-video group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Result: 10-Inch Half Wing Simulation Section -->
+                    <div class="mt-8 pt-8 border-t border-border">
+                        <strong class="text-primary block mb-4">Result: 10-Inch Half Wing Simulation</strong>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                            <div class="text-muted text-sm md:text-base leading-relaxed">
+                                <p class="mb-8"><strong>Aerodynamic Efficiency Gains:</strong> The computational fluid dynamics (CFD) analysis revealed substantial performance improvements for the biomimetic designs. At a baseline testing speed of 50 m/s and an Angle of Attack (AoA) of 5°, the whale-mimetic tubercle wing demonstrated a peak <strong>+47% increase in the Lift-to-Drag (L/D) ratio</strong> compared to the conventional Clark-Y aerofoil.</p>
+                                <p><strong>Delayed Flow Separation:</strong> Visual airflow trajectory models confirmed the mechanism behind this efficiency. The leading-edge tubercles acted as passive flow control devices, channeling the air into accelerated streams (vortices) over the wing surface. This energized the boundary layer, successfully mitigating turbulence and significantly delaying flow separation and aerodynamic stall at higher angles of attack.</p>
+                            </div>
+                            <div class="grid grid-cols-1 gap-6">
+                                <div class="rounded-2xl overflow-hidden border border-border shadow-sm group bg-white flex items-center justify-center">
+                                    <img src="Phase1-CFD-imp-graph.png" alt="CFD Simulation Improvement Graph" class="w-full h-full object-contain aspect-video p-2 group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                                <div class="rounded-2xl overflow-hidden border border-border shadow-sm group bg-bg">
+                                    <img src="Phase1-CFD-flow-sep.png" alt="CFD Airflow Showing Delayed Flow Separation" class="w-full h-full object-cover aspect-video group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Result: 40-Inch Full Wing Simulation Section -->
+                    <div class="mt-8 pt-8 border-t border-border">
+                        <strong class="text-primary block mb-4">Result: 40-Inch Full Wing Simulation</strong>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                            <div class="text-muted text-sm md:text-base leading-relaxed">
+                                <p class="mb-8"><strong>Full-Scale Aerodynamic Validation:</strong> Following the successful half-wing trials, the fully scaled 40.5-inch UAV wingspan was subjected to comprehensive CFD analysis. The simulation data confirmed that the biomimetic tubercles successfully scale to larger geometries, maintaining significant aerodynamic superiority over the baseline models under real-world operational flight conditions.</p>
+                                <p><strong>Statistical Performance Consistency:</strong> To ensure reliability, variance in the aerodynamic data was rigorously tracked across multiple trials. The resulting statistical boxplot illustrates a tightly clustered performance metric for the biomimetic design. This indicates not just an improvement in the peak lift-to-drag ratio, but a highly stable and consistent aerodynamic profile essential for reliable UAV field flights.</p>
+                            </div>
+                            <div class="grid grid-cols-1 gap-6">
+                                <div class="rounded-2xl overflow-hidden border border-border shadow-sm group bg-white flex items-center justify-center">
+                                    <img src="Phase2-CFD-sim-graph.png" alt="Phase 2 CFD Simulation Graph" class="w-full h-full object-contain aspect-video p-2 group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                                <div class="rounded-2xl overflow-hidden border border-border shadow-sm group bg-white flex items-center justify-center">
+                                    <img src="Phase2-CFD-boxplot.png" alt="Phase 2 CFD Boxplot" class="w-full h-full object-contain aspect-video p-2 group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Result: Flight Testing Section -->
+                    <div class="mt-8 pt-8 border-t border-border">
+                        <strong class="text-primary block mb-4">Result: Flight Testing</strong>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                            <div class="text-muted text-sm md:text-base leading-relaxed">
+                                <p class="mb-8"><strong>Custom Telemetry Integration:</strong> To capture precise empirical data during physical flight tests, a custom data acquisition circuit was engineered and integrated directly into the UAV payload. This system tracked real-time voltage, current, and GPS distance simultaneously, ensuring that performance metrics collected during the ~10 m/s field tests were accurate, bias-free, and perfectly synchronized.</p>
+                                <p><strong>Empirical Range Extension:</strong> The physical field tests successfully validated the computational projections. The UAV equipped with the whale-mimetic leading-edge tubercles achieved a verified flight efficiency of 1802 meters per volt, compared to the 1596 meters per volt baseline of the conventional wing. This translates to a definitive <strong>+12% real-world flight range extension</strong>, underscoring the practical viability of biomimetic structures for commercial aviation.</p>
+                            </div>
+                            <div class="grid grid-cols-1 gap-6">
+                                <div class="rounded-2xl overflow-hidden border border-border shadow-sm group bg-white flex items-center justify-center">
+                                    <img src="Phase2-Flight-Circuit.jpg" alt="Phase 2 Telemetry Circuit" class="w-full h-full object-contain aspect-video p-2 group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                                <div class="rounded-2xl overflow-hidden border border-border shadow-sm group bg-black flex items-center justify-center relative">
+                                    <!-- Video Placeholder -->
+                                    <video src="Flight-vid-trim1.mp4" controls class="w-full h-full object-cover aspect-video"></video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Result Summary Section -->
+                    <div class="mt-8 pt-8 border-t border-border">
+                        <strong class="text-primary block mb-4">Result Summary</strong>
+                        <div class="flex flex-col gap-8">
+                            
+                            <!-- Summary Table -->
+                            <div class="overflow-x-auto rounded-2xl border border-border shadow-sm">
+                                <table class="w-full text-left text-sm text-muted whitespace-nowrap">
+                                    <thead class="bg-bg text-primary border-b border-border">
+                                        <tr>
+                                            <th class="px-6 py-4 font-bold">Configuration</th>
+                                            <th class="px-6 py-4 font-bold">Scale</th>
+                                            <th class="px-6 py-4 font-bold">Condition</th>
+                                            <th class="px-6 py-4 font-bold">Metric Gain</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-border bg-white">
+                                        <tr class="hover:bg-black/[0.02] transition-colors">
+                                            <td class="px-6 py-5 font-medium text-primary">CFD Simulation</td>
+                                            <td class="px-6 py-5">10-inch Half Wing</td>
+                                            <td class="px-6 py-5 text-accent font-medium">50 m/s @ 5° AoA</td>
+                                            <td class="px-6 py-5 text-primary font-bold">+47% L/D Ratio</td>
+                                        </tr>
+                                        <tr class="hover:bg-black/[0.02] transition-colors">
+                                            <td class="px-6 py-5 font-medium text-primary">CFD Simulation</td>
+                                            <td class="px-6 py-5">40.5-inch Full Wing</td>
+                                            <td class="px-6 py-5 text-accent font-medium">10 m/s @ 5° AoA</td>
+                                            <td class="px-6 py-5 text-primary font-bold">+12.2% L/D Ratio</td>
+                                        </tr>
+                                        <tr class="hover:bg-black/[0.02] transition-colors">
+                                            <td class="px-6 py-5 font-medium text-primary">Flight Testing</td>
+                                            <td class="px-6 py-5">40.5-inch Wingspan</td>
+                                            <td class="px-6 py-5 text-accent font-medium">10 m/s Avg airspeed</td>
+                                            <td class="px-6 py-5 text-primary font-bold">+12% Meter/Volt</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Key Bullet Points -->
+                            <div class="bg-bg p-6 rounded-2xl border border-border shadow-sm">
+                                <ul class="space-y-4 text-muted text-sm md:text-base">
+                                    <li class="flex items-start">
+                                        <div class="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                        </div>
+                                        <span class="leading-relaxed">The whale-mimetic wing performed better in all the 3 test scenarios.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                        </div>
+                                        <span class="leading-relaxed">At the same wing size and similar airspeed, the CFD simulation results and the flight test results were comparable.</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Findings Section -->
+                            <div class="mt-2">
+                                <strong class="text-primary block mb-3 text-lg">Findings</strong>
+                                <div class="bg-white p-6 rounded-2xl border border-border shadow-sm">
+                                    <ul class="space-y-3 text-muted text-sm md:text-base">
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">The whale-mimetic wing had higher lift-to-drag ratio compared to the control and eagle-mimetic wing</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">Lift-to-drag ratio gain was most significant at lower airspeeds</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">Lift-to-drag gain decreased with larger wing size</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">Fuel efficiency gain observed in flight testing is proportional to the CFD lift-to-drag ratio gain</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Applications Section -->
+                            <div class="mt-2">
+                                <strong class="text-primary block mb-3 text-lg">Applications</strong>
+                                <div class="bg-white p-6 rounded-2xl border border-border shadow-sm flex flex-col gap-8">
+                                    
+                                    <!-- Topic 1 -->
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                                        <div>
+                                            <h4 class="font-bold text-xs text-primary uppercase tracking-wider mb-3">Improvements in fuel efficiency of commercial drone could result in:</h4>
+                                            <ul class="space-y-3 text-muted text-sm md:text-base">
+                                                <li class="flex items-start">
+                                                    <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                                    <span class="leading-relaxed">Extended drone range, mitigating current limitation for drone adoption</span>
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                                    <span class="leading-relaxed">Reduced energy consumption and CO₂ emissions</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- Diagram 1 -->
+                                        <div class="flex flex-col gap-2">
+                                            <div class="w-full rounded-2xl overflow-hidden border border-border shadow-sm group bg-white flex items-center justify-center">
+                                                <img src="Wing.png" alt="Commercial Drone Diagram" class="w-full h-full object-contain aspect-video p-2 group-hover:scale-105 transition-transform duration-500">
+                                            </div>
+                                            <span class="text-[10px] text-muted text-center w-full block">Image credit: wing.com</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Topic 2 -->
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center pt-6 border-t border-border">
+                                        <div>
+                                            <h4 class="font-bold text-xs text-primary uppercase tracking-wider mb-3">Increased adoption of UAVs through:</h4>
+                                            <ul class="space-y-3 text-muted text-sm md:text-base">
+                                                <li class="flex items-start">
+                                                    <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                                    <span class="leading-relaxed">Fewer base depots and expanded rural service area coverage</span>
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                                    <span class="leading-relaxed">Greater coverage for agricultural inspections</span>
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                                    <span class="leading-relaxed">Better loiter times and reduced fleet sizes for defense operations</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- Diagram 2 -->
+                                        <div class="w-full rounded-2xl overflow-hidden border border-border shadow-sm group bg-white flex items-center justify-center">
+                                            <img src="dronebase.png" alt="UAV Fleet and Base Diagram" class="w-full h-full object-contain aspect-video p-2 group-hover:scale-105 transition-transform duration-500">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Limitations and Mitigations Section -->
+                            <div class="mt-2">
+                                <strong class="text-primary block mb-3 text-lg">Limitations & Mitigations</strong>
+                                <div class="bg-white p-6 rounded-2xl border border-border shadow-sm">
+                                    
+                                    <!-- Limitations Sub-group -->
+                                    <h4 class="font-bold text-xs text-primary uppercase tracking-wider mb-3">Limitations</h4>
+                                    <ul class="space-y-3 text-muted text-sm md:text-base mb-6">
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-amber-50 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">Wind tunnel airspeeds were limited to ~4 m/s, preventing the replication of high-speed flight conditions.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">Physical drag could not be measured in the wind tunnel due to instrumentation constraints; only lift was recorded.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">Manual pilot control and slight environmental winds introduced natural variability during flight testing.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">Statistical analysis could not be conducted on flight test data due to a limited sample size of 20 flights exceeding 100 meters.</span>
+                                        </li>
+                                    </ul>
+
+                                    <!-- Mitigations Sub-group -->
+                                    <h4 class="font-bold text-xs text-primary uppercase tracking-wider mb-3 pt-4 border-t border-border">Mitigations</h4>
+                                    <ul class="space-y-3 text-muted text-sm md:text-base">
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-emerald-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">Environmental and pilot variables were significantly mitigated by flying models back-to-back on the same days using the same battery pack.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-emerald-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">Flights less than 100 meters were removed to cleanse the data.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Conclusion Section -->
+                            <div class="mt-2">
+                                <strong class="text-primary block mb-3 text-lg">Conclusion</strong>
+                                <div class="bg-white p-6 rounded-2xl border border-border shadow-sm">
+                                    <ul class="space-y-3 text-muted text-sm md:text-base">
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">Whale-mimetic wings significantly improve lift-to-drag ratios and overall fuel efficiency over conventional designs.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">Integrating these biomimetic structures into commercial UAVs tangibly extends their operational flight range.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">Increased range capabilities accelerate commercial UAV adoption, replacing high-emission delivery vehicles and reducing net greenhouse gas output.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">This approach represents a highly actionable step toward mitigating the broader environmental impact of the aviation and transportation sectors.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Top References Section -->
+                    <div class="mt-8 pt-8 border-t border-border">
+                        <strong class="text-primary block mb-4">Top References</strong>
+                        <ul class="space-y-4 text-muted text-sm break-words">
+                            <li class="flex items-start">
+                                <svg class="w-4 h-4 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                <span class="leading-relaxed">"Learn about Aerodynamics." NASA Glenn Research Center, 7 Dec. 2023, <a href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/learn-about-aerodynamics/#lift" target="_blank" class="text-accent hover:underline">www1.grc.nasa.gov/beginners-guide-to-aeronautics/learn-about-aerodynamics/#lift</a>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-4 h-4 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                <span class="leading-relaxed">Celli, Vittorio. "Boundary Layer Separation and Pressure Drag." University of Virginia, 28 Sept. 1997, <a href="http://galileo.phys.virginia.edu/classes/311/notes/fluids2/node11.html" target="_blank" class="text-accent hover:underline">galileo.phys.virginia.edu/classes/311/notes/fluids2/node11.html</a>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-4 h-4 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                <span class="leading-relaxed">Tucker, V. A. "Gliding Birds: Reduction of Induced Drag by Wing Tip Slots between the Primary Feathers." Journal of Experimental Biology, vol. 180, no. 1, 1993, pp. 285–310, <a href="https://journals.biologists.com/jeb/article-abstract/180/1/285/6536/Gliding-Birds-Reduction-of-Induced-Drag-by-Wing" target="_blank" class="text-accent hover:underline">journals.biologists.com/jeb/article-abstract/180/1/285/6536/Gliding-Birds-Reduction-of-Induced-Drag-by-Wing</a>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-4 h-4 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                <span class="leading-relaxed">Fish, F. E., and J. M. Battle. "Hydrodynamic Design of the Humpback Whale Flipper." Journal of Morphology, vol. 225, no. 1, 1995, pp. 51–60, <a href="https://doi.org/10.1002/jmor.1052250105" target="_blank" class="text-accent hover:underline">doi.org/10.1002/jmor.1052250105</a>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-4 h-4 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                <span class="leading-relaxed">Miklosovic, D. S., et al. "Leading-Edge Tubercles Delay Stall on Humpback Whale (Megaptera novaeangliae) Flippers." Physics of Fluids, vol. 16, no. 5, 2004, pp. L39–L42, <a href="https://doi.org/10.1063/1.1688341" target="_blank" class="text-accent hover:underline">doi.org/10.1063/1.1688341</a>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-4 h-4 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                <span class="leading-relaxed">Stolaroff, J. K., et al. "Energy Use and Life Cycle Greenhouse Gas Emissions of Drones for Commercial Package Delivery." Nature Communications, vol. 9, no. 1, 2018, article no. 409, <a href="https://doi.org/10.1038/s41467-017-02411-5" target="_blank" class="text-accent hover:underline">doi.org/10.1038/s41467-017-02411-5</a>.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Additional Independent Research Cards -->
+                    <div class="mt-12 pt-10 border-t border-border grid grid-cols-1 gap-6">
+                        <!-- Ion vs. Chemical Propulsion Study Card -->
+                        <div class="bg-bg rounded-3xl p-6 md:p-8 border border-border shadow-sm hover:shadow-framer transition-all duration-300 flex flex-col justify-between">
+                            <div>
+                                <h4 class="text-lg font-bold text-primary mb-3">Ion vs. Chemical Propulsion Study</h4>
+                                <p class="text-muted text-sm leading-relaxed mb-4">
+                                    In Freshman year, conducted a comparative study evaluating propulsion systems in modern spacecraft. Analyzed specific limitations, thrust-to-weight ratios, and long-term deep space benefits of each methodology.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Independent Capstone Project Section -->
+            <div id="independent-capstone" class="bg-card rounded-[2rem] border border-border overflow-hidden shadow-framer mt-12 scroll-mt-28">
+                <div class="p-8 md:p-12">
+                    <p class="text-accent font-semibold tracking-wider text-2xl uppercase mb-2">Independent Capstone project</p>
+                    <h3 class="text-3xl md:text-4xl font-bold tracking-tight mb-6">Open-source Aerodynamic Screening and Educational Toolkit</h3>
+                    
+                    <!-- Project Snapshot Section -->
+                    <div class="p-6 md:p-8 bg-bg rounded-2xl border border-border">
+                        <strong class="text-primary block mb-3 text-lg">Project Snapshot</strong>
+                        <p class="text-muted leading-relaxed text-sm md:text-base mb-6">
+                            Built a community-facing open-source aerodynamics toolkit centered on a lightweight predictive machine learning software tool to help robotics teams/makerspaces/beginner engineering groups/Students explore aerodynamic behavior in a matter of seconds without needing expensive software or specialized hardware. This toolkit will make the aerofoil wing design iterations faster, cheaper and highly accessible to the aerospace community.
+                        </p>
+                        
+                        <!-- Recognition Chips -->
+                        <div class="flex flex-wrap gap-2">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-xs font-semibold rounded-full">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                Toolkit website
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-black/5 border border-border text-primary text-xs font-semibold rounded-full">
+                                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                                GitHub link
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold rounded-full">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                Workshop info
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UT Austin Research Assistant Section -->
+            <div id="ut-austin-research" class="bg-card rounded-[2rem] border border-border overflow-hidden shadow-framer mt-12 scroll-mt-28">
+                <div class="p-8 md:p-12">
+                    <p class="text-accent font-semibold tracking-wider text-2xl uppercase mb-2">Research Assistant</p>
+                    <h3 class="text-3xl md:text-4xl font-bold tracking-tight mb-6">UT Austin research project for the US Dept of Navy</h3>
+                    
+                    <!-- Project Snapshot Section -->
+                    <div class="p-6 md:p-8 bg-bg rounded-2xl border border-border">
+                        <strong class="text-primary block mb-3 text-lg">Project Snapshot</strong>
+                        <p class="text-muted leading-relaxed text-sm md:text-base mb-0">
+                            Build a special purpose drone for US Dept of Navy to enable ship inspection. The special requirements include extended range, ability to semi-auto navigate tight quarters.
+                        </p>
+                    </div>
+
+                    <!-- My contributions Section -->
+                    <div class="mt-8 pt-8 border-t border-border">
+                        <strong class="text-primary block mb-4">My Contributions</strong>
+                        <p class="text-muted text-sm md:text-base leading-relaxed mb-4">
+                            Assisted Professor Dr. Jayant Sirohi and a PhD student starting from my junior year, taking on the following responsibilities:
+                        </p>
+                        <ul class="space-y-3 text-muted text-sm md:text-base">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span class="leading-relaxed">Designed precise 3D models of test harnesses for experimental setups.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span class="leading-relaxed">Spearheaded the evaluation and testing of distance sensors critical for semi-autonomous navigation.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Destination Imagination Section -->
+            <div id="destination-imagination" class="bg-card rounded-[2rem] border border-border overflow-hidden shadow-framer mt-12 scroll-mt-28">
+                <div class="p-8 md:p-12">
+                    <p class="text-accent font-semibold tracking-wider text-2xl uppercase mb-2">Destination Imagination</p>
+                    <h3 class="text-3xl md:text-4xl font-bold tracking-tight mb-12">Combining Engineering, Art, and Teamwork on a Global Stage</h3>
+
+                    <!-- Block 1: The Ascent of the Thought-Tree -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-12">
+                        <div class="space-y-4">
+                            <h4 class="text-2xl font-bold text-primary mb-2">The Ascent of the Thought-Tree</h4>
+                            <p class="text-muted leading-relaxed text-sm md:text-base">
+                                A huge sigh of relief washed over me as our colorful "thought-tree" finally rose into the air. As it reached the peak of its ascent, the circular leaves—embedded with custom LED strips—automatically lit up the room in a rainbow of colors. Attached to each leaf was a tag representing a core value of humanity: creativity, honesty, bravery, and kindness. While most teams at the competition built standard jigsaw puzzles, my team decided to build a "growing puzzle tree". We wanted the different branches to represent life abstracts, turning our project into a "tree of humanity".
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                                <img src="DI-thought-tree1.jpg" alt="The Thought Tree" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                                <img src="DI-thought-tree2.jpg" alt="The Thought Tree Detail" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="w-full h-px bg-border/50 mb-12"></div>
+
+                    <!-- Block 2: Engineering Behind the Art -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-12">
+                        <div class="grid grid-cols-2 gap-3 order-2 lg:order-1">
+                            <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                                <img src="DI-Beanbag-launcher.jpg" alt="Beanbag Launcher Mechanism" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                                <img src="DI-Thought-tree-circuit.jpeg" alt="Thought Tree Circuitry" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                                <img src="DI-Middleschool-Skit.png" alt="Middle School Skit" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                                <img src="DI-Highschool-Skit.jpeg" alt="High School Skit" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            </div>
+                        </div>
+                        <div class="space-y-4 order-1 lg:order-2">
+                            <h4 class="text-2xl font-bold text-primary mb-2">Engineering Behind the Art</h4>
+                            <p class="text-muted leading-relaxed text-sm md:text-base">
+                                This was all part of Destination Imagination (DI), a STEAM competition where teams are given a massive challenge and have to use a mix of STEM, fine arts, and teamwork to build a solution and present it through a live skit. That year, our task was to build a puzzle solver robot that could solve a chosen puzzle using technical methods. I co-led the design and development of the technical side, working alongside friends who were just as obsessed with engineering and science as I was.
+                            </p>
+                            <p class="text-muted leading-relaxed text-sm md:text-base">
+                                Bringing our story to life meant dividing up the work based on what we were good at, from writing the script to building the actual props. One of my friends was amazing at electrical engineering and circuitry, while another was a woodworking expert. Even though I was a key player in the overall technical build, I had my own learning curves. I seriously struggled with precisely cutting wood blocks and attaching them together with L-brackets. My teammate was patient enough to teach me, and in return, I taught them how to use the Arduino IDE to program our crane's controls. To make the mechanism work, we built an electromagnetic crane using programmed motors and switches, alongside a custom electromagnet to place the puzzle pieces. Then, to actually make the tree "grow," we built a pneumatic pump and piston system using hydraulics to lift the entire heavy structure up by six inches.
+                            </p>
+
+                            <h4 class="text-2xl font-bold text-primary mb-2 mt-8">Precision Bean bag launcher</h4>
+                            <p class="text-muted leading-relaxed text-sm md:text-base">
+                                For another year's competition, the requirement was to build a beanbag launcher that could hit an exact distance with repeatable precision. We pooled our engineering skills and worked as a tight unit to design and calibrate a custom thrower mechanism. Our main goal was consistency, which meant analyzing launch angles and spring tension until the device worked like clockwork. After hours of fine-tuning the math and hardware, we got the launcher to a point where it could reliably and accurately fire a single beanbag right into a target zone between 280 and 300 centimeters away.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="w-full h-px bg-border/50 mb-12"></div>
+
+                    <!-- Block 3: A Global Triumph -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                        <div class="space-y-4">
+                            <h4 class="text-2xl font-bold text-primary mb-2">A Global Triumph</h4>
+                            <p class="text-muted leading-relaxed text-sm md:text-base">
+                                Watching our masterpiece actually work and amaze the audience and judges made me smile, knowing that months of research, trial-and-error, and pure determination were going to pay off. The teamwork skills I built during that DI season have been invaluable ever since, whether I'm working on a regular group project at school or collaborating with PhD students at the UT Austin aerospace lab.
+                            </p>
+                            <p class="text-muted leading-relaxed text-sm md:text-base">
+                                Our team went on to be incredibly successful, ultimately winning the first-place trophy at the global competition twice—once in the middle school division and again in high school. Along the way, we were honored with both the DaVinci Award and the Renaissance Award, special recognitions reserved for teams that display exceptionally unique solutions, courageous risk-taking, and outstanding creativity.
+                            </p>
+                            <p class="text-muted leading-relaxed text-sm md:text-base">
+                                Standing on top of a global stage that featured over 600 teams from 13 different countries was completely exhilarating. It wasn't just because we successfully combined art and engineering, but because we failed, learned, and succeeded together as close friends.
+                            </p>
+                            
+                            <div class="mt-6 flex flex-wrap gap-2">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold rounded-full">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                                    2x Global 1st Place
+                                </span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold rounded-full">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                                    DaVinci Award
+                                </span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold rounded-full">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                                    Renaissance Award
+                                </span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                                <img src="DI-MiddleSchool-firstplace.jpeg" alt="Middle School 1st Place" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                                <img src="DI-HighSchool-Firstplace.jpeg" alt="High School 1st Place" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ================= PAGE 3: AEROSPACE (NEW) ================= -->
+        <section id="aerospace" class="page-section hidden">
+            <div class="mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-primary mb-4">My Aerospace Journey</h2>
+                <p class="text-lg text-muted max-w-2xl">From childhood wonder to real-world engineering.</p>
+            </div>
+
+            <div class="bg-card rounded-[2rem] border border-border p-6 md:p-12 shadow-framer space-y-16">
+
+                <!-- Block 1: The Spark -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                    <div class="space-y-4 order-2 lg:order-1">
+                        <h3 class="text-2xl md:text-3xl font-bold text-primary mb-2">The Spark</h3>
+                        <p class="text-muted leading-relaxed text-lg">
+                            That night, the moon wasn’t the bright white I knew it to be; it was blood-red, and I had to know why. As a kindergartner, I couldn’t grasp how something in the sky could change so drastically overnight. When I learned about the mechanics of a lunar eclipse the next day, it felt like a door had unlocked.
+                        </p>
+                        <p class="text-muted leading-relaxed text-lg">
+                            Realizing there was an entire universe past our planet waiting to be understood changed everything for me. Ever since, I’ve been completely hooked on the mysteries of space.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3 order-1 lg:order-2">
+                        <div class="col-span-2 rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-video relative">
+                            <img src="Redmoon.png" alt="Blood Red Moon" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                            <img src="stargazing-at-age6.JPG" alt="Stargazing at age 6" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                            <img src="austronaut-at-age6.png" alt="Astronaut costume at age 6" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                            <img src="Rocket-building-at-age6.jpg" alt="Building rockets at age 6" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                            <img src="Launch-reentry-at-age7.png" alt="Simulated launch and reentry at age 7" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="w-full h-px bg-border/50"></div>
+
+                <!-- Block 2: Problem Solving & Camps -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="col-span-2 rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-video relative">
+                            <img src="Spacecamp-huntsville-at-age15.jpeg" alt="Space Camp Huntsville at age 15" class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                            <img src="NASA-camp-at-age10.png" alt="NASA summer camp at age 10" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                            <img src="NASA-Camp-Rockets-at-age10.png" alt="Building rockets at NASA camp" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="text-2xl md:text-3xl font-bold text-primary mb-2">Problem Solving & Space Camps</h3>
+                        <p class="text-muted leading-relaxed text-lg">
+                            As I grew older, that passive wonder evolved into a desire to actually solve problems. This shift started at a NASA summer camp where I found myself designing simulated lunar bases and programming rovers. I loved it so much that I later returned as an assistant counselor to help spark that same excitement in younger kids.
+                        </p>
+                        <p class="text-muted leading-relaxed text-lg">
+                            Years later, I found myself standing as the flight director in a Space Shuttle simulator at the U.S. Space & Rocket Center. Staring at my monitor during a high-stakes scenario, I blurted out, “Whoa! Why are the payload bay doors closed?” Ordering CAPCOM to open them was a split-second decision that averted a simulated collision. Guiding my ten-person mission control team through those frantic moments left me with a clear, concrete ambition: one day, I want to help guide humanity’s real steps onto Mars.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="w-full h-px bg-border/50"></div>
+
+                <!-- Block 3: Engineering the Future -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                    <div class="space-y-6 text-muted leading-relaxed text-lg">
+                        <h3 class="text-2xl md:text-3xl font-bold text-primary mb-2">Engineering the Future</h3>
+                        <p>
+                            I’m drawn to aerospace engineering because it does two things at once: it pushes the absolute limits of human endurance, and it creates a trickle-down effect of everyday innovations on Earth. But I also know that getting there requires solving massive hurdles first—like the immense weight and cost of fuel needed to break gravity compared to the relatively weak thrust of current chemical engines. Later, inspired by how effortlessly marine life moves through water, I taught myself 3D modeling and Computational Fluid Dynamics (CFD) to explore biomimicry in flight. I designed aircraft wings modeled after the unique tubercles of a humpback whale and built a prototype remote-controlled plane to test the geometry in the real world. Seeing a 12% improvement in flight range was an incredible feeling—proof that looking to nature could dramatically cut drag and improve fuel efficiency.
+                        </p>
+                        <p>
+                            Lately, I've been eager to push my boundaries even further. I currently assist a professor at the University of Texas at Austin's aerospace department on a project for the U.S. Department of the Navy, which has been an incredible opportunity to learn advanced aerodynamics directly from experts. Balancing my time in the lab with my high school aerospace coursework and NASA’s High School Aerospace Scholars program has been a whirlwind, but it’s continually grounding my technical foundation in real-world engineering.
+                        </p>
+                        <p>
+                            Aerospace engineering has this amazing capacity to redefine what is humanly possible. I look forward to entering college to figure out my exact specialization, collaborate with peers who are just as obsessed with flight as I am, and dive into original research. Driven by the very same curiosity I felt as a kid looking up at a red moon, I'm ready to dedicate my college years to solving the complexities of spaceflight and helping make life beyond our planet a reality.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3 sticky top-24">
+                        <div class="col-span-2 rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-video relative">
+                            <img src="Phase2-drone.png" alt="Phase 2 biomimetic drone flight testing" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-white p-2 flex items-center justify-center aspect-square relative">
+                            <img src="phase1-3Dwingmodels.png" alt="Phase 1 3D Wing Models" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                            <img src="Phase1-CFD-flow-sep.png" alt="Phase 1 CFD Flow Separation" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                            <img src="Phase1-windtunnel-setup.jpg" alt="Phase 1 Wind Tunnel Setup" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-white p-2 flex items-center justify-center aspect-square relative">
+                            <img src="phase2-3Dwingmodels.png" alt="Phase 2 3D Wing Models" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-white p-2 flex items-center justify-center aspect-square relative">
+                            <img src="Phase2-Flight-Circuit.jpg" alt="Phase 2 Telemetry Circuit" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                            <img src="Phase2-gps-module-setup.jpeg" alt="Phase 2 GPS Module Setup" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="w-full h-px bg-border/50"></div>
+
+                <!-- Block 4: NASA Moonshot Team Lead -->
+                <div id="nasa-moonshot" class="bg-bg rounded-2xl p-8 border border-border shadow-sm scroll-mt-28">
+                    <p class="text-accent font-semibold tracking-wider text-xs uppercase mb-2">High School Aerospace Scholars (NASA)</p>
+                    <h3 class="text-2xl md:text-3xl font-bold text-primary mb-4">NASA Moonshot Team Lead</h3>
+                    <p class="text-muted leading-relaxed text-lg mb-0">
+                        Selected for a rigorous year-long NASA program. Led the Echo team to design a comprehensive human mission architecture to the Moon, presenting directly to a panel of NASA engineers.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= PAGE 4: MUSIC ================= -->
+        <section id="music" class="page-section hidden">
+            <div class="mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-primary mb-4">My music journey</h2>
+            </div>
+
+            <div class="bg-card rounded-[2rem] border border-border p-6 md:p-10 shadow-framer">
+                <p class="text-muted leading-relaxed text-lg mb-8 md:mb-10 w-full text-center md:text-left">
+                    People find all kinds of ways to express themselves—some paint, some write, but for me, it’s always been the piano. I’ve been taking lessons since first grade, and sitting down at the keys has become my favorite way to clear my head and just unwind. Over the last four years, I’ve also found a way to use my music to help out others, sharing my practice videos to support fundraisers at my music school for the National Pediatric Cancer Foundation. I’ve performed at over thirty recitals, community events, and local retirement homes, trying to bring a little bit of comfort wherever I can. Still, nothing really prepared me for the moment I walked onto the stage at the John F. Kennedy Center in Washington, D.C. Walking out completely solo in front of five hundred people was honestly terrifying, but looking out at the audience after the final chord faded was one of the most rewarding feelings I’ve ever had.
+                </p>
+
+                <!-- Journey Timeline -->
+                <div class="relative w-full mx-auto mt-8">
+                    <!-- Vertical Center Line (Artful Glowing Gradient) -->
+                    <div class="absolute left-[31px] md:left-1/2 top-4 bottom-4 w-[3px] md:w-1 bg-gradient-to-b from-sky-400 via-accent to-purple-500 rounded-full -translate-x-1/2 shadow-[0_0_20px_rgba(37,99,235,0.4)] opacity-90"></div>
+                    
+                    <!-- 2015 -->
+                    <div class="relative flex md:justify-start w-full mb-8">
+                        <div class="absolute left-[31px] md:left-1/2 w-5 h-5 rounded-full bg-white border-[4px] border-accent shadow-[0_0_10px_rgba(37,99,235,0.5)] -translate-x-1/2 -translate-y-1/2 z-10 top-8 md:top-1/2"></div>
+                        <div class="absolute top-8 left-[31px] w-[25px] border-t-[3px] border-dotted border-accent/40 -translate-y-1/2 z-0 md:hidden"></div>
+                        <div class="hidden md:block absolute top-1/2 right-[50%] w-[2.5rem] border-t-[3px] border-dotted border-accent/40 -translate-y-1/2 z-0"></div>
+                        
+                        <div class="w-full pl-14 md:pl-0 md:w-[calc(50%-2.5rem)]">
+                            <div class="bg-card rounded-[1.5rem] border border-border p-4 md:p-5 shadow-sm hover:shadow-framer hover:-translate-y-1 transition-all text-left md:text-right">
+                                <span class="text-accent font-bold tracking-wider text-xs uppercase mb-1 block">2015</span>
+                                <h4 class="text-lg font-bold text-primary mb-3">Early Beginnings</h4>
+                                <div class="rounded-xl overflow-hidden border border-border bg-bg relative w-full aspect-video mb-3">
+                                    <img src="Piano-age6-2015.jpg" alt="Began playing piano at age 6" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                                </div>
+                                <p class="text-muted text-sm leading-relaxed">Where it all began: Discovering the keys and taking my first piano lessons at age 6.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2017 -->
+                    <div class="relative flex md:justify-end w-full mb-8">
+                        <div class="absolute left-[31px] md:left-1/2 w-5 h-5 rounded-full bg-white border-[4px] border-accent shadow-[0_0_10px_rgba(37,99,235,0.5)] -translate-x-1/2 -translate-y-1/2 z-10 top-8 md:top-1/2"></div>
+                        <div class="absolute top-8 left-[31px] w-[25px] border-t-[3px] border-dotted border-accent/40 -translate-y-1/2 z-0 md:hidden"></div>
+                        <div class="hidden md:block absolute top-1/2 left-[50%] w-[2.5rem] border-t-[3px] border-dotted border-accent/40 -translate-y-1/2 z-0"></div>
+
+                        <div class="w-full pl-14 md:pl-0 md:w-[calc(50%-2.5rem)]">
+                            <div class="bg-card rounded-[1.5rem] border border-border p-4 md:p-5 shadow-sm hover:shadow-framer hover:-translate-y-1 transition-all text-left">
+                                <span class="text-accent font-bold tracking-wider text-xs uppercase mb-1 block">2017</span>
+                                <h4 class="text-lg font-bold text-primary mb-3">Developing Technique</h4>
+                                <div class="rounded-xl overflow-hidden border border-border bg-bg relative w-full aspect-video mb-3">
+                                    <img src="Piano-age8-2017.jpg" alt="Playing piano at age 8" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                                </div>
+                                <p class="text-muted text-sm leading-relaxed">Building foundational technique, focus, and a growing passion for musical performance at age 8.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2021 -->
+                    <div class="relative flex md:justify-start w-full mb-8">
+                        <div class="absolute left-[31px] md:left-1/2 w-5 h-5 rounded-full bg-white border-[4px] border-accent shadow-[0_0_10px_rgba(37,99,235,0.5)] -translate-x-1/2 -translate-y-1/2 z-10 top-8 md:top-1/2"></div>
+                        <div class="absolute top-8 left-[31px] w-[25px] border-t-[3px] border-dotted border-accent/40 -translate-y-1/2 z-0 md:hidden"></div>
+                        <div class="hidden md:block absolute top-1/2 right-[50%] w-[2.5rem] border-t-[3px] border-dotted border-accent/40 -translate-y-1/2 z-0"></div>
+
+                        <div class="w-full pl-14 md:pl-0 md:w-[calc(50%-2.5rem)]">
+                            <div class="bg-card rounded-[1.5rem] border border-border p-4 md:p-5 shadow-sm hover:shadow-framer hover:-translate-y-1 transition-all text-left md:text-right">
+                                <span class="text-accent font-bold tracking-wider text-xs uppercase mb-1 block">2021</span>
+                                <h4 class="text-lg font-bold text-primary mb-3">Expanding Repertoire</h4>
+                                <div class="rounded-xl overflow-hidden border border-border bg-bg relative w-full aspect-video mb-3">
+                                    <img src="Piano-age12-new-piano-2021.jpg" alt="Playing piano at age 12" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                                </div>
+                                <p class="text-muted text-sm leading-relaxed">Advancing to complex repertoire and celebrating the journey with new milestones at age 12.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- July 2023 -->
+                    <div class="relative flex md:justify-end w-full mb-8">
+                        <div class="absolute left-[31px] md:left-1/2 w-5 h-5 rounded-full bg-white border-[4px] border-accent shadow-[0_0_10px_rgba(37,99,235,0.5)] -translate-x-1/2 -translate-y-1/2 z-10 top-8 md:top-1/2"></div>
+                        <div class="absolute top-8 left-[31px] w-[25px] border-t-[3px] border-dotted border-accent/40 -translate-y-1/2 z-0 md:hidden"></div>
+                        <div class="hidden md:block absolute top-1/2 left-[50%] w-[2.5rem] border-t-[3px] border-dotted border-accent/40 -translate-y-1/2 z-0"></div>
+
+                        <div class="w-full pl-14 md:pl-0 md:w-[calc(50%-2.5rem)]">
+                            <div class="bg-card rounded-[1.5rem] border border-border p-4 md:p-5 shadow-sm hover:shadow-framer hover:-translate-y-1 transition-all text-left">
+                                <span class="text-accent font-bold tracking-wider text-xs uppercase mb-1 block">July 2023</span>
+                                <h4 class="text-lg font-bold text-primary mb-3">Kennedy Center Debut</h4>
+                                <div class="grid grid-cols-2 gap-2 mb-3">
+                                    <div class="rounded-xl overflow-hidden border border-border bg-bg relative w-full aspect-square">
+                                        <img src="Piano-DC-recital-center-2023Jul.jpg" alt="Kennedy Center Recital" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                                    </div>
+                                    <div class="rounded-xl overflow-hidden border border-border bg-bg relative w-full aspect-square">
+                                        <img src="Piano-DC-recital-play1-2023Jul.jpg" alt="Playing at Washington DC Recital" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                                    </div>
+                                </div>
+                                <p class="text-muted text-sm leading-relaxed">A major milestone: performing a solo piece center stage at the prestigious Kennedy Center in Washington D.C.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- March 2024 -->
+                    <div class="relative flex md:justify-start w-full mb-8">
+                        <div class="absolute left-[31px] md:left-1/2 w-5 h-5 rounded-full bg-white border-[4px] border-accent shadow-[0_0_10px_rgba(37,99,235,0.5)] -translate-x-1/2 -translate-y-1/2 z-10 top-8 md:top-1/2"></div>
+                        <div class="absolute top-8 left-[31px] w-[25px] border-t-[3px] border-dotted border-accent/40 -translate-y-1/2 z-0 md:hidden"></div>
+                        <div class="hidden md:block absolute top-1/2 right-[50%] w-[2.5rem] border-t-[3px] border-dotted border-accent/40 -translate-y-1/2 z-0"></div>
+
+                        <div class="w-full pl-14 md:pl-0 md:w-[calc(50%-2.5rem)]">
+                            <div class="bg-card rounded-[1.5rem] border border-border p-4 md:p-5 shadow-sm hover:shadow-framer hover:-translate-y-1 transition-all text-left md:text-right">
+                                <span class="text-accent font-bold tracking-wider text-xs uppercase mb-1 block">March 2024</span>
+                                <h4 class="text-lg font-bold text-primary mb-3">Paramount Theatre</h4>
+                                <div class="grid grid-cols-2 gap-2 mb-3">
+                                    <div class="rounded-xl overflow-hidden border border-border bg-bg relative w-full aspect-square">
+                                        <img src="Piano-Austin-Paramount-Recital1-2024Mar.jpg" alt="Paramount Theatre Recital" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                                    </div>
+                                    <div class="rounded-xl overflow-hidden border border-border bg-bg relative w-full aspect-square">
+                                        <img src="Piano-Paramount-recital-play-2024Mar.jpg" alt="Playing at Paramount Theatre" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                                    </div>
+                                </div>
+                                <p class="text-muted text-sm leading-relaxed">Live solo piano performance for the Austin community at the historic Paramount Theatre in Texas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- January 2025 -->
+                    <div class="relative flex md:justify-end w-full mb-8">
+                        <div class="absolute left-[31px] md:left-1/2 w-5 h-5 rounded-full bg-white border-[4px] border-accent shadow-[0_0_10px_rgba(37,99,235,0.5)] -translate-x-1/2 -translate-y-1/2 z-10 top-8 md:top-1/2"></div>
+                        <div class="absolute top-8 left-[31px] w-[25px] border-t-[3px] border-dotted border-accent/40 -translate-y-1/2 z-0 md:hidden"></div>
+                        <div class="hidden md:block absolute top-1/2 left-[50%] w-[2.5rem] border-t-[3px] border-dotted border-accent/40 -translate-y-1/2 z-0"></div>
+
+                        <div class="w-full pl-14 md:pl-0 md:w-[calc(50%-2.5rem)]">
+                            <div class="bg-card rounded-[1.5rem] border border-border p-4 md:p-5 shadow-sm hover:shadow-framer hover:-translate-y-1 transition-all text-left">
+                                <span class="text-accent font-bold tracking-wider text-xs uppercase mb-1 block">January 2025</span>
+                                <h4 class="text-lg font-bold text-primary mb-3">ABRSM Level 7 Achievement</h4>
+                                <div class="grid grid-cols-2 gap-2 mb-3">
+                                    <div class="rounded-xl overflow-hidden border border-border bg-bg relative w-full aspect-square">
+                                        <img src="Piano-L6toL7-recital-2025Jan.jpeg" alt="Transitioning to ABRSM Level 7" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                                    </div>
+                                    <div class="rounded-xl overflow-hidden border border-border bg-bg relative w-full aspect-square">
+                                        <img src="Piano-L7-grad-Trophy-2025Jan.jpeg" alt="Piano L7 graduation trophy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                                    </div>
+                                </div>
+                                <p class="text-muted text-sm leading-relaxed">Progressing through the rigorous ABRSM curriculum to Level 7, and celebrating competitive milestones.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- August 2025 -->
+                    <div class="relative flex md:justify-start w-full">
+                        <div class="absolute left-[31px] md:left-1/2 w-5 h-5 rounded-full bg-white border-[4px] border-accent shadow-[0_0_10px_rgba(37,99,235,0.5)] -translate-x-1/2 -translate-y-1/2 z-10 top-8 md:top-1/2"></div>
+                        <div class="absolute top-8 left-[31px] w-[25px] border-t-[3px] border-dotted border-accent/40 -translate-y-1/2 z-0 md:hidden"></div>
+                        <div class="hidden md:block absolute top-1/2 right-[50%] w-[2.5rem] border-t-[3px] border-dotted border-accent/40 -translate-y-1/2 z-0"></div>
+
+                        <div class="w-full pl-14 md:pl-0 md:w-[calc(50%-2.5rem)]">
+                            <div class="bg-card rounded-[1.5rem] border border-border p-4 md:p-5 shadow-sm hover:shadow-framer hover:-translate-y-1 transition-all text-left md:text-right">
+                                <span class="text-accent font-bold tracking-wider text-xs uppercase mb-1 block">August 2025</span>
+                                <h4 class="text-lg font-bold text-primary mb-3">Summer Concert Series</h4>
+                                <div class="grid grid-cols-2 gap-2 mb-3">
+                                    <div class="rounded-xl overflow-hidden border border-border bg-bg relative w-full aspect-square">
+                                        <img src="Piano-Recital2-Aug2025.jpg" alt="Piano Recital Stage August 2025" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                                    </div>
+                                    <div class="rounded-xl overflow-hidden border border-border bg-bg relative w-full aspect-square">
+                                        <img src="Piano-recital-Aug2025.jpg" alt="Piano Recital August 2025" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                                    </div>
+                                </div>
+                                <p class="text-muted text-sm leading-relaxed">Taking the stage at renowned venues during the summer concert series, mastering advanced compositions.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 4: EXPERIENCE ================= -->
+        <section id="experience" class="page-section hidden">
+            <div class="mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-primary mb-4">Experience & Education</h2>
+                <p class="text-lg text-muted max-w-2xl">My academic journey and practical engineering collaborations.</p>
+            </div>
+
+            <div class="bg-card rounded-[2rem] border border-border p-8 md:p-12 shadow-framer">
+                <div class="space-y-12">
+                    
+                    <!-- Item 1 -->
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-12 relative group">
+                        <div class="md:w-1/4 flex-shrink-0">
+                            <span class="text-sm font-semibold text-muted">June 2026</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary">Conference Presenter</h3>
+                            <p class="text-accent font-medium mb-3">International Research Conference for Children (IRCC '26)</p>
+                            <p class="text-muted leading-relaxed">Presented independent biomimicry research to an international audience. Shared comprehensive empirical data from wind tunnel tests, CFD simulations, and physical UAV flights demonstrating applications for commercial drone fleets.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-12 relative group pt-6 border-t border-border/50">
+                        <div class="md:w-1/4 flex-shrink-0">
+                            <span class="text-sm font-semibold text-muted">2024 - 2025</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary">Research Collaboration</h3>
+                            <p class="text-accent font-medium mb-3">Vertical Flight Lab, UT Austin</p>
+                            <p class="text-muted leading-relaxed">Expanded practical experience by collaborating with researchers in the Aerospace Engineering Department. Gained exposure to university-level research methodologies, advanced aerodynamics, and rigorous academic testing.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-12 relative group pt-6 border-t border-border/50">
+                        <div class="md:w-1/4 flex-shrink-0">
+                            <span class="text-sm font-semibold text-muted">2023 - 2024</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary">University-Level Coursework</h3>
+                            <p class="text-accent font-medium mb-3">Stanford Pre-Collegiate Mathematics</p>
+                            <p class="text-muted leading-relaxed">Successfully completed highly rigorous university-level mathematics courses, including Number Theory and Linear Algebra. Earned Stanford Continuing Studies Credit.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-12 relative group pt-6 border-t border-border/50">
+                        <div class="md:w-1/4 flex-shrink-0">
+                            <span class="text-sm font-semibold text-muted">Summer 2022</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary">Simulated Flight Director</h3>
+                            <p class="text-accent font-medium mb-3">U.S. Space & Rocket Center</p>
+                            <p class="text-muted leading-relaxed">Immersive 40-hour/week STEM experience. Directed simulated space missions, managing high-pressure scenarios and leading a team through complex operational protocols requiring rapid decision-making.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 5: HONORS ================= -->
+        <section id="honors" class="page-section hidden">
+            <div class="mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-primary mb-4">Awards & Honors</h2>
+                <p class="text-lg text-muted">Recognized for academic excellence and engineering design.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Award -->
+                <div class="bg-card rounded-3xl p-8 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300">
+                    <p class="text-sm text-muted mb-2 font-medium">August 2026</p>
+                    <h3 class="text-xl font-bold text-primary mb-2">National Merit Scholarship Semifinalist</h3>
+                    <p class="text-sm text-muted leading-relaxed">Recognized for outstanding academic achievement based on a qualifying NMSQT index score of 226.</p>
+                </div>
+                <!-- Award -->
+                <div class="bg-card rounded-3xl p-8 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300">
+                    <p class="text-sm text-muted mb-2 font-medium">2025 & 2026</p>
+                    <h3 class="text-xl font-bold text-primary mb-2">Top Science & Engineering Fair Awards</h3>
+                    <p class="text-sm text-muted leading-relaxed">2x 1st Place at Greater Austin Regional, $2500 SpaceX Scholarship at Texas State Science Fair, US Air Force Award, and $3000 Smith & Dawson Award.</p>
+                </div>
+                <!-- Award -->
+                <div class="bg-card rounded-3xl p-8 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300">
+                    <p class="text-sm text-muted mb-2 font-medium">May 2024 & 2025</p>
+                    <h3 class="text-xl font-bold text-primary mb-2">Destination Imagination Global Winner</h3>
+                    <p class="text-sm text-muted leading-relaxed">2x 1st Place winner at the International STEAM competition. Recipient of the DaVinci and Renaissance Special Awards.</p>
+                </div>
+                <!-- Award -->
+                <div class="bg-card rounded-3xl p-8 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300">
+                    <p class="text-sm text-muted mb-2 font-medium">June 2026</p>
+                    <h3 class="text-xl font-bold text-primary mb-2">Best Research Presentation</h3>
+                    <p class="text-sm text-muted leading-relaxed">Awarded at the International Research Conference for Children (IRCC) for independent research on Biomimicry.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full mt-auto bg-white border-t border-border">
+        <div class="max-w-[1100px] mx-auto px-6 py-8 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-muted text-sm">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> Madhav S. Anoop. Aerospace Portfolio.</p>
+            <div class="flex gap-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-primary transition-colors font-medium">Email</a>
+                <a href="#" class="hover:text-primary transition-colors font-medium">LinkedIn</a>
+                <a href="#" class="hover:text-primary transition-colors font-medium">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Single Page App Routing Script -->
+    <script>
+        function navigate(pageId, updateUrl = true) {
+            // 1. Hide all pages & reset animations
+            const sections = document.querySelectorAll('.page-section');
+            sections.forEach(sec => {
+                sec.classList.add('hidden');
+                sec.classList.remove('animate-fade-in-up');
+            });
+
+            // 2. Show the target page
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                targetPage.classList.remove('hidden');
+                // Force browser reflow to restart the fade-in animation
+                void targetPage.offsetWidth; 
+                targetPage.classList.add('animate-fade-in-up');
+            }
+
+            // 3. Update active states on the Navigation Menu
+            const navBtns = document.querySelectorAll('.nav-btn');
+            navBtns.forEach(btn => {
+                if (btn.dataset.target === pageId) {
+                    // Active styling
+                    btn.classList.add('bg-black/10', 'text-primary');
+                    btn.classList.remove('hover:bg-black/5', 'text-muted');
+                } else {
+                    // Inactive styling
+                    btn.classList.remove('bg-black/10', 'text-primary');
+                    btn.classList.add('hover:bg-black/5', 'text-muted');
+                }
+            });
+
+            // 4. Update URL so links can be shared directly
+            if (updateUrl) {
+                history.pushState(null, null, '#' + pageId);
+            }
+
+            // 5. Scroll smoothly to the top of the page
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Check the URL when the page first loads to open the correct tab
+        document.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.substring(1);
+            const validPages = ['home', 'engineering', 'aerospace', 'music', 'experience', 'honors'];
+            
+            if (hash && validPages.includes(hash)) {
+                navigate(hash, false);
+            } else {
+                navigate('home', false); // Default to home
+            }
+        });
+
+        // Handle browser back/forward buttons properly
+        window.addEventListener('popstate', () => {
+            const hash = window.location.hash.substring(1);
+            const validPages = ['home', 'engineering', 'aerospace', 'music', 'experience', 'honors'];
+            
+            if (hash && validPages.includes(hash)) {
+                navigate(hash, false);
+            } else {
+                navigate('home', false);
+            }
+        });
+    </script>
+</body>
+</html>
