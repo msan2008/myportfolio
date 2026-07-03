@@ -127,7 +127,7 @@
                 </a>
 
                 <!-- Highlight 3: Toolkit -->
-                <a href="#" onclick="navigate('engineering'); setTimeout(() => document.getElementById('independent-capstone').scrollIntoView({behavior: 'smooth'}), 50); return false;" class="group bg-card rounded-[1.5rem] p-6 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                <div onclick="navigate('engineering'); setTimeout(() => document.getElementById('independent-capstone').scrollIntoView({behavior: 'smooth'}), 50);" class="cursor-pointer group bg-card rounded-[1.5rem] p-6 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
                     <div>
                         <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
@@ -138,10 +138,14 @@
                         </p>
                     </div>
                     <div class="mt-auto flex flex-wrap gap-2">
-                        <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full">Software & Education</span>
-                        <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full">Capstone Project</span>
+                        <a href="https://aero-toolkit-sajgmrdshg4xhaq3wimip8.streamlit.app/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="flex items-center gap-1 px-2.5 py-1 bg-blue-100 hover:bg-blue-200 text-blue-700 border border-blue-200 text-[10px] font-bold rounded-full transition-colors">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            Toolkit website
+                        </a>
+                        <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full border border-blue-100">Software & Education</span>
+                        <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-full border border-blue-100">Capstone Project</span>
                     </div>
-                </a>
+                </div>
 
                 <!-- Highlight 2: DI -->
                 <a href="#" onclick="navigate('engineering'); setTimeout(() => document.getElementById('destination-imagination').scrollIntoView({behavior: 'smooth'}), 50); return false;" class="group bg-card rounded-[1.5rem] p-6 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
@@ -208,10 +212,10 @@
                             <p class="text-muted text-sm leading-relaxed">Developed an open-source predictive aerodynamics software toolkit for aircraft wing efficiency, replacing costly hardware and simulation software; hosted workshops for XX users; refined via community feedback</p>
                         </div>
                         <div class="mt-6 flex flex-wrap gap-2">
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-xs font-semibold rounded-full">
+                            <a href="https://aero-toolkit-sajgmrdshg4xhaq3wimip8.streamlit.app/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="inline-flex items-center gap-1.5 px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-xs font-semibold rounded-full hover:bg-accent/20 transition-colors">
                                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                                 Toolkit website
-                            </span>
+                            </a>
                             <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-black/5 border border-border text-primary text-xs font-semibold rounded-full">
                                 <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
                                 GitHub link
@@ -716,10 +720,10 @@
                         
                         <!-- Recognition Chips -->
                         <div class="flex flex-wrap gap-2">
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-xs font-semibold rounded-full">
+                            <a href="https://aero-toolkit-sajgmrdshg4xhaq3wimip8.streamlit.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-xs font-semibold rounded-full hover:bg-accent/20 transition-colors">
                                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                                 Toolkit website
-                            </span>
+                            </a>
                             <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-black/5 border border-border text-primary text-xs font-semibold rounded-full">
                                 <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
                                 GitHub link
