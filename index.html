@@ -83,7 +83,7 @@
         <button onclick="navigate('home')" data-target="home" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors bg-black/10 text-primary">Home</button>
         <button onclick="navigate('engineering')" data-target="engineering" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted">Engineering</button>
         <button onclick="navigate('aerospace')" data-target="aerospace" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted">Aerospace</button>
-        <button onclick="navigate('')" data-target="" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted"></button>
+        <button onclick="navigate('music')" data-target="music" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted">Music</button>
         <button onclick="navigate('experience')" data-target="experience" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted hidden sm:block">Experience</button>
         <button onclick="navigate('honors')" data-target="honors" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted">Honors</button>
     </nav>
@@ -120,7 +120,7 @@
                     </div>
                     <div class="relative z-10 flex flex-wrap gap-2">
                         <span class="px-2.5 py-1 bg-emerald-100 text-emerald-700 border border-emerald-200 text-[10px] font-bold rounded-full">Published Author</span>
-                        <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-bold rounded-full">2x Sci-Fair winner</span>
+                        <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-bold rounded-full">2x Sci-Fair Winner</span>
                         <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-bold rounded-full">SpaceX Award</span>
                         <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-bold rounded-full">US Air Force Award</span>
                     </div>
@@ -178,7 +178,7 @@
                         </p>
                     </div>
                     <div class="relative z-10 flex flex-wrap gap-2 mt-4">
-                        <span class="px-2.5 py-1 bg-black/5 text-primary text-[10px] font-semibold rounded-full">Year-long program (NASA)</span>
+                        <span class="px-2.5 py-1 bg-black/5 text-primary text-[10px] font-semibold rounded-full">Year-long Program (NASA)</span>
                     </div>
                 </a>
             </div>
@@ -195,7 +195,7 @@
                     <!-- Card 1 -->
                     <div onclick="document.getElementById('independent-research').scrollIntoView({behavior: 'smooth'})" class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300 flex flex-col justify-between cursor-pointer group">
                         <div>
-                            <h3 class="text-lg font-bold text-primary mb-3 group-hover:text-accent transition-colors">Independent Research projects</h3>
+                            <h3 class="text-lg font-bold text-primary mb-3 group-hover:text-accent transition-colors">Independent Research Projects</h3>
                             <p class="text-muted text-sm leading-relaxed">Conducted research for aircraft fuel efficiency improvement, paper published in JEI; named Top 12/330 at Sci Fair, securing awards and $6K scholarship</p>
                         </div>
                         <div class="mt-6 flex flex-wrap gap-2">
@@ -874,7 +874,10 @@
                                 This was all part of Destination Imagination (DI), a STEAM competition where teams are given a massive challenge and have to use a mix of STEM, fine arts, and teamwork to build a solution and present it through a live skit. That year, our task was to build a puzzle solver robot that could solve a chosen puzzle using technical methods. I co-led the design and development of the technical side, working alongside friends who were just as obsessed with engineering and science as I was.
                             </p>
                             <p class="text-muted leading-relaxed text-sm md:text-base">
-                                Bringing our story to life meant dividing up the work based on what we were good at, from writing the script to building the actual props. One of my friends was amazing at electrical engineering and circuitry, while another was a woodworking expert. Even though I was a key player in the overall technical build, I had my own learning curves. I seriously struggled with precisely cutting wood blocks and attaching them together with L-brackets. My teammate was patient enough to teach me, and in return, I taught them how to use the Arduino IDE to program our crane's controls. To make the mechanism work, we built an electromagnetic crane using programmed motors and switches, alongside a custom electromagnet to place the puzzle pieces. Then, to actually make the tree "grow," we built a pneumatic pump and piston system using hydraulics to lift the entire heavy structure up by six inches.
+                                Bringing our story to life meant dividing up the work based on what we were good at, from writing the script to building the actual props. One of my friends was amazing at electrical engineering and circuitry, while another was a woodworking expert. Even though I was a key player in the overall technical build, I had my own learning curves. I seriously struggled with precisely cutting wood blocks and attaching them together with L-brackets. My teammate was patient enough to teach me, and in return, I taught them how to use the Arduino IDE to program our crane's controls.
+                            </p>
+                            <p class="text-muted leading-relaxed text-sm md:text-base">
+                                To make the mechanism work, We built an electromagnetic crane that used programmed motors, switches, and buttons to move and operate. It used a custom electromagnet to pick up and release the puzzle pieces. A pneumatic pump and piston using hydraulics were also devised to push up the puzzle structure around 6 inches to represent the humanity-tree growth.
                             </p>
 
                             <h4 class="text-2xl font-bold text-primary mb-2 mt-8">Precision Bean bag launcher</h4>
@@ -1343,7 +1346,7 @@
                 <!-- Award -->
                 <div class="bg-card rounded-3xl p-8 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300">
                     <p class="text-sm text-muted mb-2 font-medium">May 2024 & 2025</p>
-                    <h3 class="text-xl font-bold text-primary mb-2">Destination Imagination Global Winner</h3>
+                    <h3 class="text-xl font-bold text-primary mb-2">Destination Imagination Global Finals Winner</h3>
                     <p class="text-sm text-muted leading-relaxed">2x 1st Place winner at the International STEAM competition. Recipient of the DaVinci and Renaissance Special Awards.</p>
                 </div>
                 <!-- Award -->
