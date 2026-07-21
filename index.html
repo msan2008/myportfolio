@@ -127,7 +127,7 @@
                 </a>
 
                 <!-- Highlight 3: Toolkit -->
-                <div onclick="navigate('engineering'); setTimeout(() => document.getElementById('independent-capstone').scrollIntoView({behavior: 'smooth'}), 50);" class="cursor-pointer group bg-card rounded-[1.5rem] p-6 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                <div onclick="navigate('independent-capstone');" class="cursor-pointer group bg-card rounded-[1.5rem] p-6 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
                     <div>
                         <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
@@ -148,7 +148,7 @@
                 </div>
 
                 <!-- Highlight 2: DI -->
-                <a href="#" onclick="navigate('engineering'); setTimeout(() => document.getElementById('destination-imagination').scrollIntoView({behavior: 'smooth'}), 50); return false;" class="group bg-card rounded-[1.5rem] p-6 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                <a href="#" onclick="navigate('destination-imagination'); return false;" class="group bg-card rounded-[1.5rem] p-6 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
                     <div>
                         <div class="w-10 h-10 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-4">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
@@ -193,7 +193,7 @@
                 <!-- Experience Highlight Cards -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <!-- Card 1 -->
-                    <div onclick="document.getElementById('independent-research').scrollIntoView({behavior: 'smooth'})" class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300 flex flex-col justify-between cursor-pointer group">
+                    <div onclick="navigate('independent-research');" class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300 flex flex-col justify-between cursor-pointer group">
                         <div>
                             <h3 class="text-lg font-bold text-primary mb-3 group-hover:text-accent transition-colors">Independent Research Projects</h3>
                             <p class="text-muted text-sm leading-relaxed">Conducted research for aircraft fuel efficiency improvement, paper published in JEI; named Top 12/330 at Sci Fair, securing awards and $6K scholarship</p>
@@ -206,7 +206,7 @@
                         </div>
                     </div>
                     <!-- Card 2 -->
-                    <div onclick="document.getElementById('independent-capstone').scrollIntoView({behavior: 'smooth'})" class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300 flex flex-col justify-between cursor-pointer group">
+                    <div onclick="navigate('independent-capstone');" class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300 flex flex-col justify-between cursor-pointer group">
                         <div>
                             <h3 class="text-lg font-bold text-primary mb-3 group-hover:text-accent transition-colors">Independent Capstone project</h3>
                             <p class="text-muted text-sm leading-relaxed">Developed an open-source predictive aerodynamics software toolkit for aircraft wing efficiency, replacing costly hardware and simulation software; hosted workshops for XX users; refined via community feedback</p>
@@ -223,7 +223,7 @@
                         </div>
                     </div>
                     <!-- Card 3 -->
-                    <div onclick="document.getElementById('ut-austin-research').scrollIntoView({behavior: 'smooth'})" class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300 flex flex-col justify-between cursor-pointer group">
+                    <div onclick="navigate('ut-austin-research');" class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300 flex flex-col justify-between cursor-pointer group">
                         <div>
                             <h3 class="text-lg font-bold text-primary mb-3 group-hover:text-accent transition-colors">UT Austin Research Assistant</h3>
                             <p class="text-muted text-sm leading-relaxed">Assisted UT Austin Professor at the Vertical Flight Lab on the research project for the US Dept of Navy; evaluated drone sensors & designed precise 3D models </p>
@@ -1310,12 +1310,60 @@
                     <!-- Item 4 -->
                     <div class="flex flex-col md:flex-row gap-4 md:gap-12 relative group pt-6 border-t border-border/50">
                         <div class="md:w-1/4 flex-shrink-0">
+                            <span class="text-sm font-semibold text-muted">2024 - 2026</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary">Media Coordinator & Outreach Leader</h3>
+                            <p class="text-accent font-medium mb-3">Eat Right (Non-Profit)</p>
+                            <p class="text-muted leading-relaxed">Directed media strategy and organized 6 targeted nutrition outreach workshops across local schools and parks, engaging over 2,000 participants to combat nutritional misinformation. Spearheaded fundraising campaigns that raised $2,000+ for local food organizations. These service hours directly contributed to earning the U.S. Congressional Bronze Medal.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-12 relative group pt-6 border-t border-border/50">
+                        <div class="md:w-1/4 flex-shrink-0">
                             <span class="text-sm font-semibold text-muted">Summer 2024</span>
                         </div>
                         <div>
                             <h3 class="text-xl font-bold text-primary">Simulated Flight Director</h3>
                             <p class="text-accent font-medium mb-3">U.S. Space & Rocket Center</p>
                             <p class="text-muted leading-relaxed">Immersive 40-hour/week STEM experience. Directed simulated space missions, managing high-pressure scenarios and leading a team through complex operational protocols requiring rapid decision-making.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-12 relative group pt-6 border-t border-border/50">
+                        <div class="md:w-1/4 flex-shrink-0">
+                            <span class="text-sm font-semibold text-muted">Summer 2024</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary">NASA Explorer Camp Mentor</h3>
+                            <p class="text-accent font-medium mb-3">Johnson Space Center Houston</p>
+                            <p class="text-muted leading-relaxed">Selected as a Teen Volunteer to lead hands-on engineering activities and facilitate space exploration modules for young students. Assisted camp counselors with course preparation and was awarded the President's Volunteer Service Award (PVSA) Gold for dedicating over 120 hours to STEM education.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 7 -->
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-12 relative group pt-6 border-t border-border/50">
+                        <div class="md:w-1/4 flex-shrink-0">
+                            <span class="text-sm font-semibold text-muted">2023 - 2026</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary">Community Food Access Volunteer</h3>
+                            <p class="text-accent font-medium mb-3">Sunday LunchBox</p>
+                            <p class="text-muted leading-relaxed">Committed weekly hours to process and package locally sourced, fresh produce for underserved communities in Austin. Contributed to an operation serving 150 families and feeding 200 children per week, grounding my academic pursuits with a deep sense of community gratitude.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 8 -->
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-12 relative group pt-6 border-t border-border/50">
+                        <div class="md:w-1/4 flex-shrink-0">
+                            <span class="text-sm font-semibold text-muted">2023 - 2026</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary">Philanthropic Fundraiser</h3>
+                            <p class="text-accent font-medium mb-3">National Pediatric Cancer Foundation</p>
+                            <p class="text-muted leading-relaxed">Combined a lifelong dedication to the piano with community service by securing sponsorships for my practice hours. Uploaded continuous practice videos through my music school, successfully raising over $1,000 to directly fund pediatric cancer research.</p>
                         </div>
                     </div>
 
