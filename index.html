@@ -160,13 +160,13 @@
                     </div>
                     <div class="mt-auto flex flex-wrap gap-2">
                         <span class="px-2.5 py-1 bg-amber-100 text-amber-800 text-[10px] font-bold rounded-full">2x Global 1st Place</span>
-                        <span class="px-2.5 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-[10px] font-bold rounded-full">DaVinci Award</span>
-                        <span class="px-2.5 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-[10px] font-bold rounded-full">Renaissance Award</span>
+                        <span class="px-2.5 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-[10px] font-bold rounded-full">DaVinci & Renaissance Awards</span>
+                        <span class="px-2.5 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-[10px] font-bold rounded-full">600+ Teams/13 Countries</span>
                     </div>
                 </a>
 
                 <!-- Highlight 4: NASA (Routes to Aerospace Page) -->
-                <a href="#" onclick="navigate('aerospace'); return false;" class="group bg-card rounded-[1.5rem] p-6 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                <a href="#" onclick="navigate('nasa-moonshot'); return false;" class="group bg-card rounded-[1.5rem] p-6 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
                     <div class="absolute right-0 bottom-0 opacity-[0.03] text-primary pointer-events-none">
                         <svg width="150" height="150" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
                     </div>
@@ -178,7 +178,7 @@
                         </p>
                     </div>
                     <div class="relative z-10 flex flex-wrap gap-2 mt-4">
-                        <span class="px-2.5 py-1 bg-black/5 text-primary text-[10px] font-semibold rounded-full">Year-long Program (NASA)</span>
+                        <span class="px-2.5 py-1 bg-indigo-50 border border-indigo-200 text-indigo-700 text-[10px] font-bold rounded-full">Year-long Program (NASA)</span>
                     </div>
                 </a>
             </div>
@@ -1286,7 +1286,7 @@
                     <!-- Item 2 -->
                     <div class="flex flex-col md:flex-row gap-4 md:gap-12 relative group pt-6 border-t border-border/50">
                         <div class="md:w-1/4 flex-shrink-0">
-                            <span class="text-sm font-semibold text-muted">2024 - 2025</span>
+                            <span class="text-sm font-semibold text-muted">2025 - ongoing</span>
                         </div>
                         <div>
                             <h3 class="text-xl font-bold text-primary">Research Collaboration</h3>
@@ -1298,7 +1298,7 @@
                     <!-- Item 3 -->
                     <div class="flex flex-col md:flex-row gap-4 md:gap-12 relative group pt-6 border-t border-border/50">
                         <div class="md:w-1/4 flex-shrink-0">
-                            <span class="text-sm font-semibold text-muted">2023 - 2024</span>
+                            <span class="text-sm font-semibold text-muted">2025 - 2026</span>
                         </div>
                         <div>
                             <h3 class="text-xl font-bold text-primary">University-Level Coursework</h3>
@@ -1310,7 +1310,7 @@
                     <!-- Item 4 -->
                     <div class="flex flex-col md:flex-row gap-4 md:gap-12 relative group pt-6 border-t border-border/50">
                         <div class="md:w-1/4 flex-shrink-0">
-                            <span class="text-sm font-semibold text-muted">Summer 2022</span>
+                            <span class="text-sm font-semibold text-muted">Summer 2024</span>
                         </div>
                         <div>
                             <h3 class="text-xl font-bold text-primary">Simulated Flight Director</h3>
@@ -1374,7 +1374,25 @@
 
     <!-- Single Page App Routing Script -->
     <script>
+        // Map sub-sections to their parent page to support direct links
+        const sectionMap = {
+            'independent-research': 'engineering',
+            'independent-capstone': 'engineering',
+            'ut-austin-research': 'engineering',
+            'destination-imagination': 'engineering',
+            'nasa-moonshot': 'aerospace'
+        };
+
         function navigate(pageId, updateUrl = true) {
+            let parentPage = pageId;
+            let scrollTarget = null;
+
+            // Check if navigating to a sub-section
+            if (sectionMap[pageId]) {
+                parentPage = sectionMap[pageId];
+                scrollTarget = pageId;
+            }
+
             // 1. Hide all pages & reset animations
             const sections = document.querySelectorAll('.page-section');
             sections.forEach(sec => {
@@ -1383,7 +1401,7 @@
             });
 
             // 2. Show the target page
-            const targetPage = document.getElementById(pageId);
+            const targetPage = document.getElementById(parentPage);
             if (targetPage) {
                 targetPage.classList.remove('hidden');
                 // Force browser reflow to restart the fade-in animation
@@ -1394,7 +1412,7 @@
             // 3. Update active states on the Navigation Menu
             const navBtns = document.querySelectorAll('.nav-btn');
             navBtns.forEach(btn => {
-                if (btn.dataset.target === pageId) {
+                if (btn.dataset.target === parentPage) {
                     // Active styling
                     btn.classList.add('bg-black/10', 'text-primary');
                     btn.classList.remove('hover:bg-black/5', 'text-muted');
@@ -1410,8 +1428,17 @@
                 history.pushState(null, null, '#' + pageId);
             }
 
-            // 5. Scroll smoothly to the top of the page
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            // 5. Scroll smoothly to the top or the specific sub-section
+            if (scrollTarget) {
+                setTimeout(() => {
+                    const targetEl = document.getElementById(scrollTarget);
+                    if (targetEl) {
+                        targetEl.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }, 100); // Slight delay ensures page layout has shifted from display:none
+            } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
         }
 
         // Check the URL when the page first loads to open the correct tab
@@ -1419,7 +1446,7 @@
             const hash = window.location.hash.substring(1);
             const validPages = ['home', 'engineering', 'aerospace', 'music', 'experience', 'honors'];
             
-            if (hash && validPages.includes(hash)) {
+            if (hash && (validPages.includes(hash) || sectionMap[hash])) {
                 navigate(hash, false);
             } else {
                 navigate('home', false); // Default to home
@@ -1431,7 +1458,7 @@
             const hash = window.location.hash.substring(1);
             const validPages = ['home', 'engineering', 'aerospace', 'music', 'experience', 'honors'];
             
-            if (hash && validPages.includes(hash)) {
+            if (hash && (validPages.includes(hash) || sectionMap[hash])) {
                 navigate(hash, false);
             } else {
                 navigate('home', false);
