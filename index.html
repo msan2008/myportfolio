@@ -973,8 +973,23 @@
                         </ul>
 
                         <!-- Hardware Prototyping & Lab Gallery -->
-                        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <!-- Image 1: 3D Printed Sensor Mount -->
+                        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <!-- Image 1: 3D CAD Design of the Sensor Mount -->
+                            <div class="bg-bg rounded-2xl border border-border overflow-hidden shadow-sm flex flex-col">
+                                <div class="overflow-hidden bg-white aspect-video relative group flex items-center justify-center">
+                                    <img src="sensormount-3Ddesign.jpg" onerror="if (!this.dataset.tried) { this.dataset.tried = '1'; this.src = 'sensormount-3Ddesign.JPEG'; } else if (this.dataset.tried === '1') { this.dataset.tried = '2'; this.src = 'sensormount-3Ddesign.jpeg'; } else if (this.dataset.tried === '2') { this.dataset.tried = '3'; this.src = 'Sensormount-3Ddesign.jpg'; } else if (this.dataset.tried === '3') { this.dataset.tried = '4'; this.src = 'sensormount-3Ddesign.png'; }" alt="3D CAD Design of Drone Sensor Mount" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                                <div class="p-5 flex-grow flex flex-col justify-between">
+                                    <div>
+                                        <h4 class="font-bold text-primary text-sm mb-1.5">3D CAD Model of Sensor Mount</h4>
+                                        <p class="text-muted text-xs leading-relaxed">
+                                            3D CAD model of the custom modular sensor mount and enclosure, engineered with precise tolerances to house the distance sensor and circuit board while minimizing weight on the drone airframe.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Image 2: 3D Printed Sensor Mount -->
                             <div class="bg-bg rounded-2xl border border-border overflow-hidden shadow-sm flex flex-col">
                                 <div class="overflow-hidden bg-white aspect-video relative group">
                                     <img src="Sensormount.JPEG" onerror="if (!this.dataset.tried) { this.dataset.tried = '1'; this.src = 'Sensormount.jpg'; } else if (this.dataset.tried === '1') { this.dataset.tried = '2'; this.src = 'Sensormount.jpeg'; }" alt="Custom 3D-Printed Drone Sensor Mount" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -989,7 +1004,7 @@
                                 </div>
                             </div>
 
-                            <!-- Image 2: Vertical Flight Lab at UT Austin -->
+                            <!-- Image 3: Vertical Flight Lab at UT Austin -->
                             <div class="bg-bg rounded-2xl border border-border overflow-hidden shadow-sm flex flex-col">
                                 <div class="overflow-hidden bg-white aspect-video relative group">
                                     <img src="Sensormount-UTLab2.JPEG" onerror="if (!this.dataset.tried) { this.dataset.tried = '1'; this.src = 'Sensormount-UTLab2.jpg'; } else if (this.dataset.tried === '1') { this.dataset.tried = '2'; this.src = 'Sensormount-UTLab2.jpeg'; }" alt="Vertical Flight Lab at UT Austin Workbench" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -1078,7 +1093,7 @@
 
                                         <!-- Legend -->
                                         <div class="flex flex-wrap items-center justify-center gap-4 pt-2 border-t border-border/60 text-[11px] text-muted">
-                                            <span class="inline-flex items-center gap-1.5"><span class="w-3 h-0.5 bg-gray-400 inline-block border-t border-dashed border-gray-400"></span> Ideal (Actual)</span>
+                                            <span class="inline-flex items-center gap-1.5"><span class="w-3 h-0.5 bg-gray-400 inline-block border-t border-dashed border-gray-400"></span> Ideal</span>
                                             <span class="inline-flex items-center gap-1.5 font-medium text-primary"><span class="w-3 h-0.5 bg-[#2563EB] inline-block"></span> Adafruit VL53L0X</span>
                                             <span class="inline-flex items-center gap-1.5 font-medium text-primary"><span class="w-3 h-0.5 bg-[#EF4444] inline-block"></span> SparkFun VL53L1X</span>
                                             <span class="inline-flex items-center gap-1.5 font-medium text-primary"><span class="w-3 h-0.5 bg-[#10B981] inline-block"></span> Ultrasonic MB1000</span>
