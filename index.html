@@ -739,9 +739,14 @@
                     
                     <!-- Project Snapshot Section -->
                     <div class="p-6 md:p-8 bg-bg rounded-2xl border border-border">
-                        <strong class="text-primary block mb-3 text-lg">Overview</strong>
+                        <strong class="text-primary block mb-3 text-lg">The trigger</strong>
                         <p class="text-muted leading-relaxed text-sm md:text-base mb-6">
-                            During my research, I noticed a critical gap: costly 3D design and simulation software and expensive hardware needed to run those locks many aspiring engineers out of aerospace research. I designed and deployed Wingcheck Aero Toolkit, a lightweight browser-based aerodynamics screening platform that helps students and beginner engineering teams explore drone wing design without needing immediate access to expensive CFD software or wind-tunnel testing. The app uses a Python/Streamlit interface connected to a trained machine learning model that predicts <code class="bg-black/10 px-1.5 py-0.5 rounded text-primary text-xs font-mono">separation_x_over_c</code>, a normalized estimate of where airflow separation occurs along a wing chord. Users can adjust parameters such as airfoil family, angle of attack, airspeed, tubercle amplitude, tubercle wavelength, and wing geometry to compare how different designs may affect flow separation.
+                            During my research, I noticed a critical gap: costly 3D design and simulation software and expensive hardware needed to run those locks many aspiring engineers out of aerospace research.
+                        </p>
+
+                        <strong class="text-primary block mb-3 text-lg">The solution</strong>
+                        <p class="text-muted leading-relaxed text-sm md:text-base mb-6">
+                            I designed and deployed Wingcheck Aero Toolkit, a lightweight browser-based aerodynamics screening platform that helps students and beginner engineering teams explore drone wing design without needing immediate access to expensive CFD software or wind-tunnel testing. The app uses a Python/Streamlit interface connected to a trained machine learning model that predicts <code class="bg-black/10 px-1.5 py-0.5 rounded text-primary text-xs font-mono">separation_x_over_c</code>, a normalized estimate of where airflow separation occurs along a wing chord. Users can adjust parameters such as airfoil family, angle of attack, airspeed, tubercle amplitude, tubercle wavelength, and wing geometry to compare how different designs may affect flow separation.
                         </p>
                         
                         <!-- Recognition Chips -->
@@ -950,7 +955,7 @@
                     <div class="mt-8 pt-8 border-t border-border">
                         <strong class="text-primary block mb-4">My Contributions</strong>
                         <p class="text-muted text-sm md:text-base leading-relaxed mb-4">
-                            Assisted Professor Dr. Jayant Sirohi and a PhD student starting from my junior year, taking on the following responsibilities:
+                            Assisted Professor Dr. Jayant Sirohi and a PhD student at the Vertical Flight Lab starting from my junior year, taking on the following responsibilities:
                         </p>
                         <ul class="space-y-3 text-muted text-sm md:text-base">
                             <li class="flex items-start">
@@ -963,9 +968,42 @@
                             </li>
                             <li class="flex items-start">
                                 <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span class="leading-relaxed">3D designed the sensor mount & case to install the sensors on the drone. Currently working with the Professor and Ph.D students to integrate these sensors into the drone.</span>
+                                <span class="leading-relaxed">3D designed and printed the custom sensor mount and housing case to securely install the chosen sensor onto the drone. Currently working with the Professor and Ph.D. students at the Vertical Flight Lab to integrate these sensors into the drone platform.</span>
                             </li>
                         </ul>
+
+                        <!-- Hardware Prototyping & Lab Gallery -->
+                        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Image 1: 3D Printed Sensor Mount -->
+                            <div class="bg-bg rounded-2xl border border-border overflow-hidden shadow-sm flex flex-col">
+                                <div class="overflow-hidden bg-white aspect-video relative group">
+                                    <img src="Sensormount.JPEG" onerror="if (!this.dataset.tried) { this.dataset.tried = '1'; this.src = 'Sensormount.jpg'; } else if (this.dataset.tried === '1') { this.dataset.tried = '2'; this.src = 'Sensormount.jpeg'; }" alt="Custom 3D-Printed Drone Sensor Mount" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                                <div class="p-5 flex-grow flex flex-col justify-between">
+                                    <div>
+                                        <h4 class="font-bold text-primary text-sm mb-1.5">Custom 3D-Printed Drone Sensor Mount</h4>
+                                        <p class="text-muted text-xs leading-relaxed">
+                                            Designed and 3D printed the custom modular housing that securely mounts the collision-avoidance distance sensor and wiring board directly onto the US Navy drone while maintaining clear optical alignment.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Image 2: Vertical Flight Lab at UT Austin -->
+                            <div class="bg-bg rounded-2xl border border-border overflow-hidden shadow-sm flex flex-col">
+                                <div class="overflow-hidden bg-white aspect-video relative group">
+                                    <img src="Sensormount-UTLab2.JPEG" onerror="if (!this.dataset.tried) { this.dataset.tried = '1'; this.src = 'Sensormount-UTLab2.jpg'; } else if (this.dataset.tried === '1') { this.dataset.tried = '2'; this.src = 'Sensormount-UTLab2.jpeg'; }" alt="Vertical Flight Lab at UT Austin Workbench" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                                <div class="p-5 flex-grow flex flex-col justify-between">
+                                    <div>
+                                        <h4 class="font-bold text-primary text-sm mb-1.5">Vertical Flight Lab at UT Austin</h4>
+                                        <p class="text-muted text-xs leading-relaxed">
+                                            Inside the Vertical Flight Lab at the University of Texas at Austin.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- My Impact Section -->
