@@ -79,13 +79,15 @@
 <body class="relative pb-32 flex flex-col min-h-screen">
 
     <!-- Floating Pill Navigation (JS Controlled) -->
-    <nav class="fixed top-6 right-6 md:right-10 glass-nav border border-border px-2 py-2 rounded-full z-50 shadow-glass flex items-center gap-1 sm:gap-2 transition-all w-max max-w-[95vw]">
-        <button onclick="navigate('home')" data-target="home" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors bg-black/10 text-primary">Home</button>
-        <button onclick="navigate('engineering')" data-target="engineering" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted">Engineering</button>
-        <button onclick="navigate('aerospace')" data-target="aerospace" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted">Aerospace</button>
-        <button onclick="navigate('music')" data-target="music" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted">Music</button>
-        <button onclick="navigate('experience')" data-target="experience" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted">Experience</button>
-        <button onclick="navigate('honors')" data-target="honors" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted">Honors</button>
+    <nav class="fixed top-6 right-6 md:right-10 glass-nav border border-border px-2 py-2 rounded-full z-50 shadow-glass flex items-center gap-1 sm:gap-2 transition-all w-max max-w-[95vw] overflow-x-auto">
+        <button onclick="navigate('home')" data-target="home" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors bg-black/10 text-primary whitespace-nowrap">Home</button>
+        <button onclick="navigate('research')" data-target="research" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted whitespace-nowrap">Research</button>
+        <button onclick="navigate('Engineering')" data-target="engineering" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted whitespace-nowrap">Engineering</button>
+        <button onclick="navigate('Labresearch')" data-target="labresearch" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted whitespace-nowrap">Lab Research</button>
+        <button onclick="navigate('aerospace')" data-target="aerospace" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted whitespace-nowrap">Aerospace</button>
+        <button onclick="navigate('music')" data-target="music" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted whitespace-nowrap">Music</button>
+        <button onclick="navigate('experience')" data-target="experience" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted whitespace-nowrap">Experience</button>
+        <button onclick="navigate('honors')" data-target="honors" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted whitespace-nowrap">Honors</button>
     </nav>
 
     <!-- Main Content Container -->
@@ -105,8 +107,8 @@
             <!-- "AT A GLANCE" BENTO GRID -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 
-                <!-- Highlight 1: Engineering (Routes to Engineering Page) -->
-                <a href="#" onclick="navigate('engineering'); return false;" class="group bg-card rounded-[1.5rem] p-6 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden relative">
+                <!-- Highlight 1: Research (Routes to Research Page) -->
+                <a href="#research" onclick="navigate('research'); return false;" class="group bg-card rounded-[1.5rem] p-6 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden relative">
                     <div class="absolute -right-10 -top-10 w-32 h-32 bg-accent/5 rounded-full blur-2xl group-hover:bg-accent/10 transition-colors"></div>
                     
                     <div class="relative z-10">
@@ -184,16 +186,15 @@
             </div>
         </section>
 
-        <!-- ================= PAGE 2: ENGINEERING ================= -->
-        <section id="engineering" class="page-section hidden">
+        <!-- ================= PAGE 2: RESEARCH ================= -->
+        <section id="research" class="page-section hidden">
             <div class="mb-12">
-                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-primary mb-4">Engineering </h2>
-                <p class="text-lg text-muted max-w-2xl mb-8">Projects enriching my passion for aerospace and engineering</p>
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-primary mb-4">Research</h2>
+                <p class="text-lg text-muted max-w-2xl mb-8">Independent research projects advancing aerodynamic efficiency and propulsion systems</p>
 
-                <!--  Highlight Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <!-- Card 1 -->
-                    <div onclick="navigate('independent-research');" class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300 flex flex-col justify-between cursor-pointer group">
+                <!-- Highlight Card: Independent Research Projects -->
+                <div class="grid grid-cols-1 gap-6">
+                    <div onclick="document.getElementById('independent-research').scrollIntoView({ behavior: 'smooth' });" class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300 flex flex-col justify-between cursor-pointer group">
                         <div>
                             <h3 class="text-lg font-bold text-primary mb-3 group-hover:text-accent transition-colors">Independent Research Projects</h3>
                             <p class="text-muted text-sm leading-relaxed">Conducted research for aircraft fuel efficiency improvement, paper published in JEI pre-print, Under Peer-Review for JEI Journal, named Top 12/330 at Sci Fair, securing awards and $6K scholarship</p>
@@ -206,40 +207,6 @@
                             <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-black/5 border border-border text-primary text-[11px] font-semibold rounded-full">
                                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
                                 2x Sci-Fair winner
-                            </span>
-                        </div>
-                    </div>
-                    <!-- Card 2 -->
-                    <div onclick="navigate('independent-capstone');" class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300 flex flex-col justify-between cursor-pointer group">
-                        <div>
-                            <h3 class="text-lg font-bold text-primary mb-3 group-hover:text-accent transition-colors">Independent Capstone project</h3>
-                            <p class="text-muted text-sm leading-relaxed">Developed a browser-based open-source predictive aerodynamics software toolkit for screening aircraft wing efficiency, replacing costly hardware and simulation software; hosted workshops and published YouTube video; refined via 60+ user feedbacks</p>
-                        </div>
-                        <div class="mt-6 flex flex-wrap gap-2">
-                            <a href="https://wingcheck.streamlit.app/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="inline-flex items-center gap-1.5 px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-xs font-semibold rounded-full hover:bg-accent/20 transition-colors">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                                Toolkit website
-                            </a>
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-black/5 border border-border text-primary text-xs font-semibold rounded-full">
-                                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
-                                GitHub link
-                            </span>
-                        </div>
-                    </div>
-                    <!-- Card 3 -->
-                    <div onclick="navigate('ut-austin-research');" class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300 flex flex-col justify-between cursor-pointer group">
-                        <div>
-                            <h3 class="text-lg font-bold text-primary mb-3 group-hover:text-accent transition-colors">UT Austin Research Assistant</h3>
-                            <p class="text-muted text-sm leading-relaxed">Assisted UT Austin Professor Dr. Sirohi at the Flight Lab on the research project for the US Dept of Navy; evaluated drone sensors & designed precise 3D models </p>
-                        </div>
-                        <div class="mt-6 flex flex-wrap gap-2">
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-xs font-semibold rounded-full">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
-                                US Navy project
-                            </span>
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-black/5 border border-border text-primary text-xs font-semibold rounded-full">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
-                                Flight Lab
                             </span>
                         </div>
                     </div>
@@ -708,9 +675,55 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- ================= PAGE 3: ENGINEERING ================= -->
+        <section id="engineering" class="page-section hidden">
+            <div class="mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-primary mb-4">Engineering</h2>
+                <p class="text-lg text-muted max-w-2xl mb-8">Projects enriching my passion for aerospace and engineering</p>
+
+                <!-- Highlight Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Card 1: Independent Capstone project -->
+                    <div onclick="document.getElementById('independent-capstone').scrollIntoView({ behavior: 'smooth' });" class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300 flex flex-col justify-between cursor-pointer group">
+                        <div>
+                            <h3 class="text-lg font-bold text-primary mb-3 group-hover:text-accent transition-colors">Independent Capstone project</h3>
+                            <p class="text-muted text-sm leading-relaxed">Developed a browser-based open-source predictive aerodynamics software toolkit for screening aircraft wing efficiency, replacing costly hardware and simulation software; hosted workshops and published YouTube video; refined via 60+ user feedbacks</p>
+                        </div>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <a href="https://wingcheck.streamlit.app/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="inline-flex items-center gap-1.5 px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-xs font-semibold rounded-full hover:bg-accent/20 transition-colors">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                Toolkit website
+                            </a>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-black/5 border border-border text-primary text-xs font-semibold rounded-full">
+                                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                                GitHub link
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Destination Imagination -->
+                    <div onclick="document.getElementById('destination-imagination').scrollIntoView({ behavior: 'smooth' });" class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300 flex flex-col justify-between cursor-pointer group">
+                        <div>
+                            <h3 class="text-lg font-bold text-primary mb-3 group-hover:text-accent transition-colors">Destination Imagination</h3>
+                            <p class="text-muted text-sm leading-relaxed">Co-led technical engineering and mechatronics design across multiple international STEAM challenges, building electromagnetic cranes, pneumatic structures, and precision launchers</p>
+                        </div>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold rounded-full">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                                2x Global 1st Place
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-black/5 border border-border text-primary text-xs font-semibold rounded-full">
+                                DaVinci & Renaissance Awards
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- Independent Capstone Project Section -->
-            <div id="independent-capstone" class="bg-card rounded-[2rem] border border-border overflow-hidden shadow-framer mt-12 scroll-mt-28">
+            <div id="independent-capstone" class="bg-card rounded-[2rem] border border-border overflow-hidden shadow-framer scroll-mt-28">
                 <div class="p-8 md:p-12">
                     <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
                         <div>
@@ -781,55 +794,6 @@
                         </div>
                     </div>
 
-                </div>
-            </div>
-
-            <!-- UT Austin Research Assistant Section -->
-            <div id="ut-austin-research" class="bg-card rounded-[2rem] border border-border overflow-hidden shadow-framer mt-12 scroll-mt-28">
-                <div class="p-8 md:p-12">
-                    <p class="text-accent font-semibold tracking-wider text-2xl uppercase mb-2">Research Assistant</p>
-                    <h3 class="text-3xl md:text-4xl font-bold tracking-tight mb-6">UT Austin research project for the US Dept of Navy</h3>
-                    
-                    <!-- Project Snapshot Section -->
-                    <div class="p-6 md:p-8 bg-bg rounded-2xl border border-border">
-                        <strong class="text-primary block mb-3 text-lg">Project Snapshot</strong>
-                        <p class="text-muted leading-relaxed text-sm md:text-base mb-0">
-                            Build a special purpose drone for US Dept of Navy to enable ship inspection. The special requirements include extended range, advanced drone collision avoidance.
-                        </p>
-                    </div>
-
-                    <!-- My contributions Section -->
-                    <div class="mt-8 pt-8 border-t border-border">
-                        <strong class="text-primary block mb-4">My Contributions</strong>
-                        <p class="text-muted text-sm md:text-base leading-relaxed mb-4">
-                            Assisted Professor Dr. Jayant Sirohi and a PhD student starting from my junior year, taking on the following responsibilities:
-                        </p>
-                        <ul class="space-y-3 text-muted text-sm md:text-base">
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span class="leading-relaxed">Designed precise 3D models of test harnesses for experimental setups.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span class="leading-relaxed">Conducted 670 rigorous tests across multiple distance sensors—including the Sparkfun Qwiic Time of Flight (ToF), Adafruit ToF, and an Ultrasonic High Performance Range Finder—to critically evaluate accuracy, latency, and error margins for semi-autonomous navigation.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span class="leading-relaxed">3D designed the sensor mount & case to install the sensors on the drone. Currently working with the Professor and Ph.D students to integrate these sensors into the drone.</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- My Impact Section -->
-                    <div class="mt-8 pt-8 border-t border-border">
-                        <strong class="text-primary block mb-4">My Impact & Growth</strong>
-                        <p class="text-muted text-sm md:text-base leading-relaxed mb-4">
-                            Following the testing phase, I performed comprehensive data analysis and generated visual representations to identify the most effective sensor for our specific flight requirements. The sensor for integration was chosen based on this testing and analysis.
-                        </p>
-                        <p class="text-muted text-sm md:text-base leading-relaxed">
-                            Beyond the technical deliverables, this role has been an immense catalyst for my personal and academic growth. It has provided me with direct, hands-on exposure to professional-level research standards and disciplined testing processes within a top-tier university laboratory environment.
-                        </p>
-                    </div>
                 </div>
             </div>
 
@@ -941,7 +905,84 @@
 
         </section>
 
-        <!-- ================= PAGE 3: AEROSPACE (NEW) ================= -->
+        <!-- ================= PAGE 4: LAB RESEARCH ================= -->
+        <section id="labresearch" class="page-section hidden">
+            <div class="mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-primary mb-4">Lab Research</h2>
+                <p class="text-lg text-muted max-w-2xl mb-8">Collaborative aerospace research at the University of Texas at Austin</p>
+
+                <!-- Highlight Card: UT Austin Research Assistant -->
+                <div class="grid grid-cols-1 gap-6">
+                    <div onclick="document.getElementById('ut-austin-research').scrollIntoView({ behavior: 'smooth' });" class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300 flex flex-col justify-between cursor-pointer group">
+                        <div>
+                            <h3 class="text-lg font-bold text-primary mb-3 group-hover:text-accent transition-colors">UT Austin Research Assistant</h3>
+                            <p class="text-muted text-sm leading-relaxed">Assisted UT Austin Professor Dr. Sirohi at the Flight Lab on the research project for the US Dept of Navy; evaluated drone sensors & designed precise 3D models </p>
+                        </div>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-xs font-semibold rounded-full">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                                US Navy project
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-black/5 border border-border text-primary text-xs font-semibold rounded-full">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                                Flight Lab
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UT Austin Research Assistant Section -->
+            <div id="ut-austin-research" class="bg-card rounded-[2rem] border border-border overflow-hidden shadow-framer scroll-mt-28">
+                <div class="p-8 md:p-12">
+                    <p class="text-accent font-semibold tracking-wider text-2xl uppercase mb-2">Research Assistant</p>
+                    <h3 class="text-3xl md:text-4xl font-bold tracking-tight mb-6">UT Austin research project for the US Dept of Navy</h3>
+                    
+                    <!-- Project Snapshot Section -->
+                    <div class="p-6 md:p-8 bg-bg rounded-2xl border border-border">
+                        <strong class="text-primary block mb-3 text-lg">Project Snapshot</strong>
+                        <p class="text-muted leading-relaxed text-sm md:text-base mb-0">
+                            Build a special purpose drone for US Dept of Navy to enable ship inspection. The special requirements include extended range, advanced drone collision avoidance.
+                        </p>
+                    </div>
+
+                    <!-- My contributions Section -->
+                    <div class="mt-8 pt-8 border-t border-border">
+                        <strong class="text-primary block mb-4">My Contributions</strong>
+                        <p class="text-muted text-sm md:text-base leading-relaxed mb-4">
+                            Assisted Professor Dr. Jayant Sirohi and a PhD student starting from my junior year, taking on the following responsibilities:
+                        </p>
+                        <ul class="space-y-3 text-muted text-sm md:text-base">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span class="leading-relaxed">Designed precise 3D models of test harnesses for experimental setups.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span class="leading-relaxed">Conducted 670 rigorous tests across multiple distance sensors—including the Sparkfun Qwiic Time of Flight (ToF), Adafruit ToF, and an Ultrasonic High Performance Range Finder—to critically evaluate accuracy, latency, and error margins for semi-autonomous navigation.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span class="leading-relaxed">3D designed the sensor mount & case to install the sensors on the drone. Currently working with the Professor and Ph.D students to integrate these sensors into the drone.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- My Impact Section -->
+                    <div class="mt-8 pt-8 border-t border-border">
+                        <strong class="text-primary block mb-4">My Impact & Growth</strong>
+                        <p class="text-muted text-sm md:text-base leading-relaxed mb-4">
+                            Following the testing phase, I performed comprehensive data analysis and generated visual representations to identify the most effective sensor for our specific flight requirements. The sensor for integration was chosen based on this testing and analysis.
+                        </p>
+                        <p class="text-muted text-sm md:text-base leading-relaxed">
+                            Beyond the technical deliverables, this role has been an immense catalyst for my personal and academic growth. It has provided me with direct, hands-on exposure to professional-level research standards and disciplined testing processes within a top-tier university laboratory environment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 5: AEROSPACE ================= -->
         <section id="aerospace" class="page-section hidden">
             <div class="mb-12">
                 <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-primary mb-4">My Aerospace Journey</h2>
@@ -1444,24 +1485,30 @@
 
     <!-- Single Page App Routing Script -->
     <script>
-        // Map shorthand URL hashes to their actual section IDs
+        // Map shorthand URL hashes (lowercase) to their target page or sub-section IDs
         const aliasMap = {
-            'research': 'independent-research',
+            'research': 'research',
+            'engineering': 'engineering',
+            'labresearch': 'labresearch',
+            'lab-research': 'labresearch',
             'capstone': 'independent-capstone',
             'toolkit': 'independent-capstone'
         };
 
         // Map sub-sections to their parent page to support direct links
         const sectionMap = {
-            'independent-research': 'engineering',
+            'independent-research': 'research',
             'independent-capstone': 'engineering',
-            'ut-austin-research': 'engineering',
             'destination-imagination': 'engineering',
+            'ut-austin-research': 'labresearch',
             'nasa-moonshot': 'aerospace'
         };
 
+        const validPages = ['home', 'research', 'engineering', 'labresearch', 'aerospace', 'music', 'experience', 'honors'];
+
         function navigate(pageId, updateUrl = true) {
-            const resolvedId = aliasMap[pageId] || pageId;
+            const normalizedInput = (pageId || '').toLowerCase();
+            const resolvedId = aliasMap[normalizedInput] || normalizedInput;
             let parentPage = resolvedId;
             let scrollTarget = null;
 
@@ -1519,29 +1566,23 @@
             }
         }
 
-        // Check the URL when the page first loads to open the correct tab
-        document.addEventListener('DOMContentLoaded', () => {
-            const hash = window.location.hash.substring(1);
-            const validPages = ['home', 'engineering', 'aerospace', 'music', 'experience', 'honors'];
+        function handleInitialOrPopState() {
+            const rawHash = window.location.hash.substring(1);
+            const normalizedHash = rawHash.toLowerCase();
             
-            if (hash && (validPages.includes(hash) || sectionMap[hash] || aliasMap[hash])) {
-                navigate(hash, false);
+            if (rawHash && (validPages.includes(normalizedHash) || sectionMap[normalizedHash] || aliasMap[normalizedHash])) {
+                navigate(rawHash, false);
             } else {
                 navigate('home', false); // Default to home
             }
-        });
+        }
 
-        // Handle browser back/forward buttons properly
-        window.addEventListener('popstate', () => {
-            const hash = window.location.hash.substring(1);
-            const validPages = ['home', 'engineering', 'aerospace', 'music', 'experience', 'honors'];
-            
-            if (hash && (validPages.includes(hash) || sectionMap[hash] || aliasMap[hash])) {
-                navigate(hash, false);
-            } else {
-                navigate('home', false);
-            }
-        });
+        // Check the URL when the page first loads to open the correct tab
+        document.addEventListener('DOMContentLoaded', handleInitialOrPopState);
+
+        // Handle browser back/forward buttons and hash changes properly
+        window.addEventListener('popstate', handleInitialOrPopState);
+        window.addEventListener('hashchange', handleInitialOrPopState);
     </script>
 </body>
 </html>
