@@ -189,14 +189,15 @@
         <!-- ================= PAGE 2: RESEARCH ================= -->
         <section id="research" class="page-section hidden">
             <div class="mb-12">
-                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-primary mb-4">Research</h2>
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-primary mb-4">Independent research</h2>
                 <p class="text-lg text-muted max-w-2xl mb-8">Independent research projects advancing aerodynamic efficiency and propulsion systems</p>
 
-                <!-- Highlight Card: Independent Research Projects -->
-                <div class="grid grid-cols-1 gap-6">
+                <!-- Highlight Cards: Biomimetic Aerodynamic Research & Ion vs. Chemical Propulsion Study -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Card 1: Biomimetic Aerodynamic Research -->
                     <div onclick="document.getElementById('independent-research').scrollIntoView({ behavior: 'smooth' });" class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300 flex flex-col justify-between cursor-pointer group">
                         <div>
-                            <h3 class="text-lg font-bold text-primary mb-3 group-hover:text-accent transition-colors">Independent Research Projects</h3>
+                            <h3 class="text-lg font-bold text-primary mb-3 group-hover:text-accent transition-colors">Biomimetic Aerodynamic Research</h3>
                             <p class="text-muted text-sm leading-relaxed">Conducted research for aircraft fuel efficiency improvement, paper published in JEI pre-print, Under Peer-Review for JEI Journal, named Top 12/330 at Sci Fair, securing awards and $6K scholarship</p>
                         </div>
                         <div class="mt-6 flex flex-wrap gap-2">
@@ -210,12 +211,28 @@
                             </span>
                         </div>
                     </div>
+
+                    <!-- Card 2: Ion vs. Chemical Propulsion Study -->
+                    <div onclick="document.getElementById('ion-propulsion-study').scrollIntoView({ behavior: 'smooth' });" class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300 flex flex-col justify-between cursor-pointer group">
+                        <div>
+                            <h3 class="text-lg font-bold text-primary mb-3 group-hover:text-accent transition-colors">Ion vs. Chemical Propulsion Study</h3>
+                            <p class="text-muted text-sm leading-relaxed">Conducted a freshman-year comparative study evaluating electric ion propulsion (NASA NEXT-C) versus chemical rocket engines (RS-25) across specific impulse, thrust, fuel consumption, and deep-space velocity gain</p>
+                        </div>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-[11px] font-semibold rounded-full">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                Deep-Space Propulsion
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-black/5 border border-border text-primary text-[11px] font-semibold rounded-full">
+                                NEXT-C vs. RS-25 Analysis
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div id="independent-research" class="bg-card rounded-[2rem] border border-border overflow-hidden shadow-framer scroll-mt-28">
                 <div class="p-8 md:p-12 border-b border-border">
-                    <p class="text-accent font-semibold tracking-wider text-2xl uppercase mb-2">Independent Research</p>
                     <h3 class="text-3xl md:text-4xl font-bold tracking-tight mb-6">Prototyping & Flight-Testing Biomimetic Wings to Optimize Aerodynamic Efficiency</h3>
                     
                     <!-- Project Snapshot Section -->
@@ -660,923 +677,142 @@
                             </li>
                         </ul>
                     </div>
-
-                    <!-- Additional Independent Research Cards -->
-                    <div class="mt-12 pt-10 border-t border-border grid grid-cols-1 gap-6">
-                        <!-- Ion vs. Chemical Propulsion Study Card -->
-                        <div class="bg-bg rounded-3xl p-6 md:p-8 border border-border shadow-sm hover:shadow-framer transition-all duration-300 flex flex-col justify-between">
-                            <div>
-                                <h4 class="text-lg font-bold text-primary mb-3">Ion vs. Chemical Propulsion Study</h4>
-                                <p class="text-muted text-sm leading-relaxed mb-4">
-                                    In Freshman year, conducted a comparative study evaluating propulsion systems in modern spacecraft. Analyzed specific limitations, thrust-to-weight ratios, and long-term deep space benefits of each methodology.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= PAGE 3: ENGINEERING ================= -->
-        <section id="engineering" class="page-section hidden">
-            <div class="mb-12">
-                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-primary mb-4">Engineering</h2>
-                <p class="text-lg text-muted max-w-2xl mb-8">Projects enriching my passion for aerospace and engineering</p>
-
-                <!-- Highlight Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- Card 1: Independent Capstone project -->
-                    <div onclick="document.getElementById('independent-capstone').scrollIntoView({ behavior: 'smooth' });" class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300 flex flex-col justify-between cursor-pointer group">
-                        <div>
-                            <h3 class="text-lg font-bold text-primary mb-3 group-hover:text-accent transition-colors">Independent Capstone project</h3>
-                            <p class="text-muted text-sm leading-relaxed">Developed a browser-based open-source predictive aerodynamics software toolkit for screening aircraft wing efficiency, replacing costly hardware and simulation software; hosted workshops and published YouTube video; refined via 60+ user feedbacks</p>
-                        </div>
-                        <div class="mt-6 flex flex-wrap gap-2">
-                            <a href="https://wingcheck.streamlit.app/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="inline-flex items-center gap-1.5 px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-xs font-semibold rounded-full hover:bg-accent/20 transition-colors">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                                Toolkit website
-                            </a>
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-black/5 border border-border text-primary text-xs font-semibold rounded-full">
-                                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
-                                GitHub link
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- Card 2: Destination Imagination -->
-                    <div onclick="document.getElementById('destination-imagination').scrollIntoView({ behavior: 'smooth' });" class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300 flex flex-col justify-between cursor-pointer group">
-                        <div>
-                            <h3 class="text-lg font-bold text-primary mb-3 group-hover:text-accent transition-colors">Destination Imagination</h3>
-                            <p class="text-muted text-sm leading-relaxed">Co-led technical engineering and mechatronics design across multiple international STEAM challenges, building electromagnetic cranes, pneumatic structures, and precision launchers</p>
-                        </div>
-                        <div class="mt-6 flex flex-wrap gap-2">
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold rounded-full">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
-                                2x Global 1st Place
-                            </span>
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-black/5 border border-border text-primary text-xs font-semibold rounded-full">
-                                DaVinci & Renaissance Awards
-                            </span>
-                        </div>
-                    </div>
                 </div>
             </div>
 
-            <!-- Independent Capstone Project Section -->
-            <div id="independent-capstone" class="bg-card rounded-[2rem] border border-border overflow-hidden shadow-framer scroll-mt-28">
+            <!-- Standalone Ion vs. Chemical Propulsion Study Box -->
+            <div id="ion-propulsion-study" class="bg-card rounded-[2rem] border border-border overflow-hidden shadow-framer mt-12 scroll-mt-28">
                 <div class="p-8 md:p-12">
-                    <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
-                        <div>
-                            <p class="text-accent font-semibold tracking-wider text-2xl uppercase mb-2">Independent Capstone Project</p>
-                            <h3 class="text-3xl md:text-4xl font-bold tracking-tight">WingCheck Aero Toolkit: Open-Source Aerodynamics Education Platform</h3>
-                        </div>
-                        <div class="flex-shrink-0 mt-2 md:mt-0">
-                            <span class="inline-flex items-center px-4 py-1.5 bg-black/5 border border-border text-primary text-sm font-semibold rounded-full">
-                                Role: Founder & Lead Developer
-                            </span>
-                        </div>
-                    </div>
+                    <h3 class="text-3xl md:text-4xl font-bold tracking-tight mb-6">Ion vs. Chemical Propulsion Study: Ion Propulsion and the Future of Deep-Space Travel</h3>
                     
-                    <!-- Project Snapshot Section -->
-                    <div class="p-6 md:p-8 bg-bg rounded-2xl border border-border">
-                        <strong class="text-primary block mb-3 text-lg">The trigger</strong>
-                        <p class="text-muted leading-relaxed text-sm md:text-base mb-6">
-                            During my research, I noticed a critical gap: costly 3D design and simulation software and expensive hardware needed to run those locks many aspiring engineers out of aerospace research.
-                        </p>
-
-                        <strong class="text-primary block mb-3 text-lg">The solution</strong>
-                        <p class="text-muted leading-relaxed text-sm md:text-base mb-6">
-                            I designed and deployed Wingcheck Aero Toolkit, a lightweight browser-based aerodynamics screening platform that helps students and beginner engineering teams explore drone wing design without needing immediate access to expensive CFD software or wind-tunnel testing. The app uses a Python/Streamlit interface connected to a trained machine learning model that predicts <code class="bg-black/10 px-1.5 py-0.5 rounded text-primary text-xs font-mono">separation_x_over_c</code>, a normalized estimate of where airflow separation occurs along a wing chord. Users can adjust parameters such as airfoil family, angle of attack, airspeed, tubercle amplitude, tubercle wavelength, and wing geometry to compare how different designs may affect flow separation.
-                        </p>
-
-                        <strong class="text-primary block mb-3 text-lg">Technical Work</strong>
-                        <p class="text-muted leading-relaxed text-sm md:text-base mb-6">
-                            I built the toolkit as an end-to-end engineering project: generating and organizing CFD-style training data, comparing regression model families, validating predictions on held-out data, saving the trained model pipeline, and connecting it to a public web application. I also made the project open source so that other students, mentors, and educators can inspect the code, test new designs, and suggest improvements.
-                        </p>
-                        
-                        <strong class="text-primary block mb-3 text-lg">Technical Challenge</strong>
-                        <p class="text-muted leading-relaxed text-sm md:text-base mb-6">
-                            A major challenge was balancing usability with scientific honesty. The tool is carefully designed as a first-pass screening system to guide intuition, rather than a direct replacement for professional CFD, physical wind-tunnel testing, or rigorous flight validation.
-                        </p>
-
-                        <strong class="text-primary block mb-3 text-lg">Why This Matters</strong>
-                        <p class="text-muted leading-relaxed text-sm md:text-base mb-6">
-                            Aero Toolkit is meant to make aerodynamic design more accessible. Instead of requiring students to begin with advanced, often intimidating simulation tools, it gives them an interactive way to test ideas, compare designs, and decide which concepts deserve deeper analysis. Furthermore, the project directly connects aerodynamic efficiency to sustainability by helping students reason about how better wing designs can reduce wasted energy and significantly improve battery-powered flight capabilities.
-                        </p>
-                        
-                        <!-- Recognition Chips -->
-                        <div class="flex flex-wrap gap-2">
-                            <a href="https://wingcheck.streamlit.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-xs font-semibold rounded-full hover:bg-accent/20 transition-colors">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                                Toolkit website
-                            </a>
-                            <a href="https://github.com/msan2008/aero-toolkit" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1 bg-black/5 border border-border text-primary text-xs font-semibold rounded-full hover:bg-black/10 transition-colors">
-                                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
-                                GitHub link
-                            </a>
-                            <a href="https://youtu.be/lzyqT_8kMPs" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1 bg-red-50 border border-red-200 text-red-700 text-xs font-semibold rounded-full hover:bg-red-100 transition-colors">
-                                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                                Video Walkthrough
-                            </a>
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold rounded-full">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                                Workshop info
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- Video Walkthrough & Educational Demo Section -->
-                    <div class="mt-8 pt-8 border-t border-border">
-                        <strong class="text-primary block mb-3 text-lg">Video Walkthrough &amp; Platform Demonstration</strong>
-                        <p class="text-muted text-sm md:text-base leading-relaxed mb-5">
-                            In this walkthrough video (<em>Biomimicry in Flight: Using Machine Learning to Optimize Better Aircraft Wings</em>), I demonstrate how students and early-stage engineering teams can use WingCheck in the browser to compare symmetric, cambered, and humpback whale-inspired tubercle wings, interpret real-time <code class="bg-black/10 px-1.5 py-0.5 rounded text-primary text-xs font-mono">separation_x_over_c</code> predictions (<strong class="text-primary">R&sup2; = 0.984</strong> on held-out test data), and explore how aerodynamic efficiency connects to battery life and carbon emissions.
-                        </p>
-                        <div class="rounded-2xl overflow-hidden border border-border shadow-sm bg-black aspect-video w-full">
-                            <iframe 
-                                class="w-full h-full"
-                                src="https://www.youtube.com/embed/lzyqT_8kMPs" 
-                                title="Biomimicry in Flight - Using Machine Learning to Optimize Better Aircraft Wings" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                referrerpolicy="strict-origin-when-cross-origin" 
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                    </div>
-
-                    <!-- Community and Educational Impact Section -->
-                    <div class="mt-8 pt-8 border-t border-border">
-                        <strong class="text-primary block mb-4 text-lg">Community &amp; Educational Impact: Video &amp; Web App Feedback Evaluation</strong>
-                        <p class="text-muted text-sm md:text-base leading-relaxed mb-6">
-                            To make the tool useful beyond my own research, I paired the software with a workshop slide deck, student worksheet, instructional video, and feedback survey. A comprehensive evaluation survey was conducted among students and users who viewed the YouTube walkthrough video and tested the <strong>WingCheck Aero Toolkit</strong> hands-on. The feedback confirmed substantial learning gains across aerodynamics and machine learning concepts, exceptional web app usability (<strong class="text-primary">4.72/5 ease of use</strong>), and strong peer advocacy—while providing actionable feature requests that directly guide the platform's roadmap.
-                        </p>
-
-                        <!-- Top Key Metrics (4 KPI Cards from Survey Summary) -->
-                        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-                            <!-- Metric 1: Total Respondents (61) -->
-                            <div class="bg-bg rounded-2xl p-5 border border-border shadow-sm flex flex-col justify-between">
-                                <span class="text-[10px] font-bold uppercase tracking-wider text-muted mb-1">Total Respondents</span>
-                                <div class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight my-1">61</div>
-                                <span class="text-xs text-muted font-medium">Responses recorded</span>
-                            </div>
-
-                            <!-- Metric 2: Avg Video Clarity -->
-                            <div class="bg-bg rounded-2xl p-5 border border-border shadow-sm flex flex-col justify-between">
-                                <span class="text-[10px] font-bold uppercase tracking-wider text-muted mb-1">Avg Video Clarity</span>
-                                <div class="text-3xl md:text-4xl font-extrabold text-accent tracking-tight my-1">4.53<span class="text-xl text-muted font-semibold">/5</span></div>
-                                <span class="text-xs text-muted font-medium">Clear scientific explanation</span>
-                            </div>
-
-                            <!-- Metric 3: Student Recommendation -->
-                            <div class="bg-bg rounded-2xl p-5 border border-border shadow-sm flex flex-col justify-between">
-                                <span class="text-[10px] font-bold uppercase tracking-wider text-muted mb-1">Student Recommendation</span>
-                                <div class="text-3xl md:text-4xl font-extrabold text-emerald-600 tracking-tight my-1">90.6%</div>
-                                <span class="text-xs text-muted font-medium">Would recommend to peers</span>
-                            </div>
-
-                            <!-- Metric 4: Learning Utility Rate -->
-                            <div class="bg-bg rounded-2xl p-5 border border-border shadow-sm flex flex-col justify-between">
-                                <span class="text-[10px] font-bold uppercase tracking-wider text-muted mb-1">Learning Utility Rate</span>
-                                <div class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight my-1">92.5%</div>
-                                <span class="text-xs text-muted font-medium">Tool helps students learn</span>
-                            </div>
-                        </div>
-
-                        <!-- 3 Survey Summary Graphs -->
-                        <div class="space-y-6 mb-8">
-                            
-                            <!-- Graph 1: Knowledge Growth: Pre-Video Baseline vs. Post-Video Understanding -->
-                            <div class="bg-bg rounded-2xl border border-border p-5 md:p-6 shadow-sm">
-                                <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-                                    <div>
-                                        <h4 class="font-bold text-primary text-sm md:text-base">Knowledge Growth: Pre-Video Baseline vs. Post-Video Understanding</h4>
-                                        <p class="text-xs text-muted">Mean self-reported comprehension score on a 1.00 to 5.00 scale across core aerodynamic and ML topics</p>
-                                    </div>
-                                    <span class="text-[10px] font-semibold px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700">+77% Avg Comprehension Gain</span>
-                                </div>
-
-                                <div class="bg-white rounded-xl border border-border p-4 mb-4">
-                                    <svg viewBox="0 0 680 290" class="w-full h-auto overflow-visible" role="img" aria-label="Bar chart comparing Pre-Video Baseline and Post-Video Understanding across Flow Separation, Whale Tubercle Wings, separation_x_over_c, and ML and Fast Simulation">
-                                        <!-- Horizontal Gridlines (0.00 to 5.00) -->
-                                        <!-- Y mapping: 5.00 -> y=30, 0.00 -> y=230 (40px per 1.0 unit) -->
-                                        <line x1="60" y1="230" x2="650" y2="230" stroke="#111111" stroke-width="1.2"/>
-                                        <line x1="60" y1="190" x2="650" y2="190" stroke="#E5E5E5" stroke-width="1" stroke-dasharray="3,3"/>
-                                        <line x1="60" y1="150" x2="650" y2="150" stroke="#E5E5E5" stroke-width="1" stroke-dasharray="3,3"/>
-                                        <line x1="60" y1="110" x2="650" y2="110" stroke="#E5E5E5" stroke-width="1" stroke-dasharray="3,3"/>
-                                        <line x1="60" y1="70" x2="650" y2="70" stroke="#E5E5E5" stroke-width="1" stroke-dasharray="3,3"/>
-                                        <line x1="60" y1="30" x2="650" y2="30" stroke="#E5E5E5" stroke-width="1" stroke-dasharray="3,3"/>
-
-                                        <!-- Y-Axis Labels -->
-                                        <text x="50" y="234" text-anchor="end" class="text-[10px] fill-[#737373] font-sans">0.00</text>
-                                        <text x="50" y="194" text-anchor="end" class="text-[10px] fill-[#737373] font-sans">1.00</text>
-                                        <text x="50" y="154" text-anchor="end" class="text-[10px] fill-[#737373] font-sans">2.00</text>
-                                        <text x="50" y="114" text-anchor="end" class="text-[10px] fill-[#737373] font-sans">3.00</text>
-                                        <text x="50" y="74" text-anchor="end" class="text-[10px] fill-[#737373] font-sans">4.00</text>
-                                        <text x="50" y="34" text-anchor="end" class="text-[10px] fill-[#737373] font-sans">5.00</text>
-                                        <text x="14" y="130" text-anchor="middle" transform="rotate(-90 14 130)" class="text-[10px] fill-[#737373] font-semibold font-sans">Mean Rating (1–5)</text>
-
-                                        <!-- Group 1: Flow Separation (Pre: 2.45 -> y=132, h=98 | Post: 4.36 -> y=55.6, h=174.4) -->
-                                        <rect x="95" y="132" width="42" height="98" rx="4" fill="#3B82F6"/>
-                                        <text x="116" y="126" text-anchor="middle" class="text-[10px] fill-[#2563EB] font-bold font-sans">2.45</text>
-                                        <rect x="143" y="55.6" width="42" height="174.4" rx="4" fill="#EF4444"/>
-                                        <text x="164" y="49.6" text-anchor="middle" class="text-[10px] fill-[#DC2626] font-bold font-sans">4.36</text>
-                                        <text x="140" y="250" text-anchor="middle" class="text-[11px] fill-[#111111] font-medium font-sans">Flow Separation</text>
-
-                                        <!-- Group 2: Whale Tubercle Wings (Pre: 2.45 -> y=132, h=98 | Post: 4.51 -> y=49.6, h=180.4) -->
-                                        <rect x="238" y="132" width="42" height="98" rx="4" fill="#3B82F6"/>
-                                        <text x="259" y="126" text-anchor="middle" class="text-[10px] fill-[#2563EB] font-bold font-sans">2.45</text>
-                                        <rect x="286" y="49.6" width="42" height="180.4" rx="4" fill="#EF4444"/>
-                                        <text x="307" y="43.6" text-anchor="middle" class="text-[10px] fill-[#DC2626] font-bold font-sans">4.51</text>
-                                        <text x="283" y="250" text-anchor="middle" class="text-[11px] fill-[#111111] font-medium font-sans">Whale Tubercle Wings</text>
-
-                                        <!-- Group 3: separation_x_over_c (Pre: 2.45 -> y=132, h=98 | Post: 4.26 -> y=59.6, h=170.4) -->
-                                        <rect x="381" y="132" width="42" height="98" rx="4" fill="#3B82F6"/>
-                                        <text x="402" y="126" text-anchor="middle" class="text-[10px] fill-[#2563EB] font-bold font-sans">2.45</text>
-                                        <rect x="429" y="59.6" width="42" height="170.4" rx="4" fill="#EF4444"/>
-                                        <text x="450" y="53.6" text-anchor="middle" class="text-[10px] fill-[#DC2626] font-bold font-sans">4.26</text>
-                                        <text x="426" y="250" text-anchor="middle" class="text-[11px] fill-[#111111] font-mono font-medium">separation_x_over_c</text>
-
-                                        <!-- Group 4: ML & Fast Simulation (Pre: 3.00 -> y=110, h=120 | Post: 4.66 -> y=43.6, h=186.4) -->
-                                        <rect x="524" y="110" width="42" height="120" rx="4" fill="#3B82F6"/>
-                                        <text x="545" y="104" text-anchor="middle" class="text-[10px] fill-[#2563EB] font-bold font-sans">3.00</text>
-                                        <rect x="572" y="43.6" width="42" height="186.4" rx="4" fill="#EF4444"/>
-                                        <text x="593" y="37.6" text-anchor="middle" class="text-[10px] fill-[#DC2626] font-bold font-sans">4.66</text>
-                                        <text x="569" y="250" text-anchor="middle" class="text-[11px] fill-[#111111] font-medium font-sans">ML &amp; Fast Simulation</text>
-
-                                        <!-- X-Axis Title -->
-                                        <text x="355" y="274" text-anchor="middle" class="text-[10px] fill-[#737373] font-semibold font-sans">Topic Evaluated</text>
-                                    </svg>
-
-                                    <!-- Legend -->
-                                    <div class="flex flex-wrap items-center justify-center gap-6 pt-3 border-t border-border/60 text-xs text-muted">
-                                        <span class="inline-flex items-center gap-2 font-medium text-primary"><span class="w-3.5 h-3.5 rounded-sm bg-[#3B82F6] inline-block"></span> Pre-Video Baseline</span>
-                                        <span class="inline-flex items-center gap-2 font-medium text-primary"><span class="w-3.5 h-3.5 rounded-sm bg-[#EF4444] inline-block"></span> Post-Video Understanding</span>
-                                    </div>
-                                </div>
-
-                                <p class="text-muted text-xs leading-relaxed">
-                                    <strong>Graph Insight:</strong> Prior to watching the walkthrough and using WingCheck, only <strong>13.2%</strong> of participants reported familiarity with aerodynamics (mean <strong>2.45/5</strong>) and <strong>39.6%</strong> with machine learning (mean <strong>3.00/5</strong>). Following the interactive module, comprehension surged across all four core concepts—reaching <strong>4.36/5</strong> on flow separation, <strong>4.51/5</strong> on whale tubercle wing design, <strong>4.26/5</strong> on the <code class="bg-black/5 px-1 py-0.5 rounded font-mono text-[11px]">separation_x_over_c</code> metric, and <strong>4.66/5</strong> on how machine learning accelerates simulation screening.
-                                </p>
-                            </div>
-
-                            <!-- Bottom 2 Graphs Side-by-Side -->
-                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                                
-                                <!-- Graph 2: App Usability & Video Engagement: % Positive Ratings (>=4/5) -->
-                                <div class="bg-bg rounded-2xl border border-border p-5 shadow-sm flex flex-col justify-between">
-                                    <div>
-                                        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-                                            <h4 class="font-bold text-primary text-sm">App Usability &amp; Video Engagement</h4>
-                                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-white border border-border text-muted">% Positive Ratings (&ge;4/5)</span>
-                                        </div>
-                                        <div class="bg-white rounded-xl border border-border p-3 mb-4">
-                                            <svg viewBox="0 0 520 260" class="w-full h-auto overflow-visible" role="img" aria-label="Horizontal bar chart showing positive ratings for Web App Ease of Use (96.2%), Output Clarity (92.5%), Freedom to Experiment (88.7%), and Video Engagement (90.6%)">
-                                                <!-- Vertical Gridlines (0% at x=145 to 100% at x=485 -> 3.4px per 1%) -->
-                                                <line x1="145" y1="20" x2="145" y2="205" stroke="#111111" stroke-width="1.2"/>
-                                                <line x1="230" y1="20" x2="230" y2="205" stroke="#E5E5E5" stroke-width="1" stroke-dasharray="3,3"/>
-                                                <line x1="315" y1="20" x2="315" y2="205" stroke="#E5E5E5" stroke-width="1" stroke-dasharray="3,3"/>
-                                                <line x1="400" y1="20" x2="400" y2="205" stroke="#E5E5E5" stroke-width="1" stroke-dasharray="3,3"/>
-                                                <line x1="485" y1="20" x2="485" y2="205" stroke="#E5E5E5" stroke-width="1" stroke-dasharray="3,3"/>
-
-                                                <!-- Bar 1: Web App Ease of Use (96.2% -> width = 327.1) -->
-                                                <text x="135" y="44" text-anchor="end" class="text-[10.5px] fill-[#111111] font-medium font-sans">Web App Ease of Use</text>
-                                                <rect x="145" y="28" width="327.1" height="24" rx="4" fill="#3B82F6"/>
-                                                <text x="477" y="44" text-anchor="start" class="text-[10px] fill-[#1D4ED8] font-bold font-sans">96.2%</text>
-
-                                                <!-- Bar 2: Output Clarity (92.5% -> width = 314.5) -->
-                                                <text x="135" y="90" text-anchor="end" class="text-[10.5px] fill-[#111111] font-medium font-sans">Output Clarity</text>
-                                                <rect x="145" y="74" width="314.5" height="24" rx="4" fill="#3B82F6"/>
-                                                <text x="465" y="90" text-anchor="start" class="text-[10px] fill-[#1D4ED8] font-bold font-sans">92.5%</text>
-
-                                                <!-- Bar 3: Freedom to Experiment (88.7% -> width = 301.6) -->
-                                                <text x="135" y="136" text-anchor="end" class="text-[10.5px] fill-[#111111] font-medium font-sans">Freedom to Experiment</text>
-                                                <rect x="145" y="120" width="301.6" height="24" rx="4" fill="#3B82F6"/>
-                                                <text x="452" y="136" text-anchor="start" class="text-[10px] fill-[#1D4ED8] font-bold font-sans">88.7%</text>
-
-                                                <!-- Bar 4: Video Engagement (90.6% -> width = 308.0) -->
-                                                <text x="135" y="182" text-anchor="end" class="text-[10.5px] fill-[#111111] font-medium font-sans">Video Engagement</text>
-                                                <rect x="145" y="166" width="308.0" height="24" rx="4" fill="#3B82F6"/>
-                                                <text x="458" y="182" text-anchor="start" class="text-[10px] fill-[#1D4ED8] font-bold font-sans">90.6%</text>
-
-                                                <!-- X-Axis Labels -->
-                                                <text x="145" y="224" text-anchor="middle" class="text-[10px] fill-[#737373] font-sans">0.0%</text>
-                                                <text x="230" y="224" text-anchor="middle" class="text-[10px] fill-[#737373] font-sans">25.0%</text>
-                                                <text x="315" y="224" text-anchor="middle" class="text-[10px] fill-[#737373] font-sans">50.0%</text>
-                                                <text x="400" y="224" text-anchor="middle" class="text-[10px] fill-[#737373] font-sans">75.0%</text>
-                                                <text x="485" y="224" text-anchor="middle" class="text-[10px] fill-[#737373] font-sans">100%</text>
-                                                <text x="315" y="245" text-anchor="middle" class="text-[10px] fill-[#737373] font-semibold font-sans">% Positive Rating (Score of 4 or 5)</text>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <p class="text-muted text-xs leading-relaxed">
-                                        <strong>Graph Insight:</strong> Over <strong>96.2%</strong> of users rated the web app easy to use (mean <strong>4.72/5</strong>) and <strong>92.5%</strong> confirmed that the prediction outputs were clear and interpretable (mean <strong>4.53/5</strong>), validating the plain-English UI redesign.
-                                    </p>
-                                </div>
-
-                                <!-- Graph 3: Perceived Tool Utility for Student Learning -->
-                                <div class="bg-bg rounded-2xl border border-border p-5 shadow-sm flex flex-col justify-between">
-                                    <div>
-                                        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-                                            <h4 class="font-bold text-primary text-sm">Perceived Tool Utility for Student Learning</h4>
-                                            <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-white border border-border text-muted">Student Sentiment Share</span>
-                                        </div>
-                                        <div class="bg-white rounded-xl border border-border p-3 mb-4">
-                                            <svg viewBox="0 0 520 260" class="w-full h-auto overflow-visible" role="img" aria-label="Bar chart showing Perceived Tool Utility for Student Learning: Yes (92.5%), Maybe (5.7%), No (1.9%)">
-                                                <!-- Horizontal Gridlines (Y: 0 at y=205 to 100% / 50+ at y=25) -->
-                                                <line x1="60" y1="205" x2="490" y2="205" stroke="#111111" stroke-width="1.2"/>
-                                                <line x1="60" y1="169" x2="490" y2="169" stroke="#E5E5E5" stroke-width="1" stroke-dasharray="3,3"/>
-                                                <line x1="60" y1="133" x2="490" y2="133" stroke="#E5E5E5" stroke-width="1" stroke-dasharray="3,3"/>
-                                                <line x1="60" y1="97" x2="490" y2="97" stroke="#E5E5E5" stroke-width="1" stroke-dasharray="3,3"/>
-                                                <line x1="60" y1="61" x2="490" y2="61" stroke="#E5E5E5" stroke-width="1" stroke-dasharray="3,3"/>
-                                                <line x1="60" y1="25" x2="490" y2="25" stroke="#E5E5E5" stroke-width="1" stroke-dasharray="3,3"/>
-
-                                                <!-- Y-Axis Labels (% Share of Respondents) -->
-                                                <text x="50" y="209" text-anchor="end" class="text-[10px] fill-[#737373] font-sans">0%</text>
-                                                <text x="50" y="173" text-anchor="end" class="text-[10px] fill-[#737373] font-sans">20%</text>
-                                                <text x="50" y="137" text-anchor="end" class="text-[10px] fill-[#737373] font-sans">40%</text>
-                                                <text x="50" y="101" text-anchor="end" class="text-[10px] fill-[#737373] font-sans">60%</text>
-                                                <text x="50" y="65" text-anchor="end" class="text-[10px] fill-[#737373] font-sans">80%</text>
-                                                <text x="50" y="29" text-anchor="end" class="text-[10px] fill-[#737373] font-sans">100%</text>
-                                                <text x="14" y="115" text-anchor="middle" transform="rotate(-90 14 115)" class="text-[10px] fill-[#737373] font-semibold font-sans">Share of Respondents</text>
-
-                                                <!-- Bar 1: Yes (92.5% -> h = 166.5, y = 38.5) -->
-                                                <rect x="105" y="38.5" width="76" height="166.5" rx="4" fill="#046A82"/>
-                                                <text x="143" y="31" text-anchor="middle" class="text-[10.5px] fill-[#046A82] font-bold font-sans">92.5%</text>
-                                                <text x="143" y="224" text-anchor="middle" class="text-[11px] fill-[#111111] font-medium font-sans">Yes</text>
-
-                                                <!-- Bar 2: Maybe (5.7% -> h = 10.3, y = 194.7) -->
-                                                <rect x="242" y="194.7" width="76" height="10.3" rx="3" fill="#046A82"/>
-                                                <text x="280" y="188" text-anchor="middle" class="text-[10.5px] fill-[#046A82] font-bold font-sans">5.7%</text>
-                                                <text x="280" y="224" text-anchor="middle" class="text-[11px] fill-[#111111] font-medium font-sans">Maybe</text>
-
-                                                <!-- Bar 3: No (1.9% -> h = 4, y = 201) -->
-                                                <rect x="379" y="201" width="76" height="4" rx="2" fill="#046A82"/>
-                                                <text x="417" y="194" text-anchor="middle" class="text-[10.5px] fill-[#046A82] font-bold font-sans">1.9%</text>
-                                                <text x="417" y="224" text-anchor="middle" class="text-[11px] fill-[#111111] font-medium font-sans">No</text>
-
-                                                <!-- X-Axis Title -->
-                                                <text x="275" y="245" text-anchor="middle" class="text-[10px] fill-[#737373] font-semibold font-sans">"Does WingCheck Help Students Learn Aerodynamics?"</text>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <p class="text-muted text-xs leading-relaxed">
-                                        <strong>Graph Insight:</strong> An overwhelming <strong>92.5%</strong> of respondents affirmed that WingCheck directly helps students learn aerodynamic design concepts, while <strong>81.1%</strong> reported that the walkthrough and web app sparked new interest in STEM and aerospace.
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- Executive Synthesis & Actionable Recommendations -->
-                        <div class="bg-bg rounded-2xl p-6 md:p-8 border border-border shadow-sm">
-                            <div class="flex flex-wrap items-center justify-between gap-2 mb-5">
-                                <strong class="text-primary text-base md:text-lg">Executive Synthesis &amp; Actionable Recommendations</strong>
-                                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-accent/10 text-accent border border-accent/20">User-Driven Product Roadmap</span>
-                            </div>
-
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                                <!-- Point 1 -->
-                                <div class="bg-white rounded-xl p-5 border border-border shadow-sm flex items-start gap-3.5">
-                                    <div class="w-6 h-6 rounded-full bg-accent/10 text-accent flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">1</div>
-                                    <div>
-                                        <h5 class="font-bold text-primary text-sm mb-1">Substantial Knowledge Gain</h5>
-                                        <p class="text-muted text-xs leading-relaxed">
-                                            Aerodynamics understanding increased from a <strong>2.40–2.45 baseline to 4.31+</strong> (up to 4.66/5) across complex topics including boundary-layer flow separation, humpback whale tubercle wings, and ML-assisted simulation screening.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <!-- Point 2 -->
-                                <div class="bg-white rounded-xl p-5 border border-border shadow-sm flex items-start gap-3.5">
-                                    <div class="w-6 h-6 rounded-full bg-accent/10 text-accent flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">2</div>
-                                    <div>
-                                        <h5 class="font-bold text-primary text-sm mb-1">Exceptional Usability &amp; Reception</h5>
-                                        <p class="text-muted text-xs leading-relaxed">
-                                            Over <strong>96% (96.2%)</strong> rated web app usability positively (4.72/5 ease of use), and <strong>92.5%</strong> affirmed the tool directly helps students master aerodynamics without requiring expensive CFD software.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <!-- Point 3 -->
-                                <div class="bg-white rounded-xl p-5 border border-border shadow-sm flex items-start gap-3.5">
-                                    <div class="w-6 h-6 rounded-full bg-accent/10 text-accent flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">3</div>
-                                    <div>
-                                        <h5 class="font-bold text-primary text-sm mb-1">Strong Peer Advocacy</h5>
-                                        <p class="text-muted text-xs leading-relaxed">
-                                            <strong>90.6%</strong> of surveyed students recommend the video and toolkit to fellow peers interested in engineering, physics, drones, and AI, with <strong>81.1%</strong> reporting newly sparked interest in STEM.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <!-- Point 4 -->
-                                <div class="bg-white rounded-xl p-5 border border-border shadow-sm flex items-start gap-3.5">
-                                    <div class="w-6 h-6 rounded-full bg-accent/10 text-accent flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">4</div>
-                                    <div>
-                                        <h5 class="font-bold text-primary text-sm mb-1">High-Priority Next Steps</h5>
-                                        <p class="text-muted text-xs leading-relaxed">
-                                            Introduce dynamic 2D/3D visual airflow animations, interactive hover tooltips and glossary cards for advanced terminology (e.g., <code class="bg-black/5 px-1 py-0.5 rounded font-mono text-[11px]">separation_x_over_c</code>), and expanded variable camber/NACA geometry controls.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <!-- Point 5 (Full Width on Desktop) -->
-                                <div class="bg-white rounded-xl p-5 border border-border shadow-sm flex items-start gap-3.5 md:col-span-2">
-                                    <div class="w-6 h-6 rounded-full bg-accent/10 text-accent flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">5</div>
-                                    <div>
-                                        <h5 class="font-bold text-primary text-sm mb-1">Curricular &amp; Outreach Opportunity</h5>
-                                        <p class="text-muted text-xs leading-relaxed">
-                                            Multiple respondents noted high potential for classroom integration, guided onboarding walkthroughs, and real-world science fair and STEM club demonstrations.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Methodological Note & Limitations Callout -->
-                            <div class="bg-white/80 rounded-xl p-4 border border-border text-xs text-muted leading-relaxed">
-                                <strong class="text-primary">Methodological Note &amp; Limitations:</strong> Survey findings are based on self-reported student ratings and open-ended feedback following the learning module; while reported comprehension gains and usability sentiment are strongly positive, these outcomes represent perceived learning rather than objective standardized testing assessments.
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Destination Imagination Section -->
-            <div id="destination-imagination" class="bg-card rounded-[2rem] border border-border overflow-hidden shadow-framer mt-12 scroll-mt-28">
-                <div class="p-8 md:p-12">
-                    <p class="text-accent font-semibold tracking-wider text-2xl uppercase mb-2">Destination Imagination</p>
-                    <h3 class="text-3xl md:text-4xl font-bold tracking-tight mb-12">Combining Engineering, Art, and Teamwork on a Global Stage</h3>
-
-                    <!-- Block 1: The Ascent of the Thought-Tree -->
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-12">
-                        <div class="space-y-4">
-                            <h4 class="text-2xl font-bold text-primary mb-2">The Ascent of the Thought-Tree</h4>
-                            <p class="text-muted leading-relaxed text-sm md:text-base">
-                                A huge sigh of relief washed over me as our colorful "thought-tree" finally rose into the air. As it reached the peak of its ascent, the circular leaves—embedded with custom LED strips—automatically lit up the room in a rainbow of colors. Attached to each leaf was a tag representing a core value of humanity: creativity, honesty, bravery, and kindness. While most teams at the competition built standard jigsaw puzzles, my team decided to build a "growing puzzle tree". We wanted the different branches to represent life abstracts, turning our project into a "tree of humanity".
-                            </p>
-                        </div>
-                        <div class="grid grid-cols-2 gap-3">
-                            <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
-                                <img src="DI-thought-tree1.jpg" alt="The Thought Tree" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                            </div>
-                            <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
-                                <img src="DI-thought-tree2.jpg" alt="The Thought Tree Detail" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Divider -->
-                    <div class="w-full h-px bg-border/50 mb-12"></div>
-
-                    <!-- Block 2: Engineering Behind the Art -->
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-12">
-                        <div class="grid grid-cols-2 gap-3 order-2 lg:order-1">
-                            <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
-                                <img src="DI-Beanbag-launcher.jpg" alt="Beanbag Launcher Mechanism" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                            </div>
-                            <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
-                                <img src="DI-Thought-tree-circuit.jpeg" alt="Thought Tree Circuitry" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                            </div>
-                            <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
-                                <img src="DI-Middleschool-Skit.png" alt="Middle School Skit" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                            </div>
-                            <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
-                                <img src="DI-Highschool-Skit.jpeg" alt="High School Skit" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                            </div>
-                        </div>
-                        <div class="space-y-4 order-1 lg:order-2">
-                            <h4 class="text-2xl font-bold text-primary mb-2">Engineering Behind the Art</h4>
-                            <p class="text-muted leading-relaxed text-sm md:text-base">
-                                This was all part of Destination Imagination (DI), a STEAM competition where teams are given a massive challenge and have to use a mix of STEM, fine arts, and teamwork to build a solution and present it through a live skit. That year, our task was to build a puzzle solver robot that could solve a chosen puzzle using technical methods. I co-led the design and development of the technical side, working alongside friends who were just as obsessed with engineering and science as I was.
-                            </p>
-                            <p class="text-muted leading-relaxed text-sm md:text-base">
-                                Bringing our story to life meant dividing up the work based on what we were good at, from writing the script to building the actual props. One of my friends was amazing at electrical engineering and circuitry, while another was a woodworking expert. Even though I was a key player in the overall technical build, I had my own learning curves. I seriously struggled with precisely cutting wood blocks and attaching them together with L-brackets. My teammate was patient enough to teach me, and in return, I taught them how to use the Arduino IDE to program our crane's controls.
-                            </p>
-                            <p class="text-muted leading-relaxed text-sm md:text-base">
-                                To make the mechanism work, We built an electromagnetic crane that used programmed motors, switches, and buttons to move and operate. It used a custom electromagnet to pick up and release the puzzle pieces. A pneumatic pump and piston using hydraulics were also devised to push up the puzzle structure around 6 inches to represent the humanity-tree growth.
-                            </p>
-
-                            <h4 class="text-2xl font-bold text-primary mb-2 mt-8">Precision Bean bag launcher</h4>
-                            <p class="text-muted leading-relaxed text-sm md:text-base">
-                                For another year's competition, the requirement was to build a beanbag launcher that could hit an exact distance with repeatable precision. We pooled our engineering skills and worked as a tight unit to design and calibrate a custom thrower mechanism. Our main goal was consistency, which meant analyzing launch angles and spring tension until the device worked like clockwork. After hours of fine-tuning the math and hardware, we got the launcher to a point where it could reliably and accurately fire a single beanbag right into a target zone between 280 and 300 centimeters away.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Divider -->
-                    <div class="w-full h-px bg-border/50 mb-12"></div>
-
-                    <!-- Block 3: A Global Triumph -->
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-                        <div class="space-y-4">
-                            <h4 class="text-2xl font-bold text-primary mb-2">A Global Triumph</h4>
-                            <p class="text-muted leading-relaxed text-sm md:text-base">
-                                Watching our masterpiece actually work and amaze the audience and judges made me smile, knowing that months of research, trial-and-error, and pure determination were going to pay off. The teamwork skills I built during that DI season have been invaluable ever since, whether I'm working on a regular group project at school or collaborating with PhD students at the UT Austin aerospace lab.
-                            </p>
-                            <p class="text-muted leading-relaxed text-sm md:text-base">
-                                Our team went on to be incredibly successful, ultimately winning the first-place trophy at the global competition twice—once in the middle school division and again in high school. Along the way, we were honored with both the DaVinci Award and the Renaissance Award, special recognitions reserved for teams that display exceptionally unique solutions, courageous risk-taking, and outstanding creativity.
-                            </p>
-                            <p class="text-muted leading-relaxed text-sm md:text-base">
-                                Standing on top of a global stage that featured over 600 teams from 13 different countries was completely exhilarating. It wasn't just because we successfully combined art and engineering, but because we got to fail, learn, and succeed together as close friends.
-                            </p>
-                            
-                            <div class="mt-6 flex flex-wrap gap-2">
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold rounded-full">
-                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
-                                    2x Global 1st Place
-                                </span>
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold rounded-full">
-                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
-                                    DaVinci Award
-                                </span>
-                                <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold rounded-full">
-                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
-                                    Renaissance Award
-                                </span>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-2 gap-3">
-                            <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
-                                <img src="DI-MiddleSchool-firstplace.jpeg" alt="Middle School 1st Place" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                            </div>
-                            <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
-                                <img src="DI-HighSchool-Firstplace.jpeg" alt="High School 1st Place" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- ================= PAGE 4: LAB RESEARCH ================= -->
-        <section id="labresearch" class="page-section hidden">
-            <div class="mb-12">
-                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-primary mb-4">Lab Research</h2>
-                <p class="text-lg text-muted max-w-2xl mb-8">Collaborative aerospace research at the University of Texas at Austin</p>
-
-                <!-- Highlight Card: UT Austin Research Assistant -->
-                <div class="grid grid-cols-1 gap-6">
-                    <div onclick="document.getElementById('ut-austin-research').scrollIntoView({ behavior: 'smooth' });" class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300 flex flex-col justify-between cursor-pointer group">
-                        <div>
-                            <h3 class="text-lg font-bold text-primary mb-3 group-hover:text-accent transition-colors">UT Austin Research Assistant</h3>
-                            <p class="text-muted text-sm leading-relaxed">Assisted UT Austin Professor Dr. Sirohi at the Flight Lab on the research project for the US Dept of Navy; evaluated drone sensors & designed precise 3D models </p>
-                        </div>
-                        <div class="mt-6 flex flex-wrap gap-2">
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-xs font-semibold rounded-full">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
-                                US Navy project
-                            </span>
-                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-black/5 border border-border text-primary text-xs font-semibold rounded-full">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
-                                Flight Lab
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- UT Austin Research Assistant Section -->
-            <div id="ut-austin-research" class="bg-card rounded-[2rem] border border-border overflow-hidden shadow-framer scroll-mt-28">
-                <div class="p-8 md:p-12">
-                    <p class="text-accent font-semibold tracking-wider text-2xl uppercase mb-2">Research Assistant</p>
-                    <h3 class="text-3xl md:text-4xl font-bold tracking-tight mb-6">UT Austin research project for the US Dept of Navy</h3>
-                    
-                    <!-- Project Snapshot Section -->
+                    <!-- Project Snapshot -->
                     <div class="p-6 md:p-8 bg-bg rounded-2xl border border-border">
                         <strong class="text-primary block mb-3 text-lg">Project Snapshot</strong>
                         <p class="text-muted leading-relaxed text-sm md:text-base mb-0">
-                            Build a special purpose drone for US Dept of Navy to enable ship inspection. The special requirements include extended range, advanced drone collision avoidance.
+                            In my freshman year, I conducted a comparative study evaluating electric ion propulsion engines against traditional chemical rocket engines across six core engineering variables: thrust produced by the rocket, specific impulse (Isp) efficiency, fuel consumption, manufacturing and operating expense, system and fuel weight, and time to accelerate to high speeds. By benchmarking NASA's NEXT-C (NASA Evolutionary Xenon Thruster – Commercial) gridded ion engine against the Block 2 Aerojet Rocketdyne RS-25 liquid-fuel chemical engine (used on the Space Launch System) and analyzing the long-duration velocity profile of NASA's Dawn Spacecraft, the study demonstrated why electric ion propulsion is uniquely suited to dominate in-orbit deep-space transit while chemical rockets remain necessary for high-thrust planetary launch.
                         </p>
                     </div>
 
-                    <!-- My contributions Section -->
+                    <!-- Problem / Question & Hypothesis -->
                     <div class="mt-8 pt-8 border-t border-border">
-                        <strong class="text-primary block mb-4">My Contributions</strong>
-                        <p class="text-muted text-sm md:text-base leading-relaxed mb-4">
-                            Assisted Professor Dr. Jayant Sirohi and a PhD student at the Vertical Flight Lab starting from my junior year, taking on the following responsibilities:
-                        </p>
-                        <ul class="space-y-3 text-muted text-sm md:text-base">
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span class="leading-relaxed">Designed precise 3D models of test harnesses for experimental setups.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span class="leading-relaxed">Conducted 670 rigorous tests across three candidate distance sensors—the <strong>SparkFun VL53L1X Qwiic Distance Sensor</strong> (Time-of-Flight), the <strong>Adafruit VL53L0X Distance Sensor</strong> (Time-of-Flight), and the <strong>LV-MaxSonar-EZ0 (Part # MB1000)</strong> ultrasonic sensor—to critically evaluate accuracy, latency, and error margins for semi-autonomous navigation.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <span class="leading-relaxed">3D designed and printed the custom sensor mount and housing case to securely install the chosen sensor onto the drone. Currently working with the Professor and Ph.D. students at the Vertical Flight Lab to integrate these sensors into the drone platform.</span>
-                            </li>
-                        </ul>
-
-                        <!-- Hardware Prototyping & Lab Gallery -->
-                        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <!-- Image 1: 3D CAD Design of the Sensor Mount -->
-                            <div class="bg-bg rounded-2xl border border-border overflow-hidden shadow-sm flex flex-col">
-                                <div class="overflow-hidden bg-white aspect-video relative group flex items-center justify-center">
-                                    <img src="sensormount-3Ddesign.jpg" onerror="if (!this.dataset.tried) { this.dataset.tried = '1'; this.src = 'sensormount-3Ddesign.JPEG'; } else if (this.dataset.tried === '1') { this.dataset.tried = '2'; this.src = 'sensormount-3Ddesign.jpeg'; } else if (this.dataset.tried === '2') { this.dataset.tried = '3'; this.src = 'Sensormount-3Ddesign.jpg'; } else if (this.dataset.tried === '3') { this.dataset.tried = '4'; this.src = 'sensormount-3Ddesign.png'; }" alt="3D CAD Design of Drone Sensor Mount" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500">
-                                </div>
-                                <div class="p-5 flex-grow flex flex-col justify-between">
-                                    <div>
-                                        <h4 class="font-bold text-primary text-sm mb-1.5">3D CAD Model of Sensor Mount</h4>
-                                        <p class="text-muted text-xs leading-relaxed">
-                                            3D CAD model of the custom modular sensor mount and enclosure, engineered with precise tolerances to house the distance sensor and circuit board while minimizing weight on the drone airframe.
-                                        </p>
-                                    </div>
-                                </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-muted">
+                            <div>
+                                <strong class="text-primary block mb-2">The Research Question</strong>
+                                Are electric ion propulsion engines the future of deep-space travel, and how do their thrust, efficiency, and propellant requirements compare against traditional chemical rocket architectures for long-duration missions?
                             </div>
-
-                            <!-- Image 2: 3D Printed Sensor Mount -->
-                            <div class="bg-bg rounded-2xl border border-border overflow-hidden shadow-sm flex flex-col">
-                                <div class="overflow-hidden bg-white aspect-video relative group">
-                                    <img src="Sensormount.JPEG" onerror="if (!this.dataset.tried) { this.dataset.tried = '1'; this.src = 'Sensormount.jpg'; } else if (this.dataset.tried === '1') { this.dataset.tried = '2'; this.src = 'Sensormount.jpeg'; }" alt="Custom 3D-Printed Drone Sensor Mount" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                </div>
-                                <div class="p-5 flex-grow flex flex-col justify-between">
-                                    <div>
-                                        <h4 class="font-bold text-primary text-sm mb-1.5">Custom 3D-Printed Drone Sensor Mount</h4>
-                                        <p class="text-muted text-xs leading-relaxed">
-                                            Designed and 3D printed the custom modular housing that securely mounts the collision-avoidance distance sensor and wiring board directly onto the US Navy drone while maintaining clear optical alignment.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Image 3: Vertical Flight Lab at UT Austin -->
-                            <div class="bg-bg rounded-2xl border border-border overflow-hidden shadow-sm flex flex-col">
-                                <div class="overflow-hidden bg-white aspect-video relative group">
-                                    <img src="Sensormount-UTLab2.JPEG" onerror="if (!this.dataset.tried) { this.dataset.tried = '1'; this.src = 'Sensormount-UTLab2.jpg'; } else if (this.dataset.tried === '1') { this.dataset.tried = '2'; this.src = 'Sensormount-UTLab2.jpeg'; }" alt="Vertical Flight Lab at UT Austin Workbench" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                </div>
-                                <div class="p-5 flex-grow flex flex-col justify-between">
-                                    <div>
-                                        <h4 class="font-bold text-primary text-sm mb-1.5">Vertical Flight Lab at UT Austin</h4>
-                                        <p class="text-muted text-xs leading-relaxed">
-                                            Inside the Vertical Flight Lab at the University of Texas at Austin.
-                                        </p>
-                                    </div>
-                                </div>
+                            <div>
+                                <strong class="text-primary block mb-2">The Hypothesis</strong>
+                                In the future, deep-space spacecraft will be dominated by electric ion propulsion engines because of their high specific impulse efficiency, constant long-duration acceleration, and low fuel consumption.
                             </div>
                         </div>
                     </div>
 
-                    <!-- Empirical Sensor Evaluation & Key Findings Section -->
+                    <!-- Variables Researched (6 Core Parameters) -->
                     <div class="mt-8 pt-8 border-t border-border">
-                        <strong class="text-primary block mb-3 text-lg">Empirical Sensor Evaluation &amp; Key Insights</strong>
-                        <p class="text-muted text-sm md:text-base leading-relaxed mb-6">
-                            To identify the most reliable sensor for close-quarters ship inspection, I benchmarked the <strong>Adafruit VL53L0X</strong>, <strong>SparkFun VL53L1X Qwiic</strong>, and <strong>LV-MaxSonar-EZ0 (MB1000)</strong> across target distances from 40 mm to 520 mm, varying incident angles, surface reflectivities (white wall, matte black, and transparent media), and small-target geometries.
-                        </p>
-
-                        <!-- Data Visualizations (2 Key Graphs from Test Data) -->
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-                            
-                            <!-- Graph 1: Measured vs. Actual Distance -->
-                            <div class="bg-bg rounded-2xl border border-border p-5 shadow-sm flex flex-col justify-between">
-                                <div>
-                                    <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-                                        <h4 class="font-bold text-primary text-sm">Measured vs. Actual Distance (40–520 mm)</h4>
-                                        <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-white border border-border text-muted">Linearity &amp; Range</span>
-                                    </div>
-                                    <div class="bg-white rounded-xl border border-border p-3 mb-4">
-                                        <svg viewBox="0 0 560 320" class="w-full h-auto overflow-visible" role="img" aria-label="Graph comparing Measured vs Actual Distance for Adafruit VL53L0X, SparkFun VL53L1X, and LV-MaxSonar-EZ0 Ultrasonic sensors">
-                                            <!-- Horizontal Gridlines -->
-                                            <line x1="55" y1="260" x2="530" y2="260" stroke="#E5E5E5" stroke-width="1"/>
-                                            <line x1="55" y1="183.3" x2="530" y2="183.3" stroke="#E5E5E5" stroke-width="1" stroke-dasharray="3,3"/>
-                                            <line x1="55" y1="106.7" x2="530" y2="106.7" stroke="#E5E5E5" stroke-width="1" stroke-dasharray="3,3"/>
-                                            <line x1="55" y1="30" x2="530" y2="30" stroke="#E5E5E5" stroke-width="1" stroke-dasharray="3,3"/>
-
-                                            <!-- Vertical Gridlines -->
-                                            <line x1="141.4" y1="30" x2="141.4" y2="260" stroke="#F0F0F0" stroke-width="1"/>
-                                            <line x1="227.7" y1="30" x2="227.7" y2="260" stroke="#F0F0F0" stroke-width="1"/>
-                                            <line x1="314.1" y1="30" x2="314.1" y2="260" stroke="#F0F0F0" stroke-width="1"/>
-                                            <line x1="400.5" y1="30" x2="400.5" y2="260" stroke="#F0F0F0" stroke-width="1"/>
-                                            <line x1="486.8" y1="30" x2="486.8" y2="260" stroke="#F0F0F0" stroke-width="1"/>
-
-                                            <!-- Y-Axis Labels -->
-                                            <text x="48" y="264" text-anchor="end" class="text-[10px] fill-[#737373] font-sans">0</text>
-                                            <text x="48" y="187" text-anchor="end" class="text-[10px] fill-[#737373] font-sans">200</text>
-                                            <text x="48" y="110" text-anchor="end" class="text-[10px] fill-[#737373] font-sans">400</text>
-                                            <text x="48" y="34" text-anchor="end" class="text-[10px] fill-[#737373] font-sans">600</text>
-                                            <text x="14" y="145" text-anchor="middle" transform="rotate(-90 14 145)" class="text-[10px] fill-[#737373] font-semibold font-sans">Measured Distance (mm)</text>
-
-                                            <!-- X-Axis Labels -->
-                                            <text x="55" y="278" text-anchor="middle" class="text-[10px] fill-[#737373] font-sans">0</text>
-                                            <text x="141.4" y="278" text-anchor="middle" class="text-[10px] fill-[#737373] font-sans">100</text>
-                                            <text x="227.7" y="278" text-anchor="middle" class="text-[10px] fill-[#737373] font-sans">200</text>
-                                            <text x="314.1" y="278" text-anchor="middle" class="text-[10px] fill-[#737373] font-sans">300</text>
-                                            <text x="400.5" y="278" text-anchor="middle" class="text-[10px] fill-[#737373] font-sans">400</text>
-                                            <text x="486.8" y="278" text-anchor="middle" class="text-[10px] fill-[#737373] font-sans">500</text>
-                                            <text x="292" y="298" text-anchor="middle" class="text-[10px] fill-[#737373] font-semibold font-sans">Actual Target Distance (mm)</text>
-
-                                            <!-- Ideal 1:1 Line (Actual) -->
-                                            <polyline fill="none" stroke="#9CA3AF" stroke-width="1.75" stroke-dasharray="5,4"
-                                                points="89.5,244.7 124.1,229.3 158.6,214.0 193.2,198.7 227.7,183.3 262.3,168.0 296.8,152.7 331.4,137.3 365.9,122.0 400.5,106.7 435.0,91.3 469.5,76.0 486.8,68.3 504.1,60.7"/>
-
-                                            <!-- Ultrasonic (LV-MaxSonar-EZ0) Line -->
-                                            <polyline fill="none" stroke="#10B981" stroke-width="2.2"
-                                                points="193.2,44.6 227.7,185.8 262.3,179.3 296.8,169.3 331.4,150.5 365.9,134.4 400.5,118.5 435.0,108.7 469.5,89.1 486.8,79.3 504.1,69.5"/>
-
-                                            <!-- SparkFun VL53L1X Line -->
-                                            <polyline fill="none" stroke="#EF4444" stroke-width="2"
-                                                points="89.5,256.8 124.1,231.9 158.6,216.9 193.2,201.8 227.7,185.9 262.3,172.1 296.8,157.5 331.4,139.5 365.9,128.9 400.5,112.2 435.0,98.1 469.5,84.3 486.8,73.0 504.1,71.6"/>
-
-                                            <!-- Adafruit VL53L0X Line -->
-                                            <polyline fill="none" stroke="#2563EB" stroke-width="2.2"
-                                                points="89.5,241.5 124.1,228.7 158.6,213.7 193.2,193.4 227.7,181.7 262.3,168.2 296.8,151.8 331.4,139.1 365.9,117.6 400.5,109.3 435.0,95.2 469.5,77.4 486.8,60.7 504.1,62.3"/>
-
-                                            <!-- Data Points & Callout for Ultrasonic Close-Range Spike -->
-                                            <circle cx="193.2" cy="44.6" r="4" fill="#10B981" stroke="#FFFFFF" stroke-width="1.5"/>
-                                            <rect x="202" y="32" width="152" height="22" rx="4" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
-                                            <text x="208" y="46" class="text-[9.5px] fill-[#065F46] font-semibold font-sans">&lt;200mm instability (562mm avg)</text>
-                                        </svg>
-
-                                        <!-- Legend -->
-                                        <div class="flex flex-wrap items-center justify-center gap-4 pt-2 border-t border-border/60 text-[11px] text-muted">
-                                            <span class="inline-flex items-center gap-1.5"><span class="w-3 h-0.5 bg-gray-400 inline-block border-t border-dashed border-gray-400"></span> Ideal</span>
-                                            <span class="inline-flex items-center gap-1.5 font-medium text-primary"><span class="w-3 h-0.5 bg-[#2563EB] inline-block"></span> Adafruit VL53L0X</span>
-                                            <span class="inline-flex items-center gap-1.5 font-medium text-primary"><span class="w-3 h-0.5 bg-[#EF4444] inline-block"></span> SparkFun VL53L1X</span>
-                                            <span class="inline-flex items-center gap-1.5 font-medium text-primary"><span class="w-3 h-0.5 bg-[#10B981] inline-block"></span> Ultrasonic MB1000</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="text-muted text-xs leading-relaxed">
-                                    <strong>Key Takeaway:</strong> Both optical Time-of-Flight sensors track the actual target distance closely across the entire 40–520 mm range, whereas the ultrasonic sensor suffers severe readings spikes below ~200 mm before stabilizing into a linear offset.
-                                </p>
+                        <strong class="text-primary block mb-4">Variables Researched</strong>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                            <div class="bg-bg rounded-xl p-4 border border-border">
+                                <h4 class="font-bold text-primary text-sm mb-1">1. Thrust Produced</h4>
+                                <p class="text-muted text-xs leading-relaxed">Peak force generated by the propulsion system to overcome gravity or execute orbital maneuvers.</p>
                             </div>
-
-                            <!-- Graph 2: Measurement Error & Bias Profile -->
-                            <div class="bg-bg rounded-2xl border border-border p-5 shadow-sm flex flex-col justify-between">
-                                <div>
-                                    <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-                                        <h4 class="font-bold text-primary text-sm">Measurement Error &amp; Bias Profile (mm)</h4>
-                                        <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-white border border-border text-muted">Error = Measured &minus; Actual</span>
-                                    </div>
-                                    <div class="bg-white rounded-xl border border-border p-3 mb-4">
-                                        <svg viewBox="0 0 560 320" class="w-full h-auto overflow-visible" role="img" aria-label="Graph showing measurement error in mm across distances for Adafruit, SparkFun, and Ultrasonic sensors">
-                                            <!-- Horizontal Gridlines (Y domain: +20 to -60) -->
-                                            <line x1="55" y1="30" x2="530" y2="30" stroke="#E5E5E5" stroke-width="1" stroke-dasharray="3,3"/>
-                                            <!-- Zero Error Reference Line -->
-                                            <line x1="55" y1="87.5" x2="530" y2="87.5" stroke="#111111" stroke-width="1.5"/>
-                                            <line x1="55" y1="145" x2="530" y2="145" stroke="#E5E5E5" stroke-width="1" stroke-dasharray="3,3"/>
-                                            <line x1="55" y1="202.5" x2="530" y2="202.5" stroke="#E5E5E5" stroke-width="1" stroke-dasharray="3,3"/>
-                                            <line x1="55" y1="260" x2="530" y2="260" stroke="#E5E5E5" stroke-width="1"/>
-
-                                            <!-- Vertical Gridlines -->
-                                            <line x1="141.4" y1="30" x2="141.4" y2="260" stroke="#F0F0F0" stroke-width="1"/>
-                                            <line x1="227.7" y1="30" x2="227.7" y2="260" stroke="#F0F0F0" stroke-width="1"/>
-                                            <line x1="314.1" y1="30" x2="314.1" y2="260" stroke="#F0F0F0" stroke-width="1"/>
-                                            <line x1="400.5" y1="30" x2="400.5" y2="260" stroke="#F0F0F0" stroke-width="1"/>
-                                            <line x1="486.8" y1="30" x2="486.8" y2="260" stroke="#F0F0F0" stroke-width="1"/>
-
-                                            <!-- Y-Axis Labels -->
-                                            <text x="48" y="34" text-anchor="end" class="text-[10px] fill-[#737373] font-sans">+20</text>
-                                            <text x="48" y="91" text-anchor="end" class="text-[10px] fill-[#111111] font-bold font-sans">0</text>
-                                            <text x="48" y="149" text-anchor="end" class="text-[10px] fill-[#737373] font-sans">-20</text>
-                                            <text x="48" y="206" text-anchor="end" class="text-[10px] fill-[#737373] font-sans">-40</text>
-                                            <text x="48" y="264" text-anchor="end" class="text-[10px] fill-[#737373] font-sans">-60</text>
-                                            <text x="14" y="145" text-anchor="middle" transform="rotate(-90 14 145)" class="text-[10px] fill-[#737373] font-semibold font-sans">Error (mm)</text>
-
-                                            <!-- X-Axis Labels -->
-                                            <text x="55" y="278" text-anchor="middle" class="text-[10px] fill-[#737373] font-sans">0</text>
-                                            <text x="141.4" y="278" text-anchor="middle" class="text-[10px] fill-[#737373] font-sans">100</text>
-                                            <text x="227.7" y="278" text-anchor="middle" class="text-[10px] fill-[#737373] font-sans">200</text>
-                                            <text x="314.1" y="278" text-anchor="middle" class="text-[10px] fill-[#737373] font-sans">300</text>
-                                            <text x="400.5" y="278" text-anchor="middle" class="text-[10px] fill-[#737373] font-sans">400</text>
-                                            <text x="486.8" y="278" text-anchor="middle" class="text-[10px] fill-[#737373] font-sans">500</text>
-                                            <text x="292" y="298" text-anchor="middle" class="text-[10px] fill-[#737373] font-semibold font-sans">Actual Target Distance (mm)</text>
-
-                                            <!-- Ultrasonic Error Line (from 160mm spike entering at top to 520mm) -->
-                                            <polyline fill="none" stroke="#10B981" stroke-width="2.2"
-                                                points="212,30 227.7,106.2 262.3,172.0 296.8,212.6 331.4,186.0 365.9,180.2 400.5,175.9 435.0,217.4 469.5,185.4 486.8,170.0 504.1,153.9"/>
-
-                                            <!-- SparkFun Error Line -->
-                                            <polyline fill="none" stroke="#EF4444" stroke-width="2"
-                                                points="89.5,178.6 124.1,107.0 158.6,109.0 193.2,110.9 227.7,107.0 262.3,118.0 296.8,124.1 331.4,103.7 365.9,139.0 400.5,128.8 435.0,138.0 469.5,149.9 486.8,122.8 504.1,169.8"/>
-
-                                            <!-- Adafruit Error Line -->
-                                            <polyline fill="none" stroke="#2563EB" stroke-width="2.2"
-                                                points="89.5,64.1 124.1,82.4 158.6,85.1 193.2,48.1 227.7,75.3 262.3,89.1 296.8,81.1 331.4,100.4 365.9,54.4 400.5,107.2 435.0,116.6 469.5,97.8 486.8,30.1 504.1,99.7"/>
-
-                                            <!-- Mean Bias Callout Badges -->
-                                            <rect x="68" y="36" width="122" height="19" rx="4" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
-                                            <text x="74" y="49" class="text-[9.5px] fill-[#1D4ED8] font-semibold font-sans">Adafruit Bias: +2.73 mm</text>
-
-                                            <rect x="365" y="152" width="132" height="19" rx="4" fill="#FEF2F2" stroke="#FECACA" stroke-width="1"/>
-                                            <text x="371" y="165" class="text-[9.5px] fill-[#B91C1C] font-semibold font-sans">SparkFun Bias: -14.52 mm</text>
-
-                                            <rect x="242" y="226" width="178" height="19" rx="4" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
-                                            <text x="248" y="239" class="text-[9.5px] fill-[#065F46] font-semibold font-sans">Ultrasonic Offset: -25 to -45 mm</text>
-                                        </svg>
-
-                                        <!-- Legend -->
-                                        <div class="flex flex-wrap items-center justify-center gap-4 pt-2 border-t border-border/60 text-[11px] text-muted">
-                                            <span class="inline-flex items-center gap-1.5 font-medium text-primary"><span class="w-3 h-0.5 bg-[#2563EB] inline-block"></span> Adafruit Error</span>
-                                            <span class="inline-flex items-center gap-1.5 font-medium text-primary"><span class="w-3 h-0.5 bg-[#EF4444] inline-block"></span> SparkFun Error</span>
-                                            <span class="inline-flex items-center gap-1.5 font-medium text-primary"><span class="w-3 h-0.5 bg-[#10B981] inline-block"></span> Ultrasonic Error (&ge;200mm)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="text-muted text-xs leading-relaxed">
-                                    <strong>Key Takeaway:</strong> Adafruit stays tightly centered near zero error (<strong>+2.73 mm</strong> average bias), while SparkFun exhibits a consistent negative bias (<strong>-14.52 mm</strong>) that widens with distance, and the ultrasonic sensor underestimates by <strong>25–45 mm</strong>.
-                                </p>
+                            <div class="bg-bg rounded-xl p-4 border border-border">
+                                <h4 class="font-bold text-primary text-sm mb-1">2. Engine Efficiency (Isp)</h4>
+                                <p class="text-muted text-xs leading-relaxed">Specific impulse measuring how effectively propellant mass is converted into momentum.</p>
                             </div>
+                            <div class="bg-bg rounded-xl p-4 border border-border">
+                                <h4 class="font-bold text-primary text-sm mb-1">3. Fuel Consumption</h4>
+                                <p class="text-muted text-xs leading-relaxed">Total propellant mass required to achieve target delta-v over a multi-year interplanetary mission.</p>
+                            </div>
+                            <div class="bg-bg rounded-xl p-4 border border-border">
+                                <h4 class="font-bold text-primary text-sm mb-1">4. Expense</h4>
+                                <p class="text-muted text-xs leading-relaxed">Manufacturing, launch-mass, and operational costs, including rare noble-gas propellant production.</p>
+                            </div>
+                            <div class="bg-bg rounded-xl p-4 border border-border">
+                                <h4 class="font-bold text-primary text-sm mb-1">5. System &amp; Fuel Weight</h4>
+                                <p class="text-muted text-xs leading-relaxed">Dry engine mass and stored propellant weight affecting overall spacecraft payload capacity.</p>
+                            </div>
+                            <div class="bg-bg rounded-xl p-4 border border-border">
+                                <h4 class="font-bold text-primary text-sm mb-1">6. Time to Accelerate</h4>
+                                <p class="text-muted text-xs leading-relaxed">Duration required to reach high interplanetary cruise velocities in the vacuum of space.</p>
+                            </div>
+                        </div>
+                    </div>
 
+                    <!-- Benchmark Comparison Table & Dawn Spacecraft Velocity Analysis -->
+                    <div class="mt-8 pt-8 border-t border-border">
+                        <strong class="text-primary block mb-4">Benchmark Propulsion Comparison: NEXT-C Ion vs. RS-25 Chemical</strong>
+                        <div class="overflow-x-auto rounded-2xl border border-border shadow-sm mb-6">
+                            <table class="w-full text-left text-sm text-muted">
+                                <thead class="bg-bg text-primary border-b border-border">
+                                    <tr>
+                                        <th class="px-6 py-4 font-bold">Engine Architecture</th>
+                                        <th class="px-6 py-4 font-bold">Propulsion Type</th>
+                                        <th class="px-6 py-4 font-bold">Specific Impulse (Isp)</th>
+                                        <th class="px-6 py-4 font-bold">Maximum Thrust</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-border bg-white">
+                                    <tr class="hover:bg-black/[0.02] transition-colors">
+                                        <td class="px-6 py-5 font-medium text-primary">NEXT-C (NASA Evolutionary Xenon Thruster)</td>
+                                        <td class="px-6 py-5 text-accent font-medium">Electric Gridded Ion</td>
+                                        <td class="px-6 py-5 text-primary font-bold">4,190 seconds</td>
+                                        <td class="px-6 py-5">237 mN (at 6.9 kW power)</td>
+                                    </tr>
+                                    <tr class="hover:bg-black/[0.02] transition-colors">
+                                        <td class="px-6 py-5 font-medium text-primary">Block 2 Aerojet Rocketdyne RS-25 (Space Launch System)</td>
+                                        <td class="px-6 py-5">Liquid Chemical (LH2/LOX)</td>
+                                        <td class="px-6 py-5">452.3 seconds (in Vacuum)</td>
+                                        <td class="px-6 py-5 text-primary font-bold">512,300 lbs (2.279 MN)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
 
-                        <!-- Sensor-by-Sensor Insights Grid -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                            
-                            <!-- Card 1: ToF Sensors Comparison -->
-                            <div class="bg-bg rounded-2xl p-6 border border-border shadow-sm">
-                                <div class="flex items-center gap-2.5 mb-3">
-                                    <div class="w-8 h-8 rounded-lg bg-accent/10 text-accent flex items-center justify-center font-bold text-sm">ToF</div>
-                                    <div>
-                                        <h4 class="font-bold text-primary text-base leading-tight">Time-of-Flight Sensor Comparison</h4>
-                                        <p class="text-xs text-muted">Adafruit VL53L0X vs. SparkFun VL53L1X Qwiic</p>
-                                    </div>
-                                </div>
-                                <ul class="space-y-2.5 text-muted text-xs md:text-sm leading-relaxed">
+                        <!-- Data Observations & Conclusion Cards -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-bg p-6 rounded-2xl border border-border shadow-sm">
+                                <h4 class="font-bold text-primary text-base mb-3">Key Data &amp; Observations</h4>
+                                <ul class="space-y-3 text-muted text-xs md:text-sm leading-relaxed">
                                     <li class="flex items-start">
-                                        <span class="w-1.5 h-1.5 rounded-full bg-accent mt-2 mr-2.5 flex-shrink-0"></span>
-                                        <span><strong>Baseline Accuracy:</strong> Although both sensors are accurate within <strong>0–2 cm</strong> at each tested interval, the <strong>Adafruit VL53L0X</strong> is more accurate more frequently than the SparkFun sensor.</span>
+                                        <svg class="w-5 h-5 text-accent mr-2.5 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                        <span><strong>9.2x Specific Impulse Gain:</strong> The NEXT-C ion thruster achieves a specific impulse of 4,190 seconds—over 9 times higher than the RS-25 chemical rocket (452.3 seconds)—enabling spacecraft to travel vast distances with minimal fuel mass.</span>
                                     </li>
                                     <li class="flex items-start">
-                                        <span class="w-1.5 h-1.5 rounded-full bg-accent mt-2 mr-2.5 flex-shrink-0"></span>
-                                        <span><strong>Systematic Bias:</strong> Adafruit exhibits a slight positive bias, overestimating target distance by an average of <strong>+2.73 mm</strong>. Conversely, SparkFun exhibits a strong negative bias, underestimating target distance by an average of <strong>-14.52 mm</strong>.</span>
+                                        <svg class="w-5 h-5 text-accent mr-2.5 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                        <span><strong>Continuous Deep-Space Acceleration (Dawn Spacecraft):</strong> Although ion engines produce very low instantaneous thrust (237 mN), continuous thrust in vacuum compounds into extreme velocities over time—modeled after NASA's Dawn Spacecraft, which increased its speed by <strong>25,000 mph over 5.9 years</strong>.</span>
                                     </li>
                                     <li class="flex items-start">
-                                        <span class="w-1.5 h-1.5 rounded-full bg-accent mt-2 mr-2.5 flex-shrink-0"></span>
-                                        <span><strong>Distance Scaling:</strong> Both Time-of-Flight sensors gradually lose accuracy and exhibit higher variance as the distance from the target increases.</span>
+                                        <svg class="w-5 h-5 text-accent mr-2.5 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                        <span><strong>Propellant Trade-Offs:</strong> Electric ion thrusters require easily ionizable noble gases such as Xenon, which is rare and expensive to produce compared to chemical propellants.</span>
                                     </li>
                                 </ul>
                             </div>
 
-                            <!-- Card 2: Ultrasonic Sensor Insights -->
-                            <div class="bg-bg rounded-2xl p-6 border border-border shadow-sm">
-                                <div class="flex items-center gap-2.5 mb-3">
-                                    <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs">US</div>
-                                    <div>
-                                        <h4 class="font-bold text-primary text-base leading-tight">Ultrasonic Sensor Evaluation</h4>
-                                        <p class="text-xs text-muted">LV-MaxSonar-EZ0 (Part # MB1000)</p>
-                                    </div>
-                                </div>
-                                <ul class="space-y-2.5 text-muted text-xs md:text-sm leading-relaxed">
+                            <div class="bg-bg p-6 rounded-2xl border border-border shadow-sm">
+                                <h4 class="font-bold text-primary text-base mb-3">Results &amp; Conclusion</h4>
+                                <ul class="space-y-3 text-muted text-xs md:text-sm leading-relaxed">
                                     <li class="flex items-start">
-                                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 mt-2 mr-2.5 flex-shrink-0"></span>
-                                        <span><strong>Close-Range Unreliability (&lt;200 mm):</strong> Near its minimum range (~6 inches / 152 mm), the sensor is highly unreliable—readings fluctuate wildly between <strong>180 mm and 650+ mm</strong> across identical distance trials.</span>
+                                        <div class="w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center mr-2.5 mt-0.5 flex-shrink-0">
+                                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                        </div>
+                                        <span><strong>Launch vs. In-Orbit Division:</strong> Because of their low thrust-to-weight ratio, electric ion engines cannot launch a rocket from Earth's surface to orbit; chemical engines remain essential for launch and rapid, high-thrust maneuvers.</span>
                                     </li>
                                     <li class="flex items-start">
-                                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 mt-2 mr-2.5 flex-shrink-0"></span>
-                                        <span><strong>High Precision vs. Low Accuracy (&gt;200 mm):</strong> Above ~200 mm, the sensor is remarkably precise (often yielding identical means and standard deviations of ~0.3–0.5 mm across all 5–6 trials), but consistently underestimates distance by <strong>25–45 mm</strong>.</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 mt-2 mr-2.5 flex-shrink-0"></span>
-                                        <span><strong>Collision-Avoidance Suitability:</strong> While the systematic bias could be corrected with a calibration offset, the severe instability below 200 mm makes it poorly suited for short-range collision avoidance without additional filtering.</span>
+                                        <div class="w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center mr-2.5 mt-0.5 flex-shrink-0">
+                                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                        </div>
+                                        <span><strong>Future of Deep-Space Transit:</strong> Once a spacecraft reaches orbit, electric ion propulsion is the superior architecture for deep-space exploration due to its exceptional propellant efficiency, lightweight fuel load, and ability to reach very high terminal speeds over multi-year missions.</span>
                                     </li>
                                 </ul>
                             </div>
-
-                        </div>
-
-                        <!-- Environmental & Target Stress Tests (3 Sub-Cards) -->
-                        <h4 class="font-bold text-xs text-primary uppercase tracking-wider mb-3">Surface Reflectivity, Transparency &amp; Target Size Stress Tests</h4>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            
-                            <!-- Stress Test 1: Dark Surface -->
-                            <div class="bg-white rounded-xl p-5 border border-border shadow-sm">
-                                <h5 class="font-bold text-primary mb-2 text-sm">Dark (Black) Surface</h5>
-                                <p class="text-muted text-xs leading-relaxed">
-                                    Testing against a matte black surface had little effect on the mean accuracy of the Time-of-Flight sensors, which stayed nearly identical to white-wall readings. However, ToF measurements became noticeably noisier, showing a higher standard deviation over the 5-second sampling interval. The ultrasonic sensor was completely unaffected, as expected.
-                                </p>
-                            </div>
-
-                            <!-- Stress Test 2: Transparent Surface -->
-                            <div class="bg-white rounded-xl p-5 border border-border shadow-sm">
-                                <h5 class="font-bold text-primary mb-2 text-sm">Transparent Surface</h5>
-                                <p class="text-muted text-xs leading-relaxed">
-                                    When a clear object (eyeglasses or clear tape) was placed in front of the sensor with an air gap before a white wall (at 300 mm), all three sensors significantly underestimated distance (dropping to <strong>~150–160 mm</strong> vs. ~280 mm unobstructed). However, against an actual flush window, all three measured accurately like a plain wall—showing interference occurs primarily when a transparent object sits a short distance in front of the sensor.
-                                </p>
-                            </div>
-
-                            <!-- Stress Test 3: Target Size & FOV -->
-                            <div class="bg-white rounded-xl p-5 border border-border shadow-sm">
-                                <h5 class="font-bold text-primary mb-2 text-sm">Target Size &amp; FOV (US Penny)</h5>
-                                <p class="text-muted text-xs leading-relaxed">
-                                    Evaluated minimum detectable target size using a US penny. Both Time-of-Flight sensors (~25–27&deg; field of view) detected the penny at close range but could no longer detect it reliably beyond <strong>~250 mm</strong>. The ultrasonic sensor struggled to detect the penny at all, registering it only when placed directly in front of the transducer.
-                                </p>
-                            </div>
-
                         </div>
                     </div>
 
-                    <!-- My Impact Section -->
+                    <!-- References -->
                     <div class="mt-8 pt-8 border-t border-border">
-                        <strong class="text-primary block mb-4">My Impact & Growth</strong>
-                        <p class="text-muted text-sm md:text-base leading-relaxed mb-4">
-                            Following the testing phase, I performed comprehensive data analysis and generated visual representations to identify the most effective sensor for our specific flight requirements. The sensor for integration was chosen based on this testing and analysis.
-                        </p>
-                        <p class="text-muted text-sm md:text-base leading-relaxed">
-                            Beyond the technical deliverables, this role has been an immense catalyst for my personal and academic growth. It has provided me with direct, hands-on exposure to professional-level research standards and disciplined testing processes within a top-tier university laboratory environment.
+                        <strong class="text-primary block mb-3 text-sm uppercase tracking-wider">Works Cited &amp; Data Sources</strong>
+                        <p class="text-muted text-xs leading-relaxed">
+                            Aerojet Rocketdyne (RS-25 Specifications) &bull; NASA Glenn Research Center (Gridded Ion Thrusters &amp; NEXT-C) &bull; German Aerospace Center / DLR (Dawn Spacecraft Propulsion Profile) &bull; European Space Agency / ESA (SMART-1 Solar Electric Propulsion) &bull; Fraser Cain Space Propulsion Analysis
                         </p>
                     </div>
                 </div>
@@ -2099,6 +1335,7 @@
         // Map sub-sections to their parent page to support direct links
         const sectionMap = {
             'independent-research': 'research',
+            'ion-propulsion-study': 'research',
             'independent-capstone': 'engineering',
             'destination-imagination': 'engineering',
             'ut-austin-research': 'labresearch',
