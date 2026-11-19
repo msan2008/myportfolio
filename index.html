@@ -969,27 +969,27 @@
                     <div class="p-6 md:p-8 bg-bg rounded-2xl border border-border">
                         <strong class="text-primary block mb-3 text-lg">The trigger</strong>
                         <p class="text-muted leading-relaxed text-sm md:text-base mb-6">
-                            During my research, I noticed a critical gap: costly 3D design and simulation software and expensive hardware needed to run those locks many aspiring engineers out of aerospace research.
+                            During my research, I noticed a critical gap: commercial 3D design and Computational Fluid Dynamics (CFD) simulation software priced at <strong>around $7,649/year</strong>—alongside specialized hardware and hours-long run times—locks many aspiring student engineers out of aerospace research.
                         </p>
 
                         <strong class="text-primary block mb-3 text-lg">The solution</strong>
                         <p class="text-muted leading-relaxed text-sm md:text-base mb-6">
-                            I designed and deployed Wingcheck Aero Toolkit, a lightweight browser-based aerodynamics screening platform that helps students and beginner engineering teams explore drone wing design without needing immediate access to expensive CFD software or wind-tunnel testing. The app uses a Python/Streamlit interface connected to a trained machine learning model that predicts <code class="bg-black/10 px-1.5 py-0.5 rounded text-primary text-xs font-mono">separation_x_over_c</code>, a normalized estimate of where airflow separation occurs along a wing chord. Users can adjust parameters such as airfoil family, angle of attack, airspeed, tubercle amplitude, tubercle wavelength, and wing geometry to compare how different designs may affect flow separation.
+                            I designed and deployed WingCheck Aero Toolkit, a lightweight browser-based aerodynamics screening platform that helps students and beginner engineering teams explore drone wing design without needing immediate access to expensive CFD software or wind-tunnel testing. The app uses a Python/Streamlit interface connected to a trained machine learning surrogate model that predicts <code class="bg-black/10 px-1.5 py-0.5 rounded text-primary text-xs font-mono">separation_x_over_c</code>, the normalized chord fraction where airflow separation occurs. Users can adjust parameters such as airfoil family (symmetric, cambered, or humpback whale-inspired biomimetic), angle of attack, airspeed, tubercle amplitude, tubercle wavelength, and wing geometry to compare how different designs affect flow separation.
                         </p>
 
                         <strong class="text-primary block mb-3 text-lg">Technical Work</strong>
                         <p class="text-muted leading-relaxed text-sm md:text-base mb-6">
-                            I built the toolkit as an end-to-end engineering project: generating and organizing CFD-style training data, comparing regression model families, validating predictions on held-out data, saving the trained model pipeline, and connecting it to a public web application. I also made the project open source so that other students, mentors, and educators can inspect the code, test new designs, and suggest improvements.
+                            I built the toolkit as an end-to-end machine learning and software engineering project: curating a <strong>1,000+ simulation dataset</strong> derived from my <strong>250+ CFD runs</strong>, benchmarking multiple regression model families in <code class="bg-black/10 px-1.5 py-0.5 rounded text-primary text-xs font-mono">scikit-learn</code> (Random Forest, Extra Trees, Ridge Regression, and Gradient Boosting), selecting <strong>Extra Trees</strong> as the top-performing surrogate model (<strong class="text-primary">R&sup2; = 0.984</strong> on held-out tubercle geometries), and deploying the serialized pipeline to a public Streamlit web app. After realizing my initial prototype worked only for users with prior aerodynamics training, I rebuilt the interface with <strong>40+ plain-English variable definitions</strong> and visual diagrams informed by 60+ user surveys. I also made the entire repository open source so students, mentors, and educators can inspect the code, test new designs, and contribute improvements.
                         </p>
                         
                         <strong class="text-primary block mb-3 text-lg">Technical Challenge</strong>
                         <p class="text-muted leading-relaxed text-sm md:text-base mb-6">
-                            A major challenge was balancing usability with scientific honesty. The tool is carefully designed as a first-pass screening system to guide intuition, rather than a direct replacement for professional CFD, physical wind-tunnel testing, or rigorous flight validation.
+                            A major challenge was balancing beginner accessibility with scientific honesty. Because a surrogate ML model is only reliable inside its training distribution—and because delaying flow separation (<code class="bg-black/10 px-1.5 py-0.5 rounded text-primary text-xs font-mono">separation_x_over_c</code>) does not automatically guarantee higher lift or lower drag—I engineered a dedicated <strong>Model Reliability panel</strong> directly into the application so students clearly understand that WingCheck is a first-pass screening tool rather than a replacement for full CFD, physical wind-tunnel testing, or rigorous flight validation.
                         </p>
 
                         <strong class="text-primary block mb-3 text-lg">Why This Matters</strong>
                         <p class="text-muted leading-relaxed text-sm md:text-base mb-6">
-                            Aero Toolkit is meant to make aerodynamic design more accessible. Instead of requiring students to begin with advanced, often intimidating simulation tools, it gives them an interactive way to test ideas, compare designs, and decide which concepts deserve deeper analysis. Furthermore, the project directly connects aerodynamic efficiency to sustainability by helping students reason about how better wing designs can reduce wasted energy and significantly improve battery-powered flight capabilities.
+                            WingCheck is built on the lesson that making a tool free does not automatically make it accessible. Through hands-on workshops and video tutorials, <strong>over 150 students</strong> have used the platform to test ideas, compare wing designs, and decide which concepts deserve deeper analysis without paying around $7,649/year for commercial software. Furthermore, the project directly connects aerodynamic efficiency to sustainability by helping students reason about how better wing designs can reduce wasted energy and extend battery-powered flight range.
                         </p>
                         
                         <!-- Recognition Chips -->
@@ -1036,7 +1036,7 @@
                     <div class="mt-8 pt-8 border-t border-border">
                         <strong class="text-primary block mb-4 text-lg">Community &amp; Educational Impact: Video &amp; Web App Feedback Evaluation</strong>
                         <p class="text-muted text-sm md:text-base leading-relaxed mb-6">
-                            To make the tool useful beyond my own research, I paired the software with a workshop slide deck, student worksheet, instructional video, and feedback survey. A comprehensive evaluation survey was conducted among students and users who viewed the YouTube walkthrough video and tested the <strong>WingCheck Aero Toolkit</strong> hands-on. The feedback confirmed substantial learning gains across aerodynamics and machine learning concepts, exceptional web app usability (<strong class="text-primary">4.72/5 ease of use</strong>), and strong peer advocacy—while providing actionable feature requests that directly guide the platform's roadmap.
+                            To make the tool useful beyond my own research, I paired the software with a workshop slide deck, student worksheet, instructional video, and feedback survey—reaching <strong>150+ student users</strong> across hands-on workshops and online tutorials. A comprehensive evaluation survey was conducted among students and users who viewed the YouTube walkthrough video and tested the <strong>WingCheck Aero Toolkit</strong> hands-on. The feedback confirmed substantial learning gains across aerodynamics and machine learning concepts, exceptional web app usability (<strong class="text-primary">4.72/5 ease of use</strong>), and strong peer advocacy—while providing actionable feature requests that directly guide the platform's roadmap.
                         </p>
 
                         <!-- Top Key Metrics (4 KPI Cards from Survey Summary) -->
@@ -1778,13 +1778,35 @@
                             </div>
 
                         </div>
+
+                        <!-- Final Sensor Selection & Engineering Rationale -->
+                        <div class="mt-6 bg-bg rounded-2xl p-6 border border-border shadow-sm">
+                            <h4 class="font-bold text-primary text-base mb-2">Final Sensor Selection: Adafruit VL53L0X Time-of-Flight</h4>
+                            <p class="text-muted text-xs md:text-sm leading-relaxed mb-3">
+                                Based on the empirical evidence across all 670 trials, we selected the <strong>Adafruit VL53L0X</strong> Time-of-Flight sensor for integration onto the U.S. Navy ship-inspection UAV:
+                            </p>
+                            <ul class="space-y-2 text-muted text-xs md:text-sm leading-relaxed">
+                                <li class="flex items-start">
+                                    <svg class="w-4 h-4 text-accent mr-2.5 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span><strong>Lowest Systematic Bias &amp; Highest Accuracy:</strong> Compared to the SparkFun VL53L1X (-14.52 mm bias) and the LV-MaxSonar-EZ0 ultrasonic sensor (-25 to -45 mm offset), the Adafruit VL53L0X maintained the lowest average bias (<strong>+2.73 mm</strong>) and tracked true distance most consistently across the 40–520 mm range.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-4 h-4 text-accent mr-2.5 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span><strong>Superior Close-Range &amp; Small-Target Reliability:</strong> Unlike the ultrasonic sensor—which suffered severe close-range reading spikes below 200 mm and failed to detect small objects like a US penny—the Adafruit Time-of-Flight sensor delivered stable close-quarters readings and reliable small-target detection within 250 mm.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-4 h-4 text-accent mr-2.5 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                    <span><strong>Manageable Transparent-Surface Trade-Off:</strong> While optical Time-of-Flight sensors can miss or underestimate clear glass with an air gap behind it, the research team judged that narrow blind spot small enough to manage safely in ship-inspection flight operations given the sensor's superior overall accuracy and precision.</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
 
                     <!-- My Impact Section -->
                     <div class="mt-8 pt-8 border-t border-border">
                         <strong class="text-primary block mb-4">My Impact & Growth</strong>
                         <p class="text-muted text-sm md:text-base leading-relaxed mb-4">
-                            Across the ~670 sensor evaluation trials, my core responsibility was ensuring the data could be trusted before physical flight testing. Rather than relying on single readings or guessing when the ultrasonic and optical sensors disagreed, I broke down each discrepancy systematically—learning to separate consistent systematic bias (which can be calibrated out) from random noise (which must be averaged), isolating surface-dependent reflection failures, and debugging anomalies caused by my own test scripts. By logging every test condition reproducibly so Ph.D. researchers could audit and verify the results, our analysis demonstrated that the optical Time-of-Flight sensor offered superior accuracy and precision, with a transparent-surface blind spot small enough to manage safely in flight operations.
+                            Across the ~670 sensor evaluation trials, my core responsibility was ensuring the data could be trusted before physical flight testing. Rather than relying on single readings or guessing when the ultrasonic and optical sensors disagreed, I broke down each discrepancy systematically—learning to separate consistent systematic bias (which can be calibrated out) from random noise (which must be averaged), isolating surface-dependent reflection failures, and debugging anomalies caused by my own test scripts. By logging every test condition reproducibly so Ph.D. researchers could audit and verify the results, our analysis demonstrated that the <strong>Adafruit VL53L0X</strong> Time-of-Flight sensor offered superior accuracy and precision, with a transparent-surface blind spot small enough to manage safely in flight operations.
                         </p>
                         <p class="text-muted text-sm md:text-base leading-relaxed">
                             Beyond the technical deliverables, this role has been an immense catalyst for my personal and academic growth. It taught me to repeat every condition, verify anomalies before accepting results, and leave an auditable trail—giving me direct, hands-on exposure to professional research standards within a top-tier university laboratory environment.
