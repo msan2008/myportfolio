@@ -297,7 +297,7 @@
                     <div role="button" tabindex="0" onclick="document.getElementById('independent-research').scrollIntoView({ behavior: 'smooth' });" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();document.getElementById('independent-research').scrollIntoView({ behavior: 'smooth' });}" class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300 flex flex-col justify-between cursor-pointer group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
                         <div>
                             <h3 class="text-lg font-bold text-primary mb-3 group-hover:text-accent transition-colors">Biomimetic Aerodynamic Research</h3>
-                            <p class="text-muted text-sm leading-relaxed">Conducted research for aircraft fuel efficiency improvement, paper published in JEI pre-print, Under Peer-Review for JEI Journal, named Top 12/330 at Sci Fair, securing awards and $6K scholarship</p>
+                            <p class="text-muted text-sm leading-relaxed">Conducted research for aircraft fuel efficiency improvement, paper posted in JEI pre-print, Peer-Review completed and under Revision for JEI Journal, named Top 12/330 at Sci Fair, securing awards and $6K scholarship</p>
                         </div>
                         <div class="mt-5 pt-4 border-t border-border/60 flex items-center justify-between text-xs font-semibold text-accent">
                             <span>Jump to Study</span>
@@ -551,9 +551,9 @@
                                 </figure>
                                 <figure class="rounded-2xl overflow-hidden border border-border shadow-sm group bg-white flex flex-col">
                                     <div class="flex items-center justify-center bg-white">
-                                        <img src="Phase1-CFD-flow-sep.png" alt="Fig 3.2: CFD airflow velocity streamlines showing energized boundary-layer vortices and delayed flow separation behind leading-edge tubercles." class="zoomable-img w-full h-full object-contain aspect-video p-2 group-hover:scale-105 transition-transform duration-500">
+                                        <img src="Phase1-CFD-flow-sep.png" alt="Fig 3.2: CFD airflow velocity streamlines showing delayed flow separation behind leading-edge tubercles." class="zoomable-img w-full h-full object-contain aspect-video p-2 group-hover:scale-105 transition-transform duration-500">
                                     </div>
-                                    <figcaption class="text-xs text-muted px-4 py-2.5 bg-bg border-t border-border">Fig 3.2: CFD airflow streamlines showing energized boundary-layer vortices and delayed flow separation.</figcaption>
+                                    <figcaption class="text-xs text-muted px-4 py-2.5 bg-bg border-t border-border">Fig 3.2: CFD airflow streamlines showing delayed flow separation.</figcaption>
                                 </figure>
                             </div>
                         </div>
@@ -2358,7 +2358,7 @@
                         <span class="text-xs text-muted font-medium">Classical piano study</span>
                     </div>
                     <div class="bg-bg rounded-2xl p-5 border border-border shadow-sm flex flex-col justify-between">
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-muted mb-1">Certification</span>
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-muted mb-1">Learning</span>
                         <div class="text-2xl md:text-3xl font-extrabold text-accent tracking-tight my-0.5">ABRSM L7</div>
                         <span class="text-xs text-muted font-medium">Rigorous curriculum</span>
                     </div>
@@ -2604,10 +2604,10 @@
                         </p>
                     </div>
                     <div class="p-5 bg-bg rounded-2xl border border-border">
-                        <span class="text-[11px] font-bold uppercase tracking-wider text-accent block mb-1">University Mathematics (2025 &ndash; 2026)</span>
-                        <h4 class="font-bold text-primary text-base mb-2">Stanford University Pre-Collegiate Studies</h4>
+                        <span class="text-[11px] font-bold uppercase tracking-wider text-accent block mb-1">University Mathematics (11th &ndash; 12th Grade)</span>
+                        <h4 class="font-bold text-primary text-base mb-2">Stanford University Pre-Collegiate Online Studies</h4>
                         <p class="text-muted text-sm leading-relaxed">
-                            Earned <strong>3 Stanford Continuing Studies credits</strong> matching the official Stanford Mathematics curriculum: <strong>Linear Algebra (A+)</strong> and <strong>Number Theory</strong>.
+                            Earned <strong>3 university credits</strong> in advanced courses matching the official Stanford curriculum: <strong>Linear Algebra (A+; matrices, vector spaces)</strong> and <strong>Number Theory (proofs)</strong>.
                         </p>
                     </div>
                 </div>
@@ -2616,16 +2616,38 @@
             <!-- Category Filter Bar (2.20) -->
             <div class="flex flex-wrap items-center gap-2 mb-6" role="group" aria-label="Filter experience items by category">
                 <span class="text-xs font-bold uppercase tracking-wider text-muted mr-1">Filter:</span>
-                <button type="button" onclick="filterExperience('all', this)" class="exp-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-primary text-white transition-colors">All (9)</button>
+                <button type="button" onclick="filterExperience('all', this)" class="exp-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-primary text-white transition-colors">All (11)</button>
                 <button type="button" onclick="filterExperience('research', this)" class="exp-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-card border border-border text-muted hover:text-primary transition-colors">Research &amp; Academics</button>
-                <button type="button" onclick="filterExperience('aerospace', this)" class="exp-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-card border border-border text-muted hover:text-primary transition-colors">Aerospace Leadership</button>
+                <button type="button" onclick="filterExperience('aerospace', this)" class="exp-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-card border border-border text-muted hover:text-primary transition-colors">Aerospace &amp; Engineering</button>
                 <button type="button" onclick="filterExperience('service', this)" class="exp-filter-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-card border border-border text-muted hover:text-primary transition-colors">Community Service</button>
             </div>
 
             <div class="bg-card rounded-[2rem] border border-border p-8 md:p-12 shadow-framer">
                 <div class="divide-y divide-border/60">
                     
-                    <!-- Item 1: Conference Presenter (IRCC) -->
+                    <!-- Item 1: Independent Researcher & First Author -->
+                    <article data-category="research" class="exp-item py-7 first:pt-0 last:pb-0 flex flex-col md:flex-row gap-4 md:gap-12">
+                        <div class="md:w-1/4 flex-shrink-0 space-y-2">
+                            <span class="text-sm font-semibold text-muted block">Grades 9 &ndash; 12</span>
+                            <span class="inline-block px-2.5 py-0.5 rounded-full bg-blue-50 border border-blue-200 text-accent text-[11px] font-semibold">Research &amp; Academics</span>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-1">
+                                <h3 class="text-xl font-bold text-primary">Independent Researcher &amp; First Author</h3>
+                                <div class="flex flex-wrap items-center gap-3 text-xs font-semibold">
+                                    <a href="https://doi.org/10.69831/157f400f46" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">JEI Pre-Print ↗</a>
+                                    <button type="button" onclick="navigate('research')" class="text-accent hover:underline">View Research &rarr;</button>
+                                </div>
+                            </div>
+                            <p class="text-accent font-medium mb-3">Independent Aerospace Research Projects</p>
+                            <ul class="space-y-1.5 text-muted text-sm md:text-base leading-relaxed list-disc list-inside">
+                                <li>Engineered fuel-efficient biomimetic aircraft wings; 3D-designed <strong>56 models</strong>, executed <strong>250+ CFD runs</strong>, and validated lift in a custom-built wind tunnel.</li>
+                                <li>Built and flight-tested a 40.5&Prime; UAV prototype achieving <strong>12% energy savings</strong> in real-world flight trials; posted first-author paper on JEI Pre-Print (under peer-review).</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Item 2: Conference Presenter (IRCC) -->
                     <article data-category="research" class="exp-item py-7 first:pt-0 last:pb-0 flex flex-col md:flex-row gap-4 md:gap-12">
                         <div class="md:w-1/4 flex-shrink-0 space-y-2">
                             <span class="text-sm font-semibold text-muted block">June 2026</span>
@@ -2641,16 +2663,16 @@
                             </div>
                             <p class="text-accent font-medium mb-3">International Research Conference for Children (<a href="https://ircc.world/" target="_blank" rel="noopener noreferrer" class="underline hover:text-primary transition-colors">ircc.world ↗</a>)</p>
                             <ul class="space-y-1.5 text-muted text-sm md:text-base leading-relaxed list-disc list-inside">
-                                <li>Presented two-phase biomimetic wing research to an international audience, sharing empirical data from <strong>250+ CFD runs</strong>, wind-tunnel testing, and <strong>40.5&Prime; UAV</strong> flight trials.</li>
+                                <li>Presented two-phase biomimetic wing research to an international audience, sharing empirical data from <strong>56 3D models</strong>, <strong>250+ CFD runs</strong>, wind-tunnel testing, and <strong>40.5&Prime; UAV</strong> flight trials.</li>
                                 <li>Awarded <strong>Best Research Presentation</strong> in the High School category.</li>
                             </ul>
                         </div>
                     </article>
 
-                    <!-- Item 2: Vertical Flight Lab, UT Austin -->
+                    <!-- Item 3: Vertical Flight Lab, UT Austin -->
                     <article data-category="research" class="exp-item py-7 first:pt-0 last:pb-0 flex flex-col md:flex-row gap-4 md:gap-12">
                         <div class="md:w-1/4 flex-shrink-0 space-y-2">
-                            <span class="text-sm font-semibold text-muted block">2025 &ndash; Ongoing</span>
+                            <span class="text-sm font-semibold text-muted block">Grades 11 &ndash; 12</span>
                             <span class="inline-block px-2.5 py-0.5 rounded-full bg-blue-50 border border-blue-200 text-accent text-[11px] font-semibold">Research &amp; Academics</span>
                         </div>
                         <div class="flex-1">
@@ -2658,18 +2680,18 @@
                                 <h3 class="text-xl font-bold text-primary">Aerospace Lab Research Assistant</h3>
                                 <button type="button" onclick="navigate('labresearch')" class="text-xs font-semibold text-accent hover:underline">View Lab Data &rarr;</button>
                             </div>
-                            <p class="text-accent font-medium mb-3">Vertical Flight Lab, The University of Texas at Austin</p>
+                            <p class="text-accent font-medium mb-3">UT Austin Cockrell School of Engineering: Vertical Flight Lab</p>
                             <ul class="space-y-1.5 text-muted text-sm md:text-base leading-relaxed list-disc list-inside">
-                                <li>Assist Prof. Dr. Jayant Sirohi and Ph.D. researchers on a <strong>U.S. Dept. of the Navy</strong> autonomous ship-inspection UAV initiative.</li>
-                                <li>Executed <strong>670 controlled sensor trials</strong> benchmarking optical Time-of-Flight and ultrasonic rangefinders, and 3D-designed custom sensor mounts for UAV integration.</li>
+                                <li>Assisted Prof. Dr. Jayant Sirohi and Ph.D. researchers on a <strong>U.S. Dept. of the Navy</strong> autonomous ship-inspection UAV project.</li>
+                                <li>Conducted <strong>670 tests</strong> evaluating UAV collision-avoidance sensors, 3D-designed custom sensor mounts, and integrated sensors onto the Navy drone platform.</li>
                             </ul>
                         </div>
                     </article>
 
-                    <!-- Item 3: WingCheck Founder & Lead Developer -->
+                    <!-- Item 4: WingCheck Founder & Lead Developer -->
                     <article data-category="research" class="exp-item py-7 first:pt-0 last:pb-0 flex flex-col md:flex-row gap-4 md:gap-12">
                         <div class="md:w-1/4 flex-shrink-0 space-y-2">
-                            <span class="text-sm font-semibold text-muted block">2025 &ndash; Ongoing</span>
+                            <span class="text-sm font-semibold text-muted block">Grades 11 &ndash; 12</span>
                             <span class="inline-block px-2.5 py-0.5 rounded-full bg-blue-50 border border-blue-200 text-accent text-[11px] font-semibold">Research &amp; Academics</span>
                         </div>
                         <div class="flex-1">
@@ -2677,112 +2699,131 @@
                                 <h3 class="text-xl font-bold text-primary">Founder, Lead Developer &amp; Workshop Lead</h3>
                                 <button type="button" onclick="navigate('independent-capstone')" class="text-xs font-semibold text-accent hover:underline">View WingCheck &rarr;</button>
                             </div>
-                            <p class="text-accent font-medium mb-3">WingCheck Aero Toolkit (<a href="https://wingcheck.streamlit.app/" target="_blank" rel="noopener noreferrer" class="underline hover:text-primary transition-colors">wingcheck.streamlit.app ↗</a>)</p>
+                            <p class="text-accent font-medium mb-3">WingCheck: Open-Source Predictive Aerodynamics Education Platform (<a href="https://wingcheck.streamlit.app/" target="_blank" rel="noopener noreferrer" class="underline hover:text-primary transition-colors">wingcheck.streamlit.app ↗</a>)</p>
                             <ul class="space-y-1.5 text-muted text-sm md:text-base leading-relaxed list-disc list-inside">
-                                <li>Built an open-source ML surrogate web app trained on <strong>1,000+ CFD runs</strong> (<strong>R&sup2; = 0.984</strong>) so students can screen wing efficiency without paying around $7,649/yr for commercial CFD software.</li>
-                                <li>Led hands-on workshops and tutorials engaging <strong>150+ users</strong>, iterating the UI with <strong>40+ plain-English definitions</strong> informed by <strong>61 user survey responses</strong>.</li>
+                                <li>Built ML-based software trained on <strong>1,000+ CFD runs</strong> (<strong>R&sup2; = 0.984</strong>) so students can test drone wing designs without costly software or hardware.</li>
+                                <li>Led workshops engaging <strong>150+ users</strong> and refined the platform through <strong>60+ user surveys</strong>.</li>
                             </ul>
                         </div>
                     </article>
 
-                    <!-- Item 4: NASA High School Aerospace Scholars (Moonshot) -->
+                    <!-- Item 5: Destination Imagination Co-Captain -->
                     <article data-category="aerospace" class="exp-item py-7 first:pt-0 last:pb-0 flex flex-col md:flex-row gap-4 md:gap-12">
                         <div class="md:w-1/4 flex-shrink-0 space-y-2">
-                            <span class="text-sm font-semibold text-muted block">2025 &ndash; 2026</span>
-                            <span class="inline-block px-2.5 py-0.5 rounded-full bg-fuchsia-50 border border-fuchsia-200 text-fuchsia-800 text-[11px] font-semibold">Aerospace Leadership</span>
+                            <span class="text-sm font-semibold text-muted block">Grades 9 &ndash; 11</span>
+                            <span class="inline-block px-2.5 py-0.5 rounded-full bg-fuchsia-50 border border-fuchsia-200 text-fuchsia-800 text-[11px] font-semibold">Aerospace &amp; Engineering</span>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex flex-wrap items-start justify-between gap-2 mb-1">
+                                <h3 class="text-xl font-bold text-primary">Co-Captain of Technical Team</h3>
+                                <button type="button" onclick="navigate('destination-imagination')" class="text-xs font-semibold text-accent hover:underline">View Builds &rarr;</button>
+                            </div>
+                            <p class="text-accent font-medium mb-3">Destination Imagination International STEAM Competition (600+ teams, 13 countries)</p>
+                            <ul class="space-y-1.5 text-muted text-sm md:text-base leading-relaxed list-disc list-inside">
+                                <li>Won <strong>Global 1st Place</strong> (3x winner) and earned both the <strong>DaVinci</strong> and <strong>Renaissance</strong> awards for engineering and creativity.</li>
+                                <li>Co-engineered <strong>3 technical devices</strong> (including an Arduino electromagnetic crane, pneumatic lift structure, and precision beanbag launcher) presented through live engineering/art skits.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Item 6: NASA High School Aerospace Scholars (Moonshot) -->
+                    <article data-category="aerospace" class="exp-item py-7 first:pt-0 last:pb-0 flex flex-col md:flex-row gap-4 md:gap-12">
+                        <div class="md:w-1/4 flex-shrink-0 space-y-2">
+                            <span class="text-sm font-semibold text-muted block">Grade 11</span>
+                            <span class="inline-block px-2.5 py-0.5 rounded-full bg-fuchsia-50 border border-fuchsia-200 text-fuchsia-800 text-[11px] font-semibold">Aerospace &amp; Engineering</span>
                         </div>
                         <div class="flex-1">
                             <div class="flex flex-wrap items-start justify-between gap-2 mb-1">
                                 <h3 class="text-xl font-bold text-primary">Space Research Scholar &amp; Moonshot Systems Engineer</h3>
                                 <button type="button" onclick="navigate('nasa-moonshot')" class="text-xs font-semibold text-accent hover:underline">View Mission &rarr;</button>
                             </div>
-                            <p class="text-accent font-medium mb-3">NASA Texas High School Aerospace Scholars (HAS)</p>
+                            <p class="text-accent font-medium mb-3">Texas High School Aerospace Scholars (NASA Partnership)</p>
                             <ul class="space-y-1.5 text-muted text-sm md:text-base leading-relaxed list-disc list-inside">
-                                <li>Earned an <strong>A+</strong> across a 5-month, 12-module NASA Earth science and aeronautics curriculum to qualify for the intensive Moonshot design week.</li>
-                                <li>Led an <strong>8-member Systems Engineering team</strong> to architect an Artemis Moon-to-Mars mission and presented technical blueprints to a panel of NASA engineers.</li>
+                                <li>Completed a rigorous <strong>12-module space science course</strong> with an <strong>A+</strong> to qualify for the intensive Moonshot design week.</li>
+                                <li>Led an <strong>8-member Moonshot systems engineering team</strong> to design an Artemis-themed Moon/Mars mission and presented blueprints to a NASA engineering panel.</li>
                             </ul>
                         </div>
                     </article>
 
-                    <!-- Item 5: Eat Right Media Coordinator & Outreach Leader -->
-                    <article data-category="service" class="exp-item py-7 first:pt-0 last:pb-0 flex flex-col md:flex-row gap-4 md:gap-12">
-                        <div class="md:w-1/4 flex-shrink-0 space-y-2">
-                            <span class="text-sm font-semibold text-muted block">2024 &ndash; 2026</span>
-                            <span class="inline-block px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[11px] font-semibold">Community Service</span>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-primary mb-1">Media Director, Outreach Coordinator &amp; Fundraiser</h3>
-                            <p class="text-accent font-medium mb-3">Eat Right (Non-Profit)</p>
-                            <ul class="space-y-1.5 text-muted text-sm md:text-base leading-relaxed list-disc list-inside">
-                                <li>Led a 5-member outreach team to organize <strong>6 interactive nutrition workshops</strong> across local parks, schools, and STEM events, engaging <strong>2,000+ participants</strong>.</li>
-                                <li>Spearheaded fundraising campaigns raising <strong>$2,000+</strong> for local food organizations; service hours contributed toward the <strong>U.S. Congressional Bronze Medal</strong>.</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <!-- Item 6: Simulated Flight Director -->
+                    <!-- Item 7: Space Flight Mission Director & Trainee -->
                     <article data-category="aerospace" class="exp-item py-7 first:pt-0 last:pb-0 flex flex-col md:flex-row gap-4 md:gap-12">
                         <div class="md:w-1/4 flex-shrink-0 space-y-2">
-                            <span class="text-sm font-semibold text-muted block">Summer 2024</span>
-                            <span class="inline-block px-2.5 py-0.5 rounded-full bg-fuchsia-50 border border-fuchsia-200 text-fuchsia-800 text-[11px] font-semibold">Aerospace Leadership</span>
+                            <span class="text-sm font-semibold text-muted block">Grade 10</span>
+                            <span class="inline-block px-2.5 py-0.5 rounded-full bg-fuchsia-50 border border-fuchsia-200 text-fuchsia-800 text-[11px] font-semibold">Aerospace &amp; Engineering</span>
                         </div>
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold text-primary mb-1">Simulated Flight Director &amp; Trainee</h3>
-                            <p class="text-accent font-medium mb-3">U.S. Space &amp; Rocket Center &mdash; Advanced Space Academy (Huntsville, AL)</p>
+                            <h3 class="text-xl font-bold text-primary mb-1">Space Flight Mission Director &amp; Trainee</h3>
+                            <p class="text-accent font-medium mb-3">U.S. Space and Rocket Center: Advanced Space Academy</p>
                             <ul class="space-y-1.5 text-muted text-sm md:text-base leading-relaxed list-disc list-inside">
-                                <li>Completed an immersive <strong>40-hour/week</strong> astronaut-training program featuring 1/6th Gravity Chair, Multi-Axis Trainer, jet flight simulators, thermal heat-shield design, and model rocket launch/recovery.</li>
-                                <li>Served as <strong>Flight Director</strong> for a <strong>13-to-16 member Mission Control crew</strong>, coordinating rapid emergency triage during simulated Space Shuttle/ISS docking operations.</li>
+                                <li>Led a <strong>13-member crew as Flight Director</strong> in simulated Space Shuttle/ISS missions, coordinating split-second emergency triage under pressure.</li>
+                                <li>Completed astronaut-training simulations, engineered a thermal heat shield, and built, launched, and recovered a payload rocket.</li>
                             </ul>
                         </div>
                     </article>
 
-                    <!-- Item 7: NASA Explorer Camp Mentor -->
+                    <!-- Item 8: Eat Right Outreach Director & Workshop Coordinator -->
                     <article data-category="service" class="exp-item py-7 first:pt-0 last:pb-0 flex flex-col md:flex-row gap-4 md:gap-12">
                         <div class="md:w-1/4 flex-shrink-0 space-y-2">
-                            <span class="text-sm font-semibold text-muted block">Summer 2024</span>
+                            <span class="text-sm font-semibold text-muted block">Grades 10 &ndash; 12</span>
                             <span class="inline-block px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[11px] font-semibold">Community Service</span>
                         </div>
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold text-primary mb-1">NASA Explorer Camp STEM Mentor</h3>
-                            <p class="text-accent font-medium mb-3">Space Center Houston &mdash; Johnson Space Center</p>
+                            <h3 class="text-xl font-bold text-primary mb-1">Outreach Director &amp; Workshop Coordinator</h3>
+                            <p class="text-accent font-medium mb-3">Community Nutrition Outreach Initiative (Eat Right Non-Profit)</p>
                             <ul class="space-y-1.5 text-muted text-sm md:text-base leading-relaxed list-disc list-inside">
-                                <li>Selected as a Teen Volunteer (<strong>40 hrs/week</strong>) to mentor <strong>75 campers</strong>, leading hands-on aerospace engineering builds and space exploration modules.</li>
-                                <li>Awarded the <strong>President&rsquo;s Volunteer Service Award (PVSA) Gold</strong> for dedicating <strong>120+ hours</strong> to youth STEM education.</li>
+                                <li>Led and organized <strong>6 nutrition workshops</strong> at local parks, engaging <strong>2,000+ attendees</strong>, and expanded the program into schools and STEM events.</li>
+                                <li>Raised <strong>$2,000</strong> for local food banks; service hours contributed toward the <strong>U.S. Congressional Bronze Medal</strong>.</li>
                             </ul>
                         </div>
                     </article>
 
-                    <!-- Item 8: Sunday LunchBox -->
+                    <!-- Item 9: NASA Explorer Camp STEM Mentor -->
                     <article data-category="service" class="exp-item py-7 first:pt-0 last:pb-0 flex flex-col md:flex-row gap-4 md:gap-12">
                         <div class="md:w-1/4 flex-shrink-0 space-y-2">
-                            <span class="text-sm font-semibold text-muted block">2023 &ndash; 2026</span>
+                            <span class="text-sm font-semibold text-muted block">Grade 10 (Summer)</span>
                             <span class="inline-block px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[11px] font-semibold">Community Service</span>
                         </div>
                         <div class="flex-1">
-                            <h3 class="text-xl font-bold text-primary mb-1">Community Food Access Volunteer</h3>
-                            <p class="text-accent font-medium mb-3">Sunday LunchBox (Austin, TX)</p>
+                            <h3 class="text-xl font-bold text-primary mb-1">Assistant Camp Counselor &amp; STEM Mentor</h3>
+                            <p class="text-accent font-medium mb-3">Space Center Houston: NASA Explorer Camps</p>
                             <ul class="space-y-1.5 text-muted text-sm md:text-base leading-relaxed list-disc list-inside">
-                                <li>Committed weekly volunteer hours washing, processing, and packaging locally sourced fresh produce for underserved Austin families.</li>
-                                <li>Prepared and distributed <strong>300+ food packages</strong> supporting an operation serving <strong>150 families and 200 children weekly</strong>.</li>
+                                <li>Mentored <strong>75 campers</strong> (<strong>40 hrs/week</strong>), coordinating hands-on engineering activities and facilitating space exploration module lessons.</li>
+                                <li>Earned the <strong>President&rsquo;s Volunteer Service Award (PVSA) Gold</strong> for <strong>120+ volunteer hours</strong>.</li>
                             </ul>
                         </div>
                     </article>
 
-                    <!-- Item 9: National Pediatric Cancer Foundation -->
+                    <!-- Item 10: Sunday LunchBox -->
                     <article data-category="service" class="exp-item py-7 first:pt-0 last:pb-0 flex flex-col md:flex-row gap-4 md:gap-12">
                         <div class="md:w-1/4 flex-shrink-0 space-y-2">
-                            <span class="text-sm font-semibold text-muted block">2023 &ndash; 2026</span>
+                            <span class="text-sm font-semibold text-muted block">Grades 9 &ndash; 12</span>
+                            <span class="inline-block px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[11px] font-semibold">Community Service</span>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-primary mb-1">Food Processing Assistant &amp; Volunteer</h3>
+                            <p class="text-accent font-medium mb-3">Sunday LunchBox for Sustained Family Nutrition (Austin, TX)</p>
+                            <ul class="space-y-1.5 text-muted text-sm md:text-base leading-relaxed list-disc list-inside">
+                                <li>Committed weekly volunteer hours washing, processing, and packing locally sourced fresh produce for underserved Austin families.</li>
+                                <li>Prepared and distributed <strong>300+ food packages</strong> serving <strong>150 families with 200 children fed weekly</strong>.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Item 11: Solo & Ensemble Pianist, Fundraiser -->
+                    <article data-category="service" class="exp-item py-7 first:pt-0 last:pb-0 flex flex-col md:flex-row gap-4 md:gap-12">
+                        <div class="md:w-1/4 flex-shrink-0 space-y-2">
+                            <span class="text-sm font-semibold text-muted block">Grades 9 &ndash; 12</span>
                             <span class="inline-block px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[11px] font-semibold">Community Service</span>
                         </div>
                         <div class="flex-1">
                             <div class="flex flex-wrap items-start justify-between gap-2 mb-1">
-                                <h3 class="text-xl font-bold text-primary">Musical Philanthropy Fundraiser</h3>
+                                <h3 class="text-xl font-bold text-primary">Solo &amp; Ensemble Pianist, Fundraiser</h3>
                                 <button type="button" onclick="navigate('music')" class="text-xs font-semibold text-accent hover:underline">View Music &rarr;</button>
                             </div>
-                            <p class="text-accent font-medium mb-3">National Pediatric Cancer Foundation (via Orpheus Academy of Music)</p>
+                            <p class="text-accent font-medium mb-3">The Orpheus Academy of Music &amp; National Pediatric Cancer Foundation</p>
                             <ul class="space-y-1.5 text-muted text-sm md:text-base leading-relaxed list-disc list-inside">
-                                <li>Paired <strong>11+ years</strong> of classical piano study (<strong>ABRSM Level 7</strong>) with community service by recording sponsored practice-hour fundraisers.</li>
-                                <li>Raised <strong>$1,000+</strong> directly funding pediatric cancer research while performing at <strong>35+ recitals</strong> and local retirement communities.</li>
+                                <li>Studied classical piano for <strong>11+ years (ABRSM Grade 7/8)</strong>, performing solo at the <strong>John F. Kennedy Center</strong> and in <strong>35+ recitals/ensembles</strong>.</li>
+                                <li>Produced practice music videos raising <strong>$1,000</strong> for the National Pediatric Cancer Foundation (NPCC).</li>
                             </ul>
                         </div>
                     </article>
@@ -2812,19 +2853,19 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 
-                <!-- Card 1: Top Science & Engineering Fair Awards (2.21 Unbundled + 2.22 Linked) -->
+                <!-- Card 1: Research Awards ($6K Scholarships & Special Awards) -->
                 <div role="button" tabindex="0" onclick="navigate('independent-research')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();navigate('independent-research');}" class="group cursor-pointer bg-card rounded-3xl p-8 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
                     <div>
                         <div class="flex items-center justify-between gap-2 mb-3">
-                            <span class="px-2.5 py-0.5 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-[11px] font-bold uppercase tracking-wider">Aerospace Research</span>
-                            <span class="text-xs text-muted font-semibold">2025 &amp; 2026</span>
+                            <span class="px-2.5 py-0.5 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-[11px] font-bold uppercase tracking-wider">State &amp; Regional</span>
+                            <span class="text-xs text-muted font-semibold">Grades 10 &amp; 11</span>
                         </div>
-                        <h3 class="text-xl font-bold text-primary mb-3 group-hover:text-accent transition-colors">Science &amp; Engineering Fair Awards ($5,500+ Scholarships)</h3>
+                        <h3 class="text-xl font-bold text-primary mb-3 group-hover:text-accent transition-colors">Research Awards ($6,000 Scholarships)</h3>
                         <ul class="space-y-1.5 text-sm text-muted leading-relaxed list-disc list-inside mb-4">
                             <li><strong>$2,500 SpaceX Scholarship</strong> &mdash; Texas State Science &amp; Engineering Fair (TXSEF)</li>
-                            <li><strong>$3,000 Smith &amp; Dawson Excellence Award</strong> &mdash; Top 2 of 430 projects (GARSEF)</li>
+                            <li><strong>$3,000 Smith &amp; Dawson Excellence Award</strong> &mdash; Top 2 of 431 projects (GARSEF)</li>
                             <li><strong>U.S. Air Force Research Laboratory Award</strong> &mdash; Aerospace engineering innovation</li>
-                            <li><strong>2x 1st Place &amp; Best-of-Fair Finalist</strong> &mdash; Greater Austin Regional (Top 12 / 330)</li>
+                            <li><strong>$6,000 Total Scholarships</strong> &amp; Best Presentation at International Conference</li>
                         </ul>
                     </div>
                     <div class="pt-4 border-t border-border/60 flex items-center justify-between text-xs font-semibold text-accent">
@@ -2833,16 +2874,34 @@
                     </div>
                 </div>
 
-                <!-- Card 2: First-Author Manuscript — JEI (2.21 Added + 2.22 Linked) -->
+                <!-- Card 2: 2x Science Fair Winner -->
+                <div role="button" tabindex="0" onclick="navigate('independent-research')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();navigate('independent-research');}" class="group cursor-pointer bg-card rounded-3xl p-8 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="px-2.5 py-0.5 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-[11px] font-bold uppercase tracking-wider">State &amp; Regional</span>
+                            <span class="text-xs text-muted font-semibold">Grades 10 &amp; 11</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-2 group-hover:text-accent transition-colors">2x Science Fair Winner &amp; Best-of-Fair Finalist</h3>
+                        <p class="text-sm text-muted leading-relaxed mb-4">
+                            <strong>2x 1st Place Winner</strong> at the Greater Austin Regional Science &amp; Engineering Fair (GARSEF), advancing as a <strong>Texas State (TXSEF) Finalist</strong> and ranked among the <strong>Top 12 of 330 Projects &amp; Best-of-Fair Finalist</strong>.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-border/60 flex items-center justify-between text-xs font-semibold text-accent">
+                        <span>View Biomimetic Research</span>
+                        <span class="group-hover:translate-x-0.5 transition-transform" aria-hidden="true">&rarr;</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: First-Author Manuscript — JEI -->
                 <a href="https://doi.org/10.69831/157f400f46" target="_blank" rel="noopener noreferrer" class="group bg-card rounded-3xl p-8 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
                     <div>
                         <div class="flex items-center justify-between gap-2 mb-3">
-                            <span class="px-2.5 py-0.5 rounded-full bg-blue-50 border border-blue-200 text-accent text-[11px] font-bold uppercase tracking-wider">Publication</span>
-                            <span class="text-xs text-muted font-semibold">June 2026</span>
+                            <span class="px-2.5 py-0.5 rounded-full bg-blue-50 border border-blue-200 text-accent text-[11px] font-bold uppercase tracking-wider">International</span>
+                            <span class="text-xs text-muted font-semibold">Grades 11 &amp; 12</span>
                         </div>
-                        <h3 class="text-xl font-bold text-primary mb-2 group-hover:text-accent transition-colors">First-Author Manuscript &mdash; Journal of Emerging Investigators (JEI)</h3>
+                        <h3 class="text-xl font-bold text-primary mb-2 group-hover:text-accent transition-colors">First-Author Aerospace Research Paper &mdash; JEI</h3>
                         <p class="text-sm text-muted leading-relaxed mb-4">
-                            Authored and published original two-phase aerospace manuscript (<em>&ldquo;Improving the Efficiency of Aircraft Using Biomimetic Wings&rdquo;</em>) on the JEI Pre-Print server (<code class="bg-bg px-1.5 py-0.5 rounded text-xs font-mono text-primary">doi.org/10.69831/157f400f46</code>), currently under peer review for full journal publication.
+                            Authored original aerospace research manuscript posted as a Pre-Print with scientific feedback (<code class="bg-bg px-1.5 py-0.5 rounded text-xs font-mono text-primary">doi.org/10.69831/157f400f46</code>), Peer review completed and currently under revision at the <strong>Journal of Emerging Investigators (JEI)</strong>.
                         </p>
                     </div>
                     <div class="pt-4 border-t border-border/60 flex items-center justify-between text-xs font-semibold text-accent">
@@ -2851,16 +2910,16 @@
                     </div>
                 </a>
 
-                <!-- Card 3: Destination Imagination Global Finals Winner (2.22 Linked) -->
+                <!-- Card 4: 3x Destination Imagination Winner -->
                 <div role="button" tabindex="0" onclick="navigate('destination-imagination')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();navigate('destination-imagination');}" class="group cursor-pointer bg-card rounded-3xl p-8 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
                     <div>
                         <div class="flex items-center justify-between gap-2 mb-3">
-                            <span class="px-2.5 py-0.5 rounded-full bg-purple-50 border border-purple-200 text-purple-800 text-[11px] font-bold uppercase tracking-wider">International STEM</span>
-                            <span class="text-xs text-muted font-semibold">May 2024 &amp; 2025</span>
+                            <span class="px-2.5 py-0.5 rounded-full bg-purple-50 border border-purple-200 text-purple-800 text-[11px] font-bold uppercase tracking-wider">International, State &amp; Regional</span>
+                            <span class="text-xs text-muted font-semibold">Grades 9, 10 &amp; 11</span>
                         </div>
-                        <h3 class="text-xl font-bold text-primary mb-2 group-hover:text-accent transition-colors">Destination Imagination Global Finals Winner</h3>
+                        <h3 class="text-xl font-bold text-primary mb-2 group-hover:text-accent transition-colors">3x Destination Imagination Winner (Global 1st Place)</h3>
                         <p class="text-sm text-muted leading-relaxed mb-4">
-                            <strong>2x Global 1st Place</strong> winner competing against <strong>600+ teams from 13 countries</strong> (plus 4x 1st Place at Texas State). Awarded both the <strong>DaVinci Award</strong> (extraordinary creativity &amp; risk-taking) and <strong>Renaissance Award</strong> (outstanding engineering &amp; design).
+                            <strong>1st Place at Global Finals (Top 1 / 600 teams)</strong> across 13 countries, earning both the <strong>DaVinci Award</strong> and <strong>Renaissance Award</strong> for extraordinary engineering and creativity.
                         </p>
                     </div>
                     <div class="pt-4 border-t border-border/60 flex items-center justify-between text-xs font-semibold text-accent">
@@ -2869,7 +2928,7 @@
                     </div>
                 </div>
 
-                <!-- Card 4: Best Research Presentation — IRCC (2.22 Linked + Watch IRCC Presentation ↗) -->
+                <!-- Card 5: Best Research Presentation — IRCC -->
                 <div role="button" tabindex="0" onclick="navigate('research')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();navigate('research');}" class="group cursor-pointer bg-card rounded-3xl p-8 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
                     <div>
                         <div class="flex items-center justify-between gap-2 mb-3">
@@ -2892,12 +2951,26 @@
                     </div>
                 </div>
 
-                <!-- Card 5: National Merit Scholarship Semifinalist (2.22 Static Card - No False Hover Lift) -->
+                <!-- Card 6: U.S. Congressional Bronze Medal -->
                 <div class="bg-card rounded-3xl p-8 border border-border shadow-framer flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between gap-2 mb-3">
-                            <span class="px-2.5 py-0.5 rounded-full bg-black/5 border border-border text-primary text-[11px] font-bold uppercase tracking-wider">Academic</span>
-                            <span class="text-xs text-muted font-semibold">August 2026</span>
+                            <span class="px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-bold uppercase tracking-wider">National</span>
+                            <span class="text-xs text-muted font-semibold">Grades 9 &amp; 10</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-2">U.S. Congressional Award &mdash; Bronze Medal</h3>
+                        <p class="text-sm text-muted leading-relaxed">
+                            Earned the United States Congress&rsquo;s highest youth honor program medal by completing <strong>400+ hours of self-leadership, voluntary public service, personal development, and physical fitness</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 7: National Merit Scholarship Semifinalist -->
+                <div class="bg-card rounded-3xl p-8 border border-border shadow-framer flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="px-2.5 py-0.5 rounded-full bg-black/5 border border-border text-primary text-[11px] font-bold uppercase tracking-wider">National Academic</span>
+                            <span class="text-xs text-muted font-semibold">Fall 2026</span>
                         </div>
                         <h3 class="text-xl font-bold text-primary mb-2">National Merit Scholarship Semifinalist</h3>
                         <p class="text-sm text-muted leading-relaxed">
@@ -2906,30 +2979,16 @@
                     </div>
                 </div>
 
-                <!-- Card 6: U.S. Congressional Bronze Medal (2.21 Added, Static Card) -->
+                <!-- Card 8: President's Volunteer Service Award (PVSA) Gold -->
                 <div class="bg-card rounded-3xl p-8 border border-border shadow-framer flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between gap-2 mb-3">
                             <span class="px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-bold uppercase tracking-wider">National Service</span>
-                            <span class="text-xs text-muted font-semibold">March 2025</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-primary mb-2">U.S. Congressional Award &mdash; Bronze Medal</h3>
-                        <p class="text-sm text-muted leading-relaxed">
-                            Earned the United States Congress&rsquo;s highest youth honor for initiative, service, and achievement by completing <strong>400+ verified hours</strong> across voluntary public service, personal musical development, and physical fitness.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Card 7: President's Volunteer Service Award (PVSA) Gold (2.21 Added, Static Card) -->
-                <div class="bg-card rounded-3xl p-8 border border-border shadow-framer flex flex-col justify-between md:col-span-2">
-                    <div>
-                        <div class="flex items-center justify-between gap-2 mb-3">
-                            <span class="px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-bold uppercase tracking-wider">National STEM Service</span>
-                            <span class="text-xs text-muted font-semibold">2024</span>
+                            <span class="text-xs text-muted font-semibold">Grade 10</span>
                         </div>
                         <h3 class="text-xl font-bold text-primary mb-2">President&rsquo;s Volunteer Service Award (PVSA) &mdash; Gold</h3>
                         <p class="text-sm text-muted leading-relaxed">
-                            Awarded Gold-level national recognition for dedicating <strong>120+ hours</strong> as a STEM Mentor and Assistant Camp Counselor at <strong>NASA Space Center Houston&rsquo;s Explorer Camps</strong>, guiding 75 young students through hands-on engineering builds and space exploration modules.
+                            Awarded Gold-level national recognition for dedicating <strong>120+ volunteer hours</strong> as an Assistant Camp Counselor &amp; STEM Mentor at <strong>Space Center Houston: NASA Explorer Camps</strong>, mentoring 75 students.
                         </p>
                     </div>
                 </div>
